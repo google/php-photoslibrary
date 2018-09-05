@@ -1,0 +1,14 @@
+{
+  "minimum-stability": "dev",
+
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../php-photoslibrary"
+    }
+  ],
+  "require": {
+    "google/photos-library": "*",
+    "league/plates": "^3.0.0"
+  }
+}

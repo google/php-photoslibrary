@@ -1,0 +1,11 @@
+.columns {
+  column-count: 3;
+}
+
+.columns div {
+  padding: 5px;
+}
+
+.switch {
+  margin: 5px;
+}

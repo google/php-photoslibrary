@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="164px" height="164px" viewBox="0 0 164 164" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/album</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M164,114.625 L164,16.375 C164,7.36875 156.63125,0 147.625,0 L49.375,0 C40.36875,0 33,7.36875 33,16.375 L33,114.625 C33,123.63125 40.36875,131 49.375,131 L147.625,131 C156.63125,131 164,123.63125 164,114.625 Z M107,16 L148,16 L148,82 L127.5,69.625 L107,82 L107,16 Z M0,33 L0,147.625 C0,156.63125 7.36875,164 16.375,164 L131,164 L131,147.625 L16.375,147.625 L16.375,33 L0,33 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/album" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Shape" fill="#9AA0A6" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

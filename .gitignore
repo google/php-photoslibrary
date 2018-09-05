@@ -1,0 +1,7 @@
+*.iml
+.DS_STORE
+.idea/
+client_secret.json
+composer.lock
+out/
+vendor/
