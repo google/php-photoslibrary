@@ -5,58 +5,72 @@ API](https://developers.google.com/photos).
 
 You can find [samples](#samples) for this library in the `samples` branch. See the samples section below.
 
-## Requirements and Preparation
+## Requirements and preparation
+This library depends on [Composer](https://getcomposer.org/). If you don't have Composer installed
+on the command line as `composer`, follow the 
+[Linux/unix/OS X](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) or 
+[Windows](https://getcomposer.org/doc/00-intro.md#installation-windows) installation guides.
 
-*   System requirements and dependencies can be found in `composer.json` of this
-    library. See [this page](https://getcomposer.org/doc/01-basic-usage.md) for
-    more details.
-*   This library depends on [Composer](https://getcomposer.org/). If you don't
-    have it installed on your computer yet, follow the
-    [installation guide for Linux/Unix/OS X](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
-    or [installation guide for Windows](https://getcomposer.org/doc/00-intro.md#installation-windows).
-    For the rest of this guide, we're assuming that you're using
-    Linux/Unix/OS X and have Composer installed [globally](https://getcomposer.org/doc/00-intro.md#globally).
-    Thus, your installed Composer is available on the command line as `composer`.
+*   System requirements and dependencies can be found in [`composer.json`](/google/php-photoslibrary/blob/master/composer.json)
+    of this library. If you are not familiar with Composer, see 
+    [this page](https://getcomposer.org/doc/01-basic-usage.md) for more details.
 *   Your PHP installation must include the [`bcmath` extension](http://php.net/manual/en/book.bc.php).
-*   To use this library to connect to the Google Photos Library API, you need an
-    [OAuth 2 client ID and secret](https://developers.google.com/photos/library/guides/get-started#request-id).
-    Make sure you've written down these credentials in advance.
+*   OAuth 2.0 credentials configured for your project as [described below](#set-up-your-oauth2-credentials-for-php).
 
-## Getting started
+
+## Download the client library
+
 Firstly, download the library, then set up OAuth 2.0 credentials to access the API.
 Next, you can follow the [samples](#samples) to see the client library in action.
 
-### Downloading this library
-
-There are three ways of downloading this library as described below.
+Here are some ways to download this library:
 
 | Method                                                                | Target Users                                                                                                                  |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | [Using `composer require`](#using-composer-require)                   | If you want to **use this library as a third-party library** for your projects and do not require example files.          |
 | [Using `git clone`](#using-git-clone)                                 | If you want to **alter or contribute to this library** (for example, submitting a pull request) or want to **run example files**. |
 | [Downloading a compressed tarball](#downloading-a-compressed-tarball) | If you only want to **run example files**.                                                                                 |
-#### Using composer require
+
+### Using composer require
+
+**NOTE: The library is still being prepared for publication on PHP packagist and
+is not available in the PHP packagist repository yet.**
+
+Add the following repository and dependency configuration to your  `composer.json`
+file to get started:
+```
+"repositories": [
+  {
+    "type": "vcs",
+    "url": "https://github.com/google/php-photoslibrary.git"
+  },
+  ...
+],
+"require": {
+  "google/photos-library": "1.0.0",
+  ...
+}
+```
+
+**These steps will be available shortly:**
 
 Follow the below steps to download this library as a third-party library for your projects.
 The library will be downloaded by Composer and stored under the `vendor/` directory.
 **Examples are NOT downloaded by this download method.**
 
-1.  Install the latest version using [Composer](https://getcomposer.org/).
+Install the latest version using [Composer](https://getcomposer.org/).
 
-    ```
-    $ composer require google/photos-library
-    ```
+```
+$ composer require google/photos-library
+```
 
-2.  Follow [Getting started](#getting-started) if you haven't done so.
-3.  Follow [Setting up your OAuth2 credentials](#setting-up-your-oauth2-credentials)
-    if you haven't set up the credentials yet.
-4.  You can now use the library.
 
-#### Using git clone
 
-If you want to alter or contribute to this library (for example, submitting pull requests) or wish
-to try our examples, follow the below method.
-**All** files in this repository will be downloaded.
+### Using git clone
+
+Use this method if you want to alter or contribute to this library (for example, submitting pull
+requests) or if you wish to try our samples. When you clone the repository, **all** files in this
+repository will be downloaded.
 
 1.  Run `git clone https://github.com/google/php-photoslibrary.git` at
     the command prompt.
@@ -64,16 +78,11 @@ to try our examples, follow the below method.
     `cd php-photoslibrary`.
 1.  Run `composer install` at the command prompt. This will install all
     dependencies needed for using the library.
-1.  Follow [Getting started](#getting-started) if you haven't done so.
-1.  Follow [Setting up your OAuth2 credentials](#setting-up-your-oauth2-credentials)
-    if you haven't set up the credentials yet.
-1.  You can now use the library and [run any examples](#samples) you want.
 
-#### Downloading a compressed tarball
+### Downloading a compressed tarball
 
-This is suitable for those who only want to try out the Google Photos Library with this
-client library. The extracted directory of the tarball will contain only the samples from the
-`samples` branch.
+Use this method only if you want to try out the Google Photos Library API with this client library.
+The extracted directory of the tarball will contain only the samples from the `samples` branch.
 
 1.  On the [releases page](https://github.com/google/php-photoslibrary/releases),
     select a version you want to try. Then, under **Download**, select the tarball
@@ -82,20 +91,15 @@ client library. The extracted directory of the tarball will contain only the sam
 1.  Navigate to the extracted directory (for example, **php-photoslibrary-samples-vX.Y.Z**).
 1.  Run `composer install` at the command prompt. This will install all dependencies
     needed for using the library and running examples.
-1.  Follow [Getting started](#getting-started) if you haven't done so.
-1.  Follow [Setting up your OAuth2 credentials](#setting-up-your-oauth2-credentials)
-    if you haven't set up the credentials yet.
-1.  You can now use the library and [run any examples](#run-samples) you want.
 
 
-### Setting up your OAuth2 credentials
+## Set up your OAuth2 credentials for PHP
 
 The Google Photos Library API uses [OAuth2](https://oauth.net/2/) as the
-authentication mechanism. Note that service accounts are not supported.
+authentication mechanism. Note that the Library API does not support service accounts.
 
-Follow the [get started guide in the developer documentation](https://developers.google.com/photos)
-to set up a Google developers account, enable the Google Photos Library API, and
-configure OAuth 2.0 for your project.
+To complete the “Enable the API” and “Configure OAuth2.0” steps in the below procedure, refer to
+the [get started guide in the developer documentation](https://developers.google.com/photos/library/guides/guides/get-started-php)
 
 This client library works with the [Google Auth Library for PHP](https://github.com/google/google-auth-library-php).
 Specify the client secret JSON file when initialising the library.
@@ -103,40 +107,54 @@ Use the authentication credentials returned by the auth library when setting up 
 `PhotosLibraryClient`. See the file [sample/src/common/common.php](https://github.com/google/php-photoslibrary/tree/samples/src/common/common.php)
 for an example on how to do this.
 
-## Basic Usage
-The best way to learn how to use this library is to [review the samples](samples/).
+## Sample usage
+The best way to learn how to use this library is to [review the samples](#samples).
 The [developer documentation](https://developers.google.com/photos) also includes
 code snippets for this client library in PHP.
 
 Once you have set up the dependencies and OAuth 2 credentials, you can access
 the API.
 Here's a short example that shows how to create a new album:
-```
-// Set up the Photos Library Client that interacts with the API
-$photosLibraryClient = new PhotosLibraryClient(['credentials' => $_SESSION['credentials']]);
-
-// Create a new Album object with at title
-$newAlbum = new Album();
-$newAlbum->setTitle("My Album");
+```php
+// [START sample_usage]
+use Google\Auth\Credentials\UserRefreshCredentials;
+use Google\Photos\Library\V1\PhotosLibraryClient;
+use Google\Photos\Library\V1\PhotosLibraryResourceFactory;
 
 try {
+    // Use the OAuth flow provided by the Google API Client Auth library
+    // to authenticate users. See the file /src/common/common.php in the samples for a complete
+    // authentication example.
+    $authCredentials = new UserRefreshCredentials( /* Add your scope, client secret and refresh token here */ );
+
+    // Set up the Photos Library Client that interacts with the API
+    $photosLibraryClient = new PhotosLibraryClient(['credentials' => $authCredentials]);
+
+    // Create a new Album object with at title
+    $newAlbum = PhotosLibraryResourceFactory::album("My Album");
+
     // Make the call to the Library API to create the new album
     $createdAlbum = $photosLibraryClient->createAlbum($newAlbum);
+
     // The creation call returns the ID of the new album
     $albumId = $createdAlbum->getId();
 } catch (\Google\ApiCore\ApiException $exception) {
     // Error during album creation
+} catch (\Google\ApiCore\ValidationException $e) {
+    // Error during client creation
     echo $exception;
 }
+// [END sample_usage]
 ```
 
 ## Samples
- Few samples are included in the [`samples` branch](https://github.com/google/php-photoslibrary/tree/samples) of this repository. They show how
- to access media items, filter media, share albums, and upload files.
+A few samples are included in the [`samples`](https://github.com/google/php-photoslibrary/tree/samples) directory.
+They show how to access media items, filter media, share albums, and upload files.
 
-## Documentation
+## Reference Documentation
 
 PHPDoc for this library can be found in the [gh-pages](https://github.com/google/photos-library-php-lib/tree/gh-pages) branch of this repository.
+You can browse it online here: [https://google.github.io/php-photoslibrary/index.html](https://google.github.io/php-photoslibrary/index.html)
 
 General Google Photos Library API documentation can be found on our Google Developers
 site: https://developers.google.com/photos
@@ -170,7 +188,7 @@ for any other API questions, bug reports, or feature requests.
 
 For general Google Photos Library API and client library updates and news, follow:
 
-*   [PHP client library release notes](TODO)
+*   [PHP client library release notes](https://github.com/google/php-photoslibrary/releases)
 *   [Google Photos Library API release notes](https://developers.google.com/photos/library/support/release-notes)
 
 ## License
