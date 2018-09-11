@@ -9,7 +9,13 @@
   "autoload": {
     "psr-4": {
       "Google\\Photos\\Library\\V1\\": "src/Google/Photos/Library/V1/",
+      "Google\\Photos\\Types\\": "src/Google/Photos/Types/",
       "GPBMetadata\\Google\\Photos\\Library\\V1\\": "src/GPBMetadata/Google/Photos/Library/V1/",
+      "GPBMetadata\\Google\\Photos\\Types\\": "src/GPBMetadata/Google/Photos/Types/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "Google\\Photos\\Library\\Tests\\": "tests"
     }
   },
