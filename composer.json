@@ -17,6 +17,7 @@
   },
   "require": {
     "php": "^5.5 || ^7.0",
+    "ext-bcmath": "*",
     "google/gax": "^0.34.0",
     "google/protobuf": "^3.5.1"
   },
