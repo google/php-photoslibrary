@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.4/phpunit.xsd"
+         colors="true"
+         verbose="true"
+         bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="php-photoslibrary Test Suite">
+            <directory>tests/Unit/V1/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/Google/Photos/Library/V1/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-text"
+             target="php://stdout"
+             showUncoveredFiles="true"
+             showOnlySummary="false"
+        />
+    </logging>
+</phpunit>
