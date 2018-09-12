@@ -33,32 +33,11 @@ Here are some ways to download this library:
 
 ### Using composer require
 
-**NOTE: The library is still being prepared for publication on PHP packagist and
-is not available in the PHP packagist repository yet.**
-
-Add the following repository and dependency configuration to your  `composer.json`
-file to get started:
-```
-"repositories": [
-  {
-    "type": "vcs",
-    "url": "https://github.com/google/php-photoslibrary.git"
-  },
-  ...
-],
-"require": {
-  "google/photos-library": "1.0.0",
-  ...
-}
-```
-
-**These steps will be available shortly:**
-
 Follow the below steps to download this library as a third-party library for your projects.
-The library will be downloaded by Composer and stored under the `vendor/` directory.
-**Examples are NOT downloaded by this download method.**
+The library will be downloaded by [Composer](https://getcomposer.org/) and stored under the
+`vendor/` directory.
+Examples are not downloaded by this download method.
 
-Install the latest version using [Composer](https://getcomposer.org/).
 
 ```
 $ composer require google/photos-library
@@ -99,7 +78,7 @@ The Google Photos Library API uses [OAuth2](https://oauth.net/2/) as the
 authentication mechanism. Note that the Library API does not support service accounts.
 
 To complete the “Enable the API” and “Configure OAuth2.0” steps in the below procedure, refer to
-the [get started guide in the developer documentation](https://developers.google.com/photos/library/guides/guides/get-started-php)
+the [get started guide in the developer documentation](https://developers.google.com/photos/library/guides/get-started-php)
 
 This client library works with the [Google Auth Library for PHP](https://github.com/google/google-auth-library-php).
 Specify the client secret JSON file when initialising the library.
