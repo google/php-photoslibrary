@@ -1,15 +1,10 @@
 {
-
-  "minimum-stability": "stable",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/google/php-photoslibrary.git"
-    }
-  ],
-
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability":"stable",
   "require": {
-    "google/photos-library": "1.0.0",
+    "google/photos-library": "^1.0",
     "league/plates": "^3.0.0"
   }
 }
