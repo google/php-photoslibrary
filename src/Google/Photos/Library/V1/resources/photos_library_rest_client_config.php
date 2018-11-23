@@ -33,6 +33,10 @@ return [
                     ],
                 ],
             ],
+            'BatchGetMediaItems' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/mediaItems:batchGet',
+            ],
             'ListAlbums' => [
                 'method' => 'get',
                 'uriTemplate' => '/v1/albums',
@@ -40,16 +44,21 @@ return [
             'GetAlbum' => [
                 'method' => 'get',
                 'uriTemplate' => '/v1/albums/{album_id=*}',
-                'additionalBindings' => [
-                    [
-                        'method' => 'get',
-                        'uriTemplate' => '/v1/sharedAlbums/{share_token=*}',
-                    ],
-                ],
                 'placeholders' => [
                     'album_id' => [
                         'getters' => [
                             'getAlbumId',
+                        ],
+                    ],
+                ],
+            ],
+            'GetSharedAlbum' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/sharedAlbums/{share_token=*}',
+                'placeholders' => [
+                    'share_token' => [
+                        'getters' => [
+                            'getShareToken',
                         ],
                     ],
                 ],
@@ -71,6 +80,11 @@ return [
                 'uriTemplate' => '/v1/sharedAlbums:join',
                 'body' => '*',
             ],
+            'LeaveSharedAlbum' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/sharedAlbums:leave',
+                'body' => '*',
+            ],
             'ShareAlbum' => [
                 'method' => 'post',
                 'uriTemplate' => '/v1/albums/{album_id=*}:share',
@@ -86,6 +100,18 @@ return [
             'ListSharedAlbums' => [
                 'method' => 'get',
                 'uriTemplate' => '/v1/sharedAlbums',
+            ],
+            'UnshareAlbum' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/albums/{album_id=*}:unshare',
+                'body' => '*',
+                'placeholders' => [
+                    'album_id' => [
+                        'getters' => [
+                            'getAlbumId',
+                        ],
+                    ],
+                ],
             ],
         ],
     ],

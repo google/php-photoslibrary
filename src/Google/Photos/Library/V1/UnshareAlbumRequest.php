@@ -9,14 +9,15 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Request to retrieve a specific album.
+ * Request to unshare a shared album in Google Photos.
  *
- * Generated from protobuf message <code>google.photos.library.v1.GetAlbumRequest</code>
+ * Generated from protobuf message <code>google.photos.library.v1.UnshareAlbumRequest</code>
  */
-class GetAlbumRequest extends \Google\Protobuf\Internal\Message
+class UnshareAlbumRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Identifier of the album to be requested.
+     * Identifier of the album to be unshared. This album id must belong to an
+     * album created by the developer.
      *
      * Generated from protobuf field <code>string album_id = 1;</code>
      */
@@ -29,7 +30,8 @@ class GetAlbumRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $album_id
-     *           Identifier of the album to be requested.
+     *           Identifier of the album to be unshared. This album id must belong to an
+     *           album created by the developer.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +40,8 @@ class GetAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the album to be requested.
+     * Identifier of the album to be unshared. This album id must belong to an
+     * album created by the developer.
      *
      * Generated from protobuf field <code>string album_id = 1;</code>
      * @return string
@@ -49,7 +52,8 @@ class GetAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the album to be requested.
+     * Identifier of the album to be unshared. This album id must belong to an
+     * album created by the developer.
      *
      * Generated from protobuf field <code>string album_id = 1;</code>
      * @param string $var

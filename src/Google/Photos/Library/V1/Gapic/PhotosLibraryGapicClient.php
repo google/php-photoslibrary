@@ -39,12 +39,17 @@ use Google\Photos\Library\V1\Album;
 use Google\Photos\Library\V1\AlbumPosition;
 use Google\Photos\Library\V1\BatchCreateMediaItemsRequest;
 use Google\Photos\Library\V1\BatchCreateMediaItemsResponse;
+use Google\Photos\Library\V1\BatchGetMediaItemsRequest;
+use Google\Photos\Library\V1\BatchGetMediaItemsResponse;
 use Google\Photos\Library\V1\CreateAlbumRequest;
 use Google\Photos\Library\V1\Filters;
 use Google\Photos\Library\V1\GetAlbumRequest;
 use Google\Photos\Library\V1\GetMediaItemRequest;
+use Google\Photos\Library\V1\GetSharedAlbumRequest;
 use Google\Photos\Library\V1\JoinSharedAlbumRequest;
 use Google\Photos\Library\V1\JoinSharedAlbumResponse;
+use Google\Photos\Library\V1\LeaveSharedAlbumRequest;
+use Google\Photos\Library\V1\LeaveSharedAlbumResponse;
 use Google\Photos\Library\V1\ListAlbumsRequest;
 use Google\Photos\Library\V1\ListAlbumsResponse;
 use Google\Photos\Library\V1\ListMediaItemsRequest;
@@ -59,6 +64,8 @@ use Google\Photos\Library\V1\SearchMediaItemsResponse;
 use Google\Photos\Library\V1\ShareAlbumRequest;
 use Google\Photos\Library\V1\ShareAlbumResponse;
 use Google\Photos\Library\V1\SharedAlbumOptions;
+use Google\Photos\Library\V1\UnshareAlbumRequest;
+use Google\Photos\Library\V1\UnshareAlbumResponse;
 
 /**
  * Service Description: Service which allows developers to perform the following actions on behalf of
@@ -320,9 +327,9 @@ class PhotosLibraryGapicClient
      * If no filters are set, then all media items in the user's library are
      * returned.
      * If an album is set, all media items in the specified album are returned.
-     * If filters are specified, media items that match the filters from the user's
-     * library are listed.
-     * If you set both the album and the filters, the request results in an error.
+     * If filters are specified, media items that match the filters from the
+     * user's library are listed. If you set both the album and the filters, the
+     * request results in an error.
      *
      * Sample code:
      * ```
@@ -474,7 +481,7 @@ class PhotosLibraryGapicClient
     }
 
     /**
-     * Returns the media item for the specified media item `id`.
+     * Returns the media item for the specified media item identifier.
      *
      * Sample code:
      * ```
@@ -487,7 +494,7 @@ class PhotosLibraryGapicClient
      * }
      * ```
      *
-     * @param string $mediaItemId  Identifier of media item to be requested.
+     * @param string $mediaItemId  Identifier of the media item to be requested.
      * @param array  $optionalArgs {
      *                             Optional.
      *
@@ -511,6 +518,49 @@ class PhotosLibraryGapicClient
         return $this->startCall(
             'GetMediaItem',
             MediaItem::class,
+            $optionalArgs,
+            $request
+        )->wait();
+    }
+
+    /**
+     * Returns the list of media items for the specified media item identifiers.
+     *
+     * Sample code:
+     * ```
+     * $photosLibraryClient = new PhotosLibraryClient();
+     * try {
+     *     $mediaItemIds = [];
+     *     $response = $photosLibraryClient->batchGetMediaItems($mediaItemIds);
+     * } finally {
+     *     $photosLibraryClient->close();
+     * }
+     * ```
+     *
+     * @param string[] $mediaItemIds Identifiers of the media items to be requested.
+     * @param array    $optionalArgs {
+     *                               Optional.
+     *
+     *     @type RetrySettings|array $retrySettings
+     *          Retry settings to use for this call. Can be a
+     *          {@see Google\ApiCore\RetrySettings} object, or an associative array
+     *          of retry settings parameters. See the documentation on
+     *          {@see Google\ApiCore\RetrySettings} for example usage.
+     * }
+     *
+     * @return \Google\Photos\Library\V1\BatchGetMediaItemsResponse
+     *
+     * @throws ApiException if the remote call fails
+     * @experimental
+     */
+    public function batchGetMediaItems($mediaItemIds, array $optionalArgs = [])
+    {
+        $request = new BatchGetMediaItemsRequest();
+        $request->setMediaItemIds($mediaItemIds);
+
+        return $this->startCall(
+            'BatchGetMediaItems',
+            BatchGetMediaItemsResponse::class,
             $optionalArgs,
             $request
         )->wait();
@@ -595,9 +645,8 @@ class PhotosLibraryGapicClient
     }
 
     /**
-     * Returns the album based on the specified `albumId` or `shareToken`.
-     * Exactly one of `albumId` and `shareToken` must be set.
-     * The `albumId` should be the ID of an album owned by the user or a shared
+     * Returns the album based on the specified `albumId`.
+     * The `albumId` must be the ID of an album owned by the user or a shared
      * album that the user has joined.
      *
      * Sample code:
@@ -611,14 +660,10 @@ class PhotosLibraryGapicClient
      * }
      * ```
      *
-     * @param string $albumId      Identifier of the album to be requested. Must not be set if `shareToken` is
-     *                             set.
+     * @param string $albumId      Identifier of the album to be requested.
      * @param array  $optionalArgs {
      *                             Optional.
      *
-     *     @type string $shareToken
-     *          Share token of the album to be request. Must not be set if `albumId` is
-     *          set.
      *     @type RetrySettings|array $retrySettings
      *          Retry settings to use for this call. Can be a
      *          {@see Google\ApiCore\RetrySettings} object, or an associative array
@@ -635,12 +680,52 @@ class PhotosLibraryGapicClient
     {
         $request = new GetAlbumRequest();
         $request->setAlbumId($albumId);
-        if (isset($optionalArgs['shareToken'])) {
-            $request->setShareToken($optionalArgs['shareToken']);
-        }
 
         return $this->startCall(
             'GetAlbum',
+            Album::class,
+            $optionalArgs,
+            $request
+        )->wait();
+    }
+
+    /**
+     * Returns the album based on the specified `shareToken`.
+     *
+     * Sample code:
+     * ```
+     * $photosLibraryClient = new PhotosLibraryClient();
+     * try {
+     *     $shareToken = '';
+     *     $response = $photosLibraryClient->getSharedAlbum($shareToken);
+     * } finally {
+     *     $photosLibraryClient->close();
+     * }
+     * ```
+     *
+     * @param string $shareToken   Share token of the album to be requested.
+     * @param array  $optionalArgs {
+     *                             Optional.
+     *
+     *     @type RetrySettings|array $retrySettings
+     *          Retry settings to use for this call. Can be a
+     *          {@see Google\ApiCore\RetrySettings} object, or an associative array
+     *          of retry settings parameters. See the documentation on
+     *          {@see Google\ApiCore\RetrySettings} for example usage.
+     * }
+     *
+     * @return \Google\Photos\Library\V1\Album
+     *
+     * @throws ApiException if the remote call fails
+     * @experimental
+     */
+    public function getSharedAlbum($shareToken, array $optionalArgs = [])
+    {
+        $request = new GetSharedAlbumRequest();
+        $request->setShareToken($shareToken);
+
+        return $this->startCall(
+            'GetSharedAlbum',
             Album::class,
             $optionalArgs,
             $request
@@ -734,6 +819,50 @@ class PhotosLibraryGapicClient
         return $this->startCall(
             'JoinSharedAlbum',
             JoinSharedAlbumResponse::class,
+            $optionalArgs,
+            $request
+        )->wait();
+    }
+
+    /**
+     * Leaves a previously-joined shared album on behalf of the Google Photos
+     * user. The user must not own this album.
+     *
+     * Sample code:
+     * ```
+     * $photosLibraryClient = new PhotosLibraryClient();
+     * try {
+     *     $shareToken = '';
+     *     $response = $photosLibraryClient->leaveSharedAlbum($shareToken);
+     * } finally {
+     *     $photosLibraryClient->close();
+     * }
+     * ```
+     *
+     * @param string $shareToken   Token to leave the shared album on behalf of the user.
+     * @param array  $optionalArgs {
+     *                             Optional.
+     *
+     *     @type RetrySettings|array $retrySettings
+     *          Retry settings to use for this call. Can be a
+     *          {@see Google\ApiCore\RetrySettings} object, or an associative array
+     *          of retry settings parameters. See the documentation on
+     *          {@see Google\ApiCore\RetrySettings} for example usage.
+     * }
+     *
+     * @return \Google\Photos\Library\V1\LeaveSharedAlbumResponse
+     *
+     * @throws ApiException if the remote call fails
+     * @experimental
+     */
+    public function leaveSharedAlbum($shareToken, array $optionalArgs = [])
+    {
+        $request = new LeaveSharedAlbumRequest();
+        $request->setShareToken($shareToken);
+
+        return $this->startCall(
+            'LeaveSharedAlbum',
+            LeaveSharedAlbumResponse::class,
             $optionalArgs,
             $request
         )->wait();
@@ -866,5 +995,54 @@ class PhotosLibraryGapicClient
             ListSharedAlbumsResponse::class,
             $request
         );
+    }
+
+    /**
+     * Marks a previously shared album as private. This means that the album is
+     * no longer shared and all the non-owners will lose access to the album. All
+     * non-owner content will be removed from the album. If a non-owner has
+     * previously added the album to their library, they will retain all photos in
+     * their library. This action can only be performed on albums which were
+     * created by the developer via the API.
+     *
+     * Sample code:
+     * ```
+     * $photosLibraryClient = new PhotosLibraryClient();
+     * try {
+     *     $albumId = '';
+     *     $response = $photosLibraryClient->unshareAlbum($albumId);
+     * } finally {
+     *     $photosLibraryClient->close();
+     * }
+     * ```
+     *
+     * @param string $albumId      Identifier of the album to be unshared. This album id must belong to an
+     *                             album created by the developer.
+     * @param array  $optionalArgs {
+     *                             Optional.
+     *
+     *     @type RetrySettings|array $retrySettings
+     *          Retry settings to use for this call. Can be a
+     *          {@see Google\ApiCore\RetrySettings} object, or an associative array
+     *          of retry settings parameters. See the documentation on
+     *          {@see Google\ApiCore\RetrySettings} for example usage.
+     * }
+     *
+     * @return \Google\Photos\Library\V1\UnshareAlbumResponse
+     *
+     * @throws ApiException if the remote call fails
+     * @experimental
+     */
+    public function unshareAlbum($albumId, array $optionalArgs = [])
+    {
+        $request = new UnshareAlbumRequest();
+        $request->setAlbumId($albumId);
+
+        return $this->startCall(
+            'UnshareAlbum',
+            UnshareAlbumResponse::class,
+            $optionalArgs,
+            $request
+        )->wait();
     }
 }

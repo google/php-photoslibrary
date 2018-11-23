@@ -13,7 +13,7 @@
     }
   },
   "require": {
-    "google/gax": "^0.34.0",
+    "google/gax": "^0.37.0",
     "google/protobuf": "^3.5.1",
     "php" : "^5.5 || ^7.0"
   },

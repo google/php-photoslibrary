@@ -90,9 +90,9 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * If no filters are set, then all media items in the user's library are
      * returned.
      * If an album is set, all media items in the specified album are returned.
-     * If filters are specified, media items that match the filters from the user's
-     * library are listed.
-     * If you set both the album and the filters, the request results in an error.
+     * If filters are specified, media items that match the filters from the
+     * user's library are listed. If you set both the album and the filters, the
+     * request results in an error.
      * @param \Google\Photos\Library\V1\SearchMediaItemsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -120,7 +120,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Returns the media item for the specified media item `id`.
+     * Returns the media item for the specified media item identifier.
      * @param \Google\Photos\Library\V1\GetMediaItemRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -130,6 +130,20 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/GetMediaItem',
         $argument,
         ['\Google\Photos\Library\V1\MediaItem', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Returns the list of media items for the specified media item identifiers.
+     * @param \Google\Photos\Library\V1\BatchGetMediaItemsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function BatchGetMediaItems(\Google\Photos\Library\V1\BatchGetMediaItemsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/BatchGetMediaItems',
+        $argument,
+        ['\Google\Photos\Library\V1\BatchGetMediaItemsResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -149,9 +163,8 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Returns the album based on the specified `albumId` or `shareToken`.
-     * Exactly one of `albumId` and `shareToken` must be set.
-     * The `albumId` should be the ID of an album owned by the user or a shared
+     * Returns the album based on the specified `albumId`.
+     * The `albumId` must be the ID of an album owned by the user or a shared
      * album that the user has joined.
      * @param \Google\Photos\Library\V1\GetAlbumRequest $argument input argument
      * @param array $metadata metadata
@@ -160,6 +173,20 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
     public function GetAlbum(\Google\Photos\Library\V1\GetAlbumRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/GetAlbum',
+        $argument,
+        ['\Google\Photos\Library\V1\Album', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Returns the album based on the specified `shareToken`.
+     * @param \Google\Photos\Library\V1\GetSharedAlbumRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function GetSharedAlbum(\Google\Photos\Library\V1\GetSharedAlbumRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/GetSharedAlbum',
         $argument,
         ['\Google\Photos\Library\V1\Album', 'decode'],
         $metadata, $options);
@@ -194,6 +221,21 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Leaves a previously-joined shared album on behalf of the Google Photos
+     * user. The user must not own this album.
+     * @param \Google\Photos\Library\V1\LeaveSharedAlbumRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function LeaveSharedAlbum(\Google\Photos\Library\V1\LeaveSharedAlbumRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/LeaveSharedAlbum',
+        $argument,
+        ['\Google\Photos\Library\V1\LeaveSharedAlbumResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * Marks an album as shared and accessible to other users. This action can
      * only be performed on albums which were created by the developer via the
      * API.
@@ -221,6 +263,25 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/ListSharedAlbums',
         $argument,
         ['\Google\Photos\Library\V1\ListSharedAlbumsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Marks a previously shared album as private. This means that the album is
+     * no longer shared and all the non-owners will lose access to the album. All
+     * non-owner content will be removed from the album. If a non-owner has
+     * previously added the album to their library, they will retain all photos in
+     * their library. This action can only be performed on albums which were
+     * created by the developer via the API.
+     * @param \Google\Photos\Library\V1\UnshareAlbumRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function UnshareAlbum(\Google\Photos\Library\V1\UnshareAlbumRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/UnshareAlbum',
+        $argument,
+        ['\Google\Photos\Library\V1\UnshareAlbumResponse', 'decode'],
         $metadata, $options);
     }
 

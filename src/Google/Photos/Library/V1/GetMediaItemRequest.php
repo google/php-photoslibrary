@@ -17,7 +17,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetMediaItemRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Identifier of media item to be requested.
+     * Identifier of the media item to be requested.
      *
      * Generated from protobuf field <code>string media_item_id = 1;</code>
      */
@@ -30,7 +30,7 @@ class GetMediaItemRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $media_item_id
-     *           Identifier of media item to be requested.
+     *           Identifier of the media item to be requested.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,7 +39,7 @@ class GetMediaItemRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of media item to be requested.
+     * Identifier of the media item to be requested.
      *
      * Generated from protobuf field <code>string media_item_id = 1;</code>
      * @return string
@@ -50,7 +50,7 @@ class GetMediaItemRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of media item to be requested.
+     * Identifier of the media item to be requested.
      *
      * Generated from protobuf field <code>string media_item_id = 1;</code>
      * @param string $var

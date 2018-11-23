@@ -31,7 +31,9 @@ use Google\Photos\Library\V1\AddEnrichmentToAlbumResponse;
 use Google\Photos\Library\V1\Album;
 use Google\Photos\Library\V1\AlbumPosition;
 use Google\Photos\Library\V1\BatchCreateMediaItemsResponse;
+use Google\Photos\Library\V1\BatchGetMediaItemsResponse;
 use Google\Photos\Library\V1\JoinSharedAlbumResponse;
+use Google\Photos\Library\V1\LeaveSharedAlbumResponse;
 use Google\Photos\Library\V1\ListAlbumsResponse;
 use Google\Photos\Library\V1\ListMediaItemsResponse;
 use Google\Photos\Library\V1\ListSharedAlbumsResponse;
@@ -39,6 +41,7 @@ use Google\Photos\Library\V1\MediaItem;
 use Google\Photos\Library\V1\NewEnrichmentItem;
 use Google\Photos\Library\V1\SearchMediaItemsResponse;
 use Google\Photos\Library\V1\ShareAlbumResponse;
+use Google\Photos\Library\V1\UnshareAlbumResponse;
 use Google\Protobuf\Any;
 use Google\Rpc\Code;
 use stdClass;
@@ -453,6 +456,77 @@ class PhotosLibraryClientTest extends GeneratedTest
     /**
      * @test
      */
+    public function batchGetMediaItemsTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        // Mock response
+        $expectedResponse = new BatchGetMediaItemsResponse();
+        $transport->addResponse($expectedResponse);
+
+        // Mock request
+        $mediaItemIds = [];
+
+        $response = $client->batchGetMediaItems($mediaItemIds);
+        $this->assertEquals($expectedResponse, $response);
+        $actualRequests = $transport->popReceivedCalls();
+        $this->assertSame(1, count($actualRequests));
+        $actualFuncCall = $actualRequests[0]->getFuncCall();
+        $actualRequestObject = $actualRequests[0]->getRequestObject();
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/BatchGetMediaItems', $actualFuncCall);
+
+        $actualValue = $actualRequestObject->getMediaItemIds();
+
+        $this->assertProtobufEquals($mediaItemIds, $actualValue);
+
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function batchGetMediaItemsExceptionTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        $status = new stdClass();
+        $status->code = Code::DATA_LOSS;
+        $status->details = 'internal error';
+
+        $expectedExceptionMessage = json_encode([
+           'message' => 'internal error',
+           'code' => Code::DATA_LOSS,
+           'status' => 'DATA_LOSS',
+           'details' => [],
+        ], JSON_PRETTY_PRINT);
+        $transport->addResponse(null, $status);
+
+        // Mock request
+        $mediaItemIds = [];
+
+        try {
+            $client->batchGetMediaItems($mediaItemIds);
+            // If the $client method call did not throw, fail the test
+            $this->fail('Expected an ApiException, but no exception was thrown.');
+        } catch (ApiException $ex) {
+            $this->assertEquals($status->code, $ex->getCode());
+            $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
+        }
+
+        // Call popReceivedCalls to ensure the stub is exhausted
+        $transport->popReceivedCalls();
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
     public function listAlbumsTest()
     {
         $transport = $this->createTransport();
@@ -593,6 +667,91 @@ class PhotosLibraryClientTest extends GeneratedTest
 
         try {
             $client->getAlbum($albumId);
+            // If the $client method call did not throw, fail the test
+            $this->fail('Expected an ApiException, but no exception was thrown.');
+        } catch (ApiException $ex) {
+            $this->assertEquals($status->code, $ex->getCode());
+            $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
+        }
+
+        // Call popReceivedCalls to ensure the stub is exhausted
+        $transport->popReceivedCalls();
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function getSharedAlbumTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        // Mock response
+        $id = 'id3355';
+        $title = 'title110371416';
+        $productUrl = 'productUrl-1491291617';
+        $isWriteable = true;
+        $mediaItemsCount = 927196149;
+        $coverPhotoBaseUrl = 'coverPhotoBaseUrl145443830';
+        $coverPhotoMediaItemId = 'coverPhotoMediaItemId840621207';
+        $expectedResponse = new Album();
+        $expectedResponse->setId($id);
+        $expectedResponse->setTitle($title);
+        $expectedResponse->setProductUrl($productUrl);
+        $expectedResponse->setIsWriteable($isWriteable);
+        $expectedResponse->setMediaItemsCount($mediaItemsCount);
+        $expectedResponse->setCoverPhotoBaseUrl($coverPhotoBaseUrl);
+        $expectedResponse->setCoverPhotoMediaItemId($coverPhotoMediaItemId);
+        $transport->addResponse($expectedResponse);
+
+        // Mock request
+        $shareToken = 'shareToken407816601';
+
+        $response = $client->getSharedAlbum($shareToken);
+        $this->assertEquals($expectedResponse, $response);
+        $actualRequests = $transport->popReceivedCalls();
+        $this->assertSame(1, count($actualRequests));
+        $actualFuncCall = $actualRequests[0]->getFuncCall();
+        $actualRequestObject = $actualRequests[0]->getRequestObject();
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/GetSharedAlbum', $actualFuncCall);
+
+        $actualValue = $actualRequestObject->getShareToken();
+
+        $this->assertProtobufEquals($shareToken, $actualValue);
+
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function getSharedAlbumExceptionTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        $status = new stdClass();
+        $status->code = Code::DATA_LOSS;
+        $status->details = 'internal error';
+
+        $expectedExceptionMessage = json_encode([
+           'message' => 'internal error',
+           'code' => Code::DATA_LOSS,
+           'status' => 'DATA_LOSS',
+           'details' => [],
+        ], JSON_PRETTY_PRINT);
+        $transport->addResponse(null, $status);
+
+        // Mock request
+        $shareToken = 'shareToken407816601';
+
+        try {
+            $client->getSharedAlbum($shareToken);
             // If the $client method call did not throw, fail the test
             $this->fail('Expected an ApiException, but no exception was thrown.');
         } catch (ApiException $ex) {
@@ -760,6 +919,77 @@ class PhotosLibraryClientTest extends GeneratedTest
     /**
      * @test
      */
+    public function leaveSharedAlbumTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        // Mock response
+        $expectedResponse = new LeaveSharedAlbumResponse();
+        $transport->addResponse($expectedResponse);
+
+        // Mock request
+        $shareToken = 'shareToken407816601';
+
+        $response = $client->leaveSharedAlbum($shareToken);
+        $this->assertEquals($expectedResponse, $response);
+        $actualRequests = $transport->popReceivedCalls();
+        $this->assertSame(1, count($actualRequests));
+        $actualFuncCall = $actualRequests[0]->getFuncCall();
+        $actualRequestObject = $actualRequests[0]->getRequestObject();
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/LeaveSharedAlbum', $actualFuncCall);
+
+        $actualValue = $actualRequestObject->getShareToken();
+
+        $this->assertProtobufEquals($shareToken, $actualValue);
+
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function leaveSharedAlbumExceptionTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        $status = new stdClass();
+        $status->code = Code::DATA_LOSS;
+        $status->details = 'internal error';
+
+        $expectedExceptionMessage = json_encode([
+           'message' => 'internal error',
+           'code' => Code::DATA_LOSS,
+           'status' => 'DATA_LOSS',
+           'details' => [],
+        ], JSON_PRETTY_PRINT);
+        $transport->addResponse(null, $status);
+
+        // Mock request
+        $shareToken = 'shareToken407816601';
+
+        try {
+            $client->leaveSharedAlbum($shareToken);
+            // If the $client method call did not throw, fail the test
+            $this->fail('Expected an ApiException, but no exception was thrown.');
+        } catch (ApiException $ex) {
+            $this->assertEquals($status->code, $ex->getCode());
+            $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
+        }
+
+        // Call popReceivedCalls to ensure the stub is exhausted
+        $transport->popReceivedCalls();
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
     public function shareAlbumTest()
     {
         $transport = $this->createTransport();
@@ -886,6 +1116,77 @@ class PhotosLibraryClientTest extends GeneratedTest
 
         try {
             $client->listSharedAlbums();
+            // If the $client method call did not throw, fail the test
+            $this->fail('Expected an ApiException, but no exception was thrown.');
+        } catch (ApiException $ex) {
+            $this->assertEquals($status->code, $ex->getCode());
+            $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
+        }
+
+        // Call popReceivedCalls to ensure the stub is exhausted
+        $transport->popReceivedCalls();
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function unshareAlbumTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        // Mock response
+        $expectedResponse = new UnshareAlbumResponse();
+        $transport->addResponse($expectedResponse);
+
+        // Mock request
+        $albumId = 'albumId1532078315';
+
+        $response = $client->unshareAlbum($albumId);
+        $this->assertEquals($expectedResponse, $response);
+        $actualRequests = $transport->popReceivedCalls();
+        $this->assertSame(1, count($actualRequests));
+        $actualFuncCall = $actualRequests[0]->getFuncCall();
+        $actualRequestObject = $actualRequests[0]->getRequestObject();
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/UnshareAlbum', $actualFuncCall);
+
+        $actualValue = $actualRequestObject->getAlbumId();
+
+        $this->assertProtobufEquals($albumId, $actualValue);
+
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function unshareAlbumExceptionTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        $status = new stdClass();
+        $status->code = Code::DATA_LOSS;
+        $status->details = 'internal error';
+
+        $expectedExceptionMessage = json_encode([
+           'message' => 'internal error',
+           'code' => Code::DATA_LOSS,
+           'status' => 'DATA_LOSS',
+           'details' => [],
+        ], JSON_PRETTY_PRINT);
+        $transport->addResponse(null, $status);
+
+        // Mock request
+        $albumId = 'albumId1532078315';
+
+        try {
+            $client->unshareAlbum($albumId);
             // If the $client method call did not throw, fail the test
             $this->fail('Expected an ApiException, but no exception was thrown.');
         } catch (ApiException $ex) {
