@@ -140,7 +140,7 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
                 'headers' => [
                     'Content-type' => 'application/octet-stream',
                     'Authorization' => $this->getCredentialsWrapper()->getBearerString(),
-                    'X-Google-Upload-File-Name' => $fileName,
+                    'X-Goog-Upload-File-Name' => $fileName,
                 ],
                 'body' => $rawFile,
                 'timeout' => $this->uploadRetrySettings->retriesEnabled
