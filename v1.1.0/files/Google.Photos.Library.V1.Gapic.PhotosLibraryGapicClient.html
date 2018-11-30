@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+        <script type="text/javascript">
+        function loadExternalCodeSnippets() {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+                var src = pre.getAttribute('data-src');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist or is empty';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        $(document).ready(function(){
+            loadExternalCodeSnippets();
+        });
+        $('#source-view').on('shown', function () {
+            loadExternalCodeSnippets();
+        })
+    </script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Google.html">\Google</a></li>
+                                                        <li><a href="../namespaces/GPBMetadata.html">\GPBMetadata</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">99</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-2108186760"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-2108186760" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-652761877"></a>
+                                <a href="../namespaces/Google.html" style="margin-left: 30px; padding-left: 0">Google</a>
+            </div>
+            <div id="namespace-652761877" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-100913835"></a>
+                                <a href="../namespaces/Google.Photos.html" style="margin-left: 30px; padding-left: 0">Photos</a>
+            </div>
+            <div id="namespace-100913835" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-573704408"></a>
+                                <a href="../namespaces/Google.Photos.Library.html" style="margin-left: 30px; padding-left: 0">Library</a>
+            </div>
+            <div id="namespace-573704408" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-621455789"></a>
+                                <a href="../namespaces/Google.Photos.Library.V1.html" style="margin-left: 30px; padding-left: 0">V1</a>
+            </div>
+            <div id="namespace-621455789" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-454983391"></a>
+                                <a href="../namespaces/Google.Photos.Library.V1.AlbumPosition.html" style="margin-left: 30px; padding-left: 0">AlbumPosition</a>
+            </div>
+            <div id="namespace-454983391" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AlbumPosition.PositionType.html">PositionType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1667639315"></a>
+                                <a href="../namespaces/Google.Photos.Library.V1.Gapic.html" style="margin-left: 30px; padding-left: 0">Gapic</a>
+            </div>
+            <div id="namespace-1667639315" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html">PhotosLibraryGapicClient</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-195002747"></a>
+                                <a href="../namespaces/Google.Photos.Library.V1.MediaTypeFilter.html" style="margin-left: 30px; padding-left: 0">MediaTypeFilter</a>
+            </div>
+            <div id="namespace-195002747" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaTypeFilter.MediaType.html">MediaType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AddEnrichmentToAlbumRequest.html">AddEnrichmentToAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AddEnrichmentToAlbumResponse.html">AddEnrichmentToAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.Album.html">Album</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AlbumPosition.html">AlbumPosition</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AlbumPosition_PositionType.html">AlbumPosition_PositionType</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchCreateMediaItemsRequest.html">BatchCreateMediaItemsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchCreateMediaItemsResponse.html">BatchCreateMediaItemsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchGetMediaItemsRequest.html">BatchGetMediaItemsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchGetMediaItemsResponse.html">BatchGetMediaItemsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ContentCategory.html">ContentCategory</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ContentFilter.html">ContentFilter</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ContributorInfo.html">ContributorInfo</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.CreateAlbumRequest.html">CreateAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.DateFilter.html">DateFilter</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.DateRange.html">DateRange</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.EnrichmentItem.html">EnrichmentItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.Filters.html">Filters</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.FiltersBuilder.html">FiltersBuilder</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.GetAlbumRequest.html">GetAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.GetMediaItemRequest.html">GetMediaItemRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.GetSharedAlbumRequest.html">GetSharedAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.JoinSharedAlbumRequest.html">JoinSharedAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.JoinSharedAlbumResponse.html">JoinSharedAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.LeaveSharedAlbumRequest.html">LeaveSharedAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.LeaveSharedAlbumResponse.html">LeaveSharedAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListAlbumsRequest.html">ListAlbumsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListAlbumsResponse.html">ListAlbumsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListMediaItemsRequest.html">ListMediaItemsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListMediaItemsResponse.html">ListMediaItemsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListSharedAlbumsRequest.html">ListSharedAlbumsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListSharedAlbumsResponse.html">ListSharedAlbumsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.Location.html">Location</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.LocationEnrichment.html">LocationEnrichment</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MapEnrichment.html">MapEnrichment</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaItem.html">MediaItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaItemResult.html">MediaItemResult</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaMetadata.html">MediaMetadata</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaTypeFilter.html">MediaTypeFilter</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaTypeFilter_MediaType.html">MediaTypeFilter_MediaType</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.NewEnrichmentItem.html">NewEnrichmentItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.NewMediaItem.html">NewMediaItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.NewMediaItemResult.html">NewMediaItemResult</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.Photo.html">Photo</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html">PhotosLibraryClient</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.PhotosLibraryGrpcClient.html">PhotosLibraryGrpcClient</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.PhotosLibraryResourceFactory.html">PhotosLibraryResourceFactory</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.SearchMediaItemsRequest.html">SearchMediaItemsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.SearchMediaItemsResponse.html">SearchMediaItemsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ShareAlbumRequest.html">ShareAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ShareAlbumResponse.html">ShareAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.SharedAlbumOptions.html">SharedAlbumOptions</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ShareInfo.html">ShareInfo</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.SimpleMediaItem.html">SimpleMediaItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.TextEnrichment.html">TextEnrichment</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.UnshareAlbumRequest.html">UnshareAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.UnshareAlbumResponse.html">UnshareAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.UploadRetrySettings.html">UploadRetrySettings</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.Video.html">Video</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.VideoProcessingStatus.html">VideoProcessingStatus</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-907083193"></a>
+                                <a href="../namespaces/GPBMetadata.html" style="margin-left: 30px; padding-left: 0">GPBMetadata</a>
+            </div>
+            <div id="namespace-907083193" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-295704845"></a>
+                                <a href="../namespaces/GPBMetadata.Google.html" style="margin-left: 30px; padding-left: 0">Google</a>
+            </div>
+            <div id="namespace-295704845" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-307928853"></a>
+                                <a href="../namespaces/GPBMetadata.Google.Photos.html" style="margin-left: 30px; padding-left: 0">Photos</a>
+            </div>
+            <div id="namespace-307928853" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-397769496"></a>
+                                <a href="../namespaces/GPBMetadata.Google.Photos.Library.html" style="margin-left: 30px; padding-left: 0">Library</a>
+            </div>
+            <div id="namespace-397769496" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-45924317"></a>
+                                <a href="../namespaces/GPBMetadata.Google.Photos.Library.V1.html" style="margin-left: 30px; padding-left: 0">V1</a>
+            </div>
+            <div id="namespace-45924317" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/GPBMetadata.Google.Photos.Library.V1.PhotosLibrary.html">PhotosLibrary</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content file">
+                    <nav>
+                                                                    </nav>
+
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+                    <h1><small>Google/Photos/Library/V1/Gapic</small>PhotosLibraryGapicClient.php</h1>
+                    <p><em></em></p>
+                    
+
+                    
+                    
+                                        <h2>Classes</h2>
+                    <table class="table table-hover">
+                                            <tr>
+                            <td><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html">PhotosLibraryGapicClient</a></td>
+                            <td><em>Service Description: Service which allows developers to perform the following actions on behalf of
+the user:
+- upload media items directly to their Google Photos library
+- create albums
+- add media items (including album enrichments) to albums
+- list and download content from their Google Photos library
+- filter results by media type, date range or content category
+- create, join, and access shared albums.</em></td>
+                        </tr>
+                                        </table>
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                                                    <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\Default</div></dd>
+                        
+                        
+                    </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                            </table>
+
+                </aside>
+            </div>
+
+            
+            
+        </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label"></h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Google.html">\Google</a></li>
+                                                                            <li><a href="../namespaces/GPBMetadata.html">\GPBMetadata</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on November 30th, 2018 at 05:15.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
