@@ -135,6 +135,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
 
     /**
      * Returns the list of media items for the specified media item identifiers.
+     * Items are returned in the same order as the supplied identifiers.
      * @param \Google\Photos\Library\V1\BatchGetMediaItemsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

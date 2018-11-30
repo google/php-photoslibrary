@@ -525,6 +525,7 @@ class PhotosLibraryGapicClient
 
     /**
      * Returns the list of media items for the specified media item identifiers.
+     * Items are returned in the same order as the supplied identifiers.
      *
      * Sample code:
      * ```
@@ -538,6 +539,8 @@ class PhotosLibraryGapicClient
      * ```
      *
      * @param string[] $mediaItemIds Identifiers of the media items to be requested.
+     *                               Must not contain repeated identifiers and cannot be empty. The maximum
+     *                               number of media items that can be retrieved in one call is 50.
      * @param array    $optionalArgs {
      *                               Optional.
      *
