@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use Google\Photos\Library\V1\Album;
+use Google\Photos\Types\Album;
 use Google\Photos\Library\V1\PhotosLibraryClient;
 use Google\Photos\Library\V1\PhotosLibraryResourceFactory;
 use Google\Rpc\Code;
