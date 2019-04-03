@@ -18,7 +18,7 @@ class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
     /**
      * [Output only] Information about the shared album.
      *
-     * Generated from protobuf field <code>.google.photos.library.v1.ShareInfo share_info = 1;</code>
+     * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 1;</code>
      */
     private $share_info = null;
 
@@ -28,7 +28,7 @@ class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Google\Photos\Library\V1\ShareInfo $share_info
+     *     @type \Google\Photos\Types\ShareInfo $share_info
      *           [Output only] Information about the shared album.
      * }
      */
@@ -40,8 +40,8 @@ class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
     /**
      * [Output only] Information about the shared album.
      *
-     * Generated from protobuf field <code>.google.photos.library.v1.ShareInfo share_info = 1;</code>
-     * @return \Google\Photos\Library\V1\ShareInfo
+     * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 1;</code>
+     * @return \Google\Photos\Types\ShareInfo
      */
     public function getShareInfo()
     {
@@ -51,13 +51,13 @@ class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
     /**
      * [Output only] Information about the shared album.
      *
-     * Generated from protobuf field <code>.google.photos.library.v1.ShareInfo share_info = 1;</code>
-     * @param \Google\Photos\Library\V1\ShareInfo $var
+     * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 1;</code>
+     * @param \Google\Photos\Types\ShareInfo $var
      * @return $this
      */
     public function setShareInfo($var)
     {
-        GPBUtil::checkMessage($var, \Google\Photos\Library\V1\ShareInfo::class);
+        GPBUtil::checkMessage($var, \Google\Photos\Types\ShareInfo::class);
         $this->share_info = $var;
 
         return $this;

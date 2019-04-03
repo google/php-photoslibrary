@@ -19,7 +19,7 @@ class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
      * [Output only] List of albums shown in the Albums tab of the user's Google
      * Photos app.
      *
-     * Generated from protobuf field <code>repeated .google.photos.library.v1.Album albums = 1;</code>
+     * Generated from protobuf field <code>repeated .google.photos.types.Album albums = 1;</code>
      */
     private $albums;
     /**
@@ -36,7 +36,7 @@ class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Google\Photos\Library\V1\Album[]|\Google\Protobuf\Internal\RepeatedField $albums
+     *     @type \Google\Photos\Types\Album[]|\Google\Protobuf\Internal\RepeatedField $albums
      *           [Output only] List of albums shown in the Albums tab of the user's Google
      *           Photos app.
      *     @type string $next_page_token
@@ -53,7 +53,7 @@ class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
      * [Output only] List of albums shown in the Albums tab of the user's Google
      * Photos app.
      *
-     * Generated from protobuf field <code>repeated .google.photos.library.v1.Album albums = 1;</code>
+     * Generated from protobuf field <code>repeated .google.photos.types.Album albums = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getAlbums()
@@ -65,13 +65,13 @@ class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
      * [Output only] List of albums shown in the Albums tab of the user's Google
      * Photos app.
      *
-     * Generated from protobuf field <code>repeated .google.photos.library.v1.Album albums = 1;</code>
-     * @param \Google\Photos\Library\V1\Album[]|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>repeated .google.photos.types.Album albums = 1;</code>
+     * @param \Google\Photos\Types\Album[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAlbums($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Google\Photos\Library\V1\Album::class);
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Google\Photos\Types\Album::class);
         $this->albums = $arr;
 
         return $this;

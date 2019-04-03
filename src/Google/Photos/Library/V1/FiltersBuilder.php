@@ -19,6 +19,7 @@ namespace Google\Photos\Library\V1;
 
 use DateTime;
 use Google\Photos\Library\V1\MediaTypeFilter\MediaType;
+use Google\Photos\Types\DateRange;
 use Google\Type\Date;
 
 /**
