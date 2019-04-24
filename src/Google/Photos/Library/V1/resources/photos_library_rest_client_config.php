@@ -15,8 +15,15 @@ return [
             ],
             'BatchAddMediaItemsToAlbum' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/albums:batchAddMediaItems',
+                'uriTemplate' => '/v1/albums/{album_id=*}:batchAddMediaItems',
                 'body' => '*',
+                'placeholders' => [
+                    'album_id' => [
+                        'getters' => [
+                            'getAlbumId',
+                        ],
+                    ],
+                ],
             ],
             'SearchMediaItems' => [
                 'method' => 'post',

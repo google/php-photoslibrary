@@ -16,15 +16,16 @@ use Google\Protobuf\Internal\GPBUtil;
 class BatchAddMediaItemsToAlbumRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Identifier of the [MediaItem][google.photos.types.MediaItem](s) to be
+     * Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
      * added.
+     * The maximum number of media items that can be added in one call is 50.
      *
      * Generated from protobuf field <code>repeated string media_item_ids = 1;</code>
      */
     private $media_item_ids;
     /**
      * Identifier of the [Album][google.photos.types.Album] that the
-     * [MediaItem][google.photos.types.MediaItem](s) are added to.
+     * media items are added to.
      *
      * Generated from protobuf field <code>string album_id = 2;</code>
      */
@@ -37,11 +38,12 @@ class BatchAddMediaItemsToAlbumRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $media_item_ids
-     *           Identifier of the [MediaItem][google.photos.types.MediaItem](s) to be
+     *           Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
      *           added.
+     *           The maximum number of media items that can be added in one call is 50.
      *     @type string $album_id
      *           Identifier of the [Album][google.photos.types.Album] that the
-     *           [MediaItem][google.photos.types.MediaItem](s) are added to.
+     *           media items are added to.
      * }
      */
     public function __construct($data = NULL) {
@@ -50,8 +52,9 @@ class BatchAddMediaItemsToAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the [MediaItem][google.photos.types.MediaItem](s) to be
+     * Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
      * added.
+     * The maximum number of media items that can be added in one call is 50.
      *
      * Generated from protobuf field <code>repeated string media_item_ids = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -62,8 +65,9 @@ class BatchAddMediaItemsToAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the [MediaItem][google.photos.types.MediaItem](s) to be
+     * Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
      * added.
+     * The maximum number of media items that can be added in one call is 50.
      *
      * Generated from protobuf field <code>repeated string media_item_ids = 1;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
@@ -79,7 +83,7 @@ class BatchAddMediaItemsToAlbumRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Identifier of the [Album][google.photos.types.Album] that the
-     * [MediaItem][google.photos.types.MediaItem](s) are added to.
+     * media items are added to.
      *
      * Generated from protobuf field <code>string album_id = 2;</code>
      * @return string
@@ -91,7 +95,7 @@ class BatchAddMediaItemsToAlbumRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Identifier of the [Album][google.photos.types.Album] that the
-     * [MediaItem][google.photos.types.MediaItem](s) are added to.
+     * media items are added to.
      *
      * Generated from protobuf field <code>string album_id = 2;</code>
      * @param string $var

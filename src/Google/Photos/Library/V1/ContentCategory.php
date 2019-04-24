@@ -4,6 +4,8 @@
 
 namespace Google\Photos\Library\V1;
 
+use UnexpectedValueException;
+
 /**
  * This is a set of pre-defined content categories that you can filter on.
  *
@@ -133,5 +135,48 @@ class ContentCategory
      * Generated from protobuf enum <code>UTILITY = 19;</code>
      */
     const UTILITY = 19;
+
+    private static $valueToName = [
+        self::NONE => 'NONE',
+        self::LANDSCAPES => 'LANDSCAPES',
+        self::RECEIPTS => 'RECEIPTS',
+        self::CITYSCAPES => 'CITYSCAPES',
+        self::LANDMARKS => 'LANDMARKS',
+        self::SELFIES => 'SELFIES',
+        self::PEOPLE => 'PEOPLE',
+        self::PETS => 'PETS',
+        self::WEDDINGS => 'WEDDINGS',
+        self::BIRTHDAYS => 'BIRTHDAYS',
+        self::DOCUMENTS => 'DOCUMENTS',
+        self::TRAVEL => 'TRAVEL',
+        self::ANIMALS => 'ANIMALS',
+        self::FOOD => 'FOOD',
+        self::SPORT => 'SPORT',
+        self::NIGHT => 'NIGHT',
+        self::PERFORMANCES => 'PERFORMANCES',
+        self::WHITEBOARDS => 'WHITEBOARDS',
+        self::SCREENSHOTS => 'SCREENSHOTS',
+        self::UTILITY => 'UTILITY',
+    ];
+
+    public static function name($value)
+    {
+        if (!isset(self::$valueToName[$value])) {
+            throw new UnexpectedValueException(sprintf(
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
+        }
+        return self::$valueToName[$value];
+    }
+
+
+    public static function value($name)
+    {
+        $const = __CLASS__ . '::' . strtoupper($name);
+        if (!defined($const)) {
+            throw new UnexpectedValueException(sprintf(
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
+        }
+        return constant($const);
+    }
 }
 

@@ -4,6 +4,8 @@
 
 namespace Google\Photos\Types;
 
+use UnexpectedValueException;
+
 /**
  * Processing status of a video being uploaded to Google Photos.
  *
@@ -36,5 +38,32 @@ class VideoProcessingStatus
      * Generated from protobuf enum <code>FAILED = 3;</code>
      */
     const FAILED = 3;
+
+    private static $valueToName = [
+        self::UNSPECIFIED => 'UNSPECIFIED',
+        self::PROCESSING => 'PROCESSING',
+        self::READY => 'READY',
+        self::FAILED => 'FAILED',
+    ];
+
+    public static function name($value)
+    {
+        if (!isset(self::$valueToName[$value])) {
+            throw new UnexpectedValueException(sprintf(
+                    'Enum %s has no name defined for value %s', __CLASS__, $value));
+        }
+        return self::$valueToName[$value];
+    }
+
+
+    public static function value($name)
+    {
+        $const = __CLASS__ . '::' . strtoupper($name);
+        if (!defined($const)) {
+            throw new UnexpectedValueException(sprintf(
+                    'Enum %s has no value defined for name %s', __CLASS__, $name));
+        }
+        return constant($const);
+    }
 }
 

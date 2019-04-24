@@ -55,7 +55,7 @@ class MediaItem
             "50015a38676f6f676c652e676f6c616e672e6f72672f67656e70726f746f" .
             "2f676f6f676c65617069732f70686f746f732f74797065733b7479706573" .
             "620670726f746f33"
-        ));
+        ), true);
 
         static::$is_initialized = true;
     }
