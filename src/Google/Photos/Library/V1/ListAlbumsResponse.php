@@ -16,14 +16,14 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * [Output only] List of albums shown in the Albums tab of the user's Google
+     * Output only. List of albums shown in the Albums tab of the user's Google
      * Photos app.
      *
      * Generated from protobuf field <code>repeated .google.photos.types.Album albums = 1;</code>
      */
     private $albums;
     /**
-     * [Output only] Token to use to get the next set of albums. Populated if
+     * Output only. Token to use to get the next set of albums. Populated if
      * there are more albums to retrieve for this request.
      *
      * Generated from protobuf field <code>string next_page_token = 2;</code>
@@ -37,10 +37,10 @@ class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Photos\Types\Album[]|\Google\Protobuf\Internal\RepeatedField $albums
-     *           [Output only] List of albums shown in the Albums tab of the user's Google
+     *           Output only. List of albums shown in the Albums tab of the user's Google
      *           Photos app.
      *     @type string $next_page_token
-     *           [Output only] Token to use to get the next set of albums. Populated if
+     *           Output only. Token to use to get the next set of albums. Populated if
      *           there are more albums to retrieve for this request.
      * }
      */
@@ -50,7 +50,7 @@ class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Output only] List of albums shown in the Albums tab of the user's Google
+     * Output only. List of albums shown in the Albums tab of the user's Google
      * Photos app.
      *
      * Generated from protobuf field <code>repeated .google.photos.types.Album albums = 1;</code>
@@ -62,7 +62,7 @@ class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Output only] List of albums shown in the Albums tab of the user's Google
+     * Output only. List of albums shown in the Albums tab of the user's Google
      * Photos app.
      *
      * Generated from protobuf field <code>repeated .google.photos.types.Album albums = 1;</code>
@@ -78,7 +78,7 @@ class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Output only] Token to use to get the next set of albums. Populated if
+     * Output only. Token to use to get the next set of albums. Populated if
      * there are more albums to retrieve for this request.
      *
      * Generated from protobuf field <code>string next_page_token = 2;</code>
@@ -90,7 +90,7 @@ class ListAlbumsResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Output only] Token to use to get the next set of albums. Populated if
+     * Output only. Token to use to get the next set of albums. Populated if
      * there are more albums to retrieve for this request.
      *
      * Generated from protobuf field <code>string next_page_token = 2;</code>

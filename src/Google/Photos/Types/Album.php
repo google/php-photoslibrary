@@ -64,9 +64,12 @@ class Album extends \Google\Protobuf\Internal\Message
     private $media_items_count = 0;
     /**
      * [Output only] A URL to the cover photo's bytes. This shouldn't be used as
-     * is. Parameters should be appended to this URL before use. For example,
-     * `'=w2048-h1024'` sets the dimensions of
-     * the cover photo to have a width of 2048 px and height of 1024 px.
+     * is. Parameters should be appended to this URL before use. See the
+     * [developer
+     * documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+     * for a complete list of supported parameters. For example,
+     * `'=w2048-h1024'` sets the dimensions of the cover photo to have a width of
+     * 2048 px and height of 1024 px.
      *
      * Generated from protobuf field <code>string cover_photo_base_url = 7;</code>
      */
@@ -108,9 +111,12 @@ class Album extends \Google\Protobuf\Internal\Message
      *           [Output only] The number of media items in the album.
      *     @type string $cover_photo_base_url
      *           [Output only] A URL to the cover photo's bytes. This shouldn't be used as
-     *           is. Parameters should be appended to this URL before use. For example,
-     *           `'=w2048-h1024'` sets the dimensions of
-     *           the cover photo to have a width of 2048 px and height of 1024 px.
+     *           is. Parameters should be appended to this URL before use. See the
+     *           [developer
+     *           documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+     *           for a complete list of supported parameters. For example,
+     *           `'=w2048-h1024'` sets the dimensions of the cover photo to have a width of
+     *           2048 px and height of 1024 px.
      *     @type string $cover_photo_media_item_id
      *           [Output only] Identifier for the media item associated with the cover
      *           photo.
@@ -297,9 +303,12 @@ class Album extends \Google\Protobuf\Internal\Message
 
     /**
      * [Output only] A URL to the cover photo's bytes. This shouldn't be used as
-     * is. Parameters should be appended to this URL before use. For example,
-     * `'=w2048-h1024'` sets the dimensions of
-     * the cover photo to have a width of 2048 px and height of 1024 px.
+     * is. Parameters should be appended to this URL before use. See the
+     * [developer
+     * documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+     * for a complete list of supported parameters. For example,
+     * `'=w2048-h1024'` sets the dimensions of the cover photo to have a width of
+     * 2048 px and height of 1024 px.
      *
      * Generated from protobuf field <code>string cover_photo_base_url = 7;</code>
      * @return string
@@ -311,9 +320,12 @@ class Album extends \Google\Protobuf\Internal\Message
 
     /**
      * [Output only] A URL to the cover photo's bytes. This shouldn't be used as
-     * is. Parameters should be appended to this URL before use. For example,
-     * `'=w2048-h1024'` sets the dimensions of
-     * the cover photo to have a width of 2048 px and height of 1024 px.
+     * is. Parameters should be appended to this URL before use. See the
+     * [developer
+     * documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+     * for a complete list of supported parameters. For example,
+     * `'=w2048-h1024'` sets the dimensions of the cover photo to have a width of
+     * 2048 px and height of 1024 px.
      *
      * Generated from protobuf field <code>string cover_photo_base_url = 7;</code>
      * @param string $var

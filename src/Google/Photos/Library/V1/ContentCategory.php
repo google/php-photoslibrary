@@ -135,6 +135,48 @@ class ContentCategory
      * Generated from protobuf enum <code>UTILITY = 19;</code>
      */
     const UTILITY = 19;
+    /**
+     * Media items containing art.
+     *
+     * Generated from protobuf enum <code>ARTS = 20;</code>
+     */
+    const ARTS = 20;
+    /**
+     * Media items containing crafts.
+     *
+     * Generated from protobuf enum <code>CRAFTS = 21;</code>
+     */
+    const CRAFTS = 21;
+    /**
+     * Media items related to fashion.
+     *
+     * Generated from protobuf enum <code>FASHION = 22;</code>
+     */
+    const FASHION = 22;
+    /**
+     * Media items containing houses.
+     *
+     * Generated from protobuf enum <code>HOUSES = 23;</code>
+     */
+    const HOUSES = 23;
+    /**
+     * Media items containing gardens.
+     *
+     * Generated from protobuf enum <code>GARDENS = 24;</code>
+     */
+    const GARDENS = 24;
+    /**
+     * Media items containing flowers.
+     *
+     * Generated from protobuf enum <code>FLOWERS = 25;</code>
+     */
+    const FLOWERS = 25;
+    /**
+     * Media items taken of holidays.
+     *
+     * Generated from protobuf enum <code>HOLIDAYS = 26;</code>
+     */
+    const HOLIDAYS = 26;
 
     private static $valueToName = [
         self::NONE => 'NONE',
@@ -157,6 +199,13 @@ class ContentCategory
         self::WHITEBOARDS => 'WHITEBOARDS',
         self::SCREENSHOTS => 'SCREENSHOTS',
         self::UTILITY => 'UTILITY',
+        self::ARTS => 'ARTS',
+        self::CRAFTS => 'CRAFTS',
+        self::FASHION => 'FASHION',
+        self::HOUSES => 'HOUSES',
+        self::GARDENS => 'GARDENS',
+        self::FLOWERS => 'FLOWERS',
+        self::HOLIDAYS => 'HOLIDAYS',
     ];
 
     public static function name($value)

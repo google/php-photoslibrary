@@ -37,9 +37,12 @@ class MediaItem extends \Google\Protobuf\Internal\Message
      */
     private $product_url = '';
     /**
-     * A URL to the media item's bytes. This shouldn't be used directly to access
-     * the media item. For example, `'=w2048-h1024'` will set the dimensions of a
-     * media item of type photo to have a width of 2048 px and height of 1024 px.
+     * A URL to the media item's bytes. This shouldn't be used as is. Parameters
+     * should be appended to this URL before use. See the [developer
+     * documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+     * for a complete list of supported parameters. For example, `'=w2048-h1024'`
+     * will set the dimensions of a media item of type photo to have a width of
+     * 2048 px and height of 1024 px.
      *
      * Generated from protobuf field <code>string base_url = 4;</code>
      */
@@ -87,9 +90,12 @@ class MediaItem extends \Google\Protobuf\Internal\Message
      *           Google Photos URL for the media item. This link is available to
      *           the user only if they're signed in.
      *     @type string $base_url
-     *           A URL to the media item's bytes. This shouldn't be used directly to access
-     *           the media item. For example, `'=w2048-h1024'` will set the dimensions of a
-     *           media item of type photo to have a width of 2048 px and height of 1024 px.
+     *           A URL to the media item's bytes. This shouldn't be used as is. Parameters
+     *           should be appended to this URL before use. See the [developer
+     *           documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+     *           for a complete list of supported parameters. For example, `'=w2048-h1024'`
+     *           will set the dimensions of a media item of type photo to have a width of
+     *           2048 px and height of 1024 px.
      *     @type string $mime_type
      *           MIME type of the media item. For example, `image/jpeg`.
      *     @type \Google\Photos\Types\MediaMetadata $media_metadata
@@ -192,9 +198,12 @@ class MediaItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A URL to the media item's bytes. This shouldn't be used directly to access
-     * the media item. For example, `'=w2048-h1024'` will set the dimensions of a
-     * media item of type photo to have a width of 2048 px and height of 1024 px.
+     * A URL to the media item's bytes. This shouldn't be used as is. Parameters
+     * should be appended to this URL before use. See the [developer
+     * documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+     * for a complete list of supported parameters. For example, `'=w2048-h1024'`
+     * will set the dimensions of a media item of type photo to have a width of
+     * 2048 px and height of 1024 px.
      *
      * Generated from protobuf field <code>string base_url = 4;</code>
      * @return string
@@ -205,9 +214,12 @@ class MediaItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A URL to the media item's bytes. This shouldn't be used directly to access
-     * the media item. For example, `'=w2048-h1024'` will set the dimensions of a
-     * media item of type photo to have a width of 2048 px and height of 1024 px.
+     * A URL to the media item's bytes. This shouldn't be used as is. Parameters
+     * should be appended to this URL before use. See the [developer
+     * documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+     * for a complete list of supported parameters. For example, `'=w2048-h1024'`
+     * will set the dimensions of a media item of type photo to have a width of
+     * 2048 px and height of 1024 px.
      *
      * Generated from protobuf field <code>string base_url = 4;</code>
      * @param string $var

@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * [Output only] Information about the shared album.
+     * Output only. Information about the shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 1;</code>
      */
@@ -29,7 +29,7 @@ class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Photos\Types\ShareInfo $share_info
-     *           [Output only] Information about the shared album.
+     *           Output only. Information about the shared album.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,7 +38,7 @@ class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Output only] Information about the shared album.
+     * Output only. Information about the shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 1;</code>
      * @return \Google\Photos\Types\ShareInfo
@@ -49,7 +49,7 @@ class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Output only] Information about the shared album.
+     * Output only. Information about the shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 1;</code>
      * @param \Google\Photos\Types\ShareInfo $var
