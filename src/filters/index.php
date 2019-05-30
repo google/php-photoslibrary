@@ -55,6 +55,14 @@ if (isset($_GET['excluded-categories'])) {
     }
 }
 
+if (isset($_GET['included-features']) && $_GET['included-features'] != '') {
+    foreach ($_GET['included-features'] as $includedFeature) {
+        // These feature strings are from the array PhotosLibraryClient::features().
+        $filtersBuilder->addIncludedFeatureFromString($includedFeature);
+        echo $includedFeature;
+    }
+}
+
 if (isset($_GET['start-date']) && $_GET['start-date'] != '') {
     $startDate = new DateTime($_GET['start-date']);
 

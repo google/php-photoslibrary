@@ -88,7 +88,21 @@ $this->layout(
         </div>
     </div>
 
-    <h4>Toggle item properties</h4>
+  <h4>Item Features</h4>
+  <div class="columns">
+      <?php foreach ($features as $feature) : ?>
+        <div>
+          <label class="mdl-checkbox mdl-js-checkbox" for="include-feature-<?= $feature ?>">
+            <input class="mdl-checkbox__input" type="checkbox" id="include-feature-<?= $feature ?>"
+                   name="included-features[]"
+                   value="<?= $feature ?>">
+            <span class="mdl-checkbox__label"><?= ucfirst(strtolower($feature)) ?></span>
+          </label>
+        </div>
+      <?php endforeach ?>
+  </div>
+
+  <h4>Toggle item properties</h4>
     <div >
         <div class="switch">
             <label class="mdl-switch mdl-js-switch" for="archived-media">

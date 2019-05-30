@@ -26,5 +26,6 @@ use Google\Photos\Library\V1\PhotosLibraryClient;
 echo $templates->render(
     'filters::filters',
     ['categories' => PhotosLibraryClient::contentCategories(),
+    'features' => PhotosLibraryClient::features(),
     'mediaTypes' => PhotosLibraryClient::mediaTypes()]
 );
