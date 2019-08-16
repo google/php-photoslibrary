@@ -19,7 +19,7 @@ require '../common/common.php';
 
 use Google\ApiCore\ApiException;
 use Google\Photos\Library\V1\PhotosLibraryClient;
-use Google\Photos\Library\V1\SharedAlbumOptions;
+use Google\Photos\Types\SharedAlbumOptions;
 
 checkCredentials($templates->render('share::connect'));
 $photosLibraryClient = new PhotosLibraryClient(['credentials' => $_SESSION['credentials']]);
