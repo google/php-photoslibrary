@@ -5,6 +5,7 @@
   "minimum-stability":"stable",
   "require": {
     "google/photos-library": "^1.0",
-    "league/plates": "^3.0.0"
+    "league/plates": "^3.0.0",
+    "google/auth": "^1.5.0"
   }
 }
