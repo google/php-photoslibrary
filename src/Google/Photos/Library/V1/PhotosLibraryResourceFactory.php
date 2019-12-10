@@ -69,6 +69,39 @@ class PhotosLibraryResourceFactory
     }
 
     /**
+     * Returns a {@link NewMediaItem} with the given fileName and a {@link SimpleMediaItem} with
+     * the given upload token.
+     *
+     * @param string $uploadToken
+     * @param string $fileName
+     * @return NewMediaItem
+     */
+    public static function newMediaItemWithFileName($uploadToken, $fileName)
+    {
+        $newMediaItem = self::newMediaItem($uploadToken);
+        $newMediaItem->setFileName($fileName);
+        return $newMediaItem;
+    }
+
+    /**
+     * Returns a {@link NewMediaItem} with the given description, fileName and a {@link SimpleMediaItem} with
+     * the given upload token.
+     *
+     * @param string $uploadToken
+     * @param string $description
+     * @param string $fileName
+     * @return NewMediaItem
+     */
+    public static function newMediaItemWithDescriptionAndFileName($uploadToken, $description,
+                                                                  $fileName)
+    {
+        $newMediaItem = self::newMediaItem($uploadToken);
+        $newMediaItem->setDescription($description);
+        $newMediaItem->setFileName($fileName);
+        return $newMediaItem;
+    }
+
+    /**
      * Returns an {@link AlbumPosition} describing the position after the given media item.
      *
      * @param string $mediaItemId

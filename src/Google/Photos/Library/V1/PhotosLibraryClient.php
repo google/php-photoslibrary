@@ -21,10 +21,10 @@
 
 namespace Google\Photos\Library\V1;
 
-    use Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient;
-    use GuzzleHttp\Client;
-    use GuzzleHttp\HandlerStack;
-    use GuzzleHttp\Middleware;
+use Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient;
+use GuzzleHttp\Client;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Middleware;
 
 /**
  * {@inheritdoc}
@@ -127,22 +127,32 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
      *
      * @param string $rawFile The raw bytes of the file, obtained by something like
      *     file_get_contents().
-     * @param string $fileName The name of the file to be uploaded.
+     * @param string $fileName The name of the file to be uploaded. This is no longer recommended
+     *     Filenames should be set in the batchCreate call instead.
+     * @param string $mimeType The MIME type of the file to be uploaded. For example, text/html.
      * @return string An upload token
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function upload($rawFile, $fileName)
+    public function upload($rawFile, $fileName = '', $mimeType = '')
     {
+        $headers = [
+            'Content-type' => 'application/octet-stream',
+            'Authorization' => $this->getCredentialsWrapper()->getBearerString(),
+            'X-Goog-Upload-Protocol' => 'raw',
+        ];
+
+        if ($fileName) {;
+            $headers['X-Goog-Upload-File-Name'] = $fileName;
+        }
+        if ($mimeType) {
+            $headers['X-Goog-Upload-Content-Type'] = $mimeType;
+        }
+
         $response = $this->httpClient->request(
             'POST',
             self::UPLOAD_URL,
             [
-                'headers' => [
-                    'Content-type' => 'application/octet-stream',
-                    'Authorization' => $this->getCredentialsWrapper()->getBearerString(),
-                    'X-Goog-Upload-File-Name' => $fileName,
-                    'X-Goog-Upload-Protocol' => 'raw'
-                ],
+                'headers' => $headers,
                 'body' => $rawFile,
                 'timeout' => $this->uploadRetrySettings->retriesEnabled
                     ? $this->uploadRetrySettings->singleTimeoutMillis
