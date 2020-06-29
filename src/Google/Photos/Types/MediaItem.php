@@ -21,21 +21,21 @@ class MediaItem extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string id = 1;</code>
      */
-    private $id = '';
+    protected $id = '';
     /**
      * Description of the media item. This is shown to the user in the item's
      * info section in the Google Photos app.
      *
      * Generated from protobuf field <code>string description = 2;</code>
      */
-    private $description = '';
+    protected $description = '';
     /**
      * Google Photos URL for the media item. This link is available to
      * the user only if they're signed in.
      *
      * Generated from protobuf field <code>string product_url = 3;</code>
      */
-    private $product_url = '';
+    protected $product_url = '';
     /**
      * A URL to the media item's bytes. This shouldn't be used as is. Parameters
      * should be appended to this URL before use. See the [developer
@@ -46,33 +46,33 @@ class MediaItem extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string base_url = 4;</code>
      */
-    private $base_url = '';
+    protected $base_url = '';
     /**
      * MIME type of the media item. For example, `image/jpeg`.
      *
      * Generated from protobuf field <code>string mime_type = 5;</code>
      */
-    private $mime_type = '';
+    protected $mime_type = '';
     /**
      * Metadata related to the media item, such as, height, width, or
      * creation time.
      *
      * Generated from protobuf field <code>.google.photos.types.MediaMetadata media_metadata = 6;</code>
      */
-    private $media_metadata = null;
+    protected $media_metadata = null;
     /**
      * Information about the user who created this media item.
      *
      * Generated from protobuf field <code>.google.photos.types.ContributorInfo contributor_info = 7;</code>
      */
-    private $contributor_info = null;
+    protected $contributor_info = null;
     /**
      * Filename of the media item. This is shown to the user in the item's info
      * section in the Google Photos app.
      *
      * Generated from protobuf field <code>string filename = 8;</code>
      */
-    private $filename = '';
+    protected $filename = '';
 
     /**
      * Constructor.

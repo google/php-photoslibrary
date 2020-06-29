@@ -20,13 +20,13 @@ class Location extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string location_name = 1;</code>
      */
-    private $location_name = '';
+    protected $location_name = '';
     /**
      * Position of the location on the map.
      *
      * Generated from protobuf field <code>.google.type.LatLng latlng = 2;</code>
      */
-    private $latlng = null;
+    protected $latlng = null;
 
     /**
      * Constructor.

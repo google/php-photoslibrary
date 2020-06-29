@@ -21,13 +21,13 @@ class ShareAlbumRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string album_id = 1;</code>
      */
-    private $album_id = '';
+    protected $album_id = '';
     /**
      * Options to be set when converting the album to a shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.SharedAlbumOptions shared_album_options = 2;</code>
      */
-    private $shared_album_options = null;
+    protected $shared_album_options = null;
 
     /**
      * Constructor.

@@ -20,7 +20,7 @@ class NewMediaItemResult extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string upload_token = 1;</code>
      */
-    private $upload_token = '';
+    protected $upload_token = '';
     /**
      * If an error occurred during the creation of this media item, this field
      * is  populated with information related to the error. For details regarding
@@ -28,14 +28,14 @@ class NewMediaItemResult extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.rpc.Status status = 2;</code>
      */
-    private $status = null;
+    protected $status = null;
     /**
      * Media item created with the upload token. It's populated if no errors
      * occurred and the media item was created successfully.
      *
      * Generated from protobuf field <code>.google.photos.types.MediaItem media_item = 3;</code>
      */
-    private $media_item = null;
+    protected $media_item = null;
 
     /**
      * Constructor.

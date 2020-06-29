@@ -29,15 +29,15 @@ class SearchMediaItemsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string album_id = 1;</code>
      */
-    private $album_id = '';
+    protected $album_id = '';
     /**
-     * Maximum number of media items to return in the response. The default number
-     * of media items to return at a time is 25. The maximum
-     * `pageSize` is 100.
+     * Maximum number of media items to return in the response. Fewer media items
+     * might be returned than the specified number. The default `pageSize` is 25,
+     * the maximum is 100.
      *
      * Generated from protobuf field <code>int32 page_size = 2;</code>
      */
-    private $page_size = 0;
+    protected $page_size = 0;
     /**
      * A continuation token to get the next page of the results. Adding this to
      * the request returns the rows after the `pageToken`. The `pageToken` should
@@ -46,14 +46,14 @@ class SearchMediaItemsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string page_token = 3;</code>
      */
-    private $page_token = '';
+    protected $page_token = '';
     /**
      * Filters to apply to the request. Can't be set in conjunction with an
      * `albumId`.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.Filters filters = 4;</code>
      */
-    private $filters = null;
+    protected $filters = null;
 
     /**
      * Constructor.
@@ -65,9 +65,9 @@ class SearchMediaItemsRequest extends \Google\Protobuf\Internal\Message
      *           Identifier of an album. If populated, lists all media items in
      *           specified album. Can't set in conjunction with any filters.
      *     @type int $page_size
-     *           Maximum number of media items to return in the response. The default number
-     *           of media items to return at a time is 25. The maximum
-     *           `pageSize` is 100.
+     *           Maximum number of media items to return in the response. Fewer media items
+     *           might be returned than the specified number. The default `pageSize` is 25,
+     *           the maximum is 100.
      *     @type string $page_token
      *           A continuation token to get the next page of the results. Adding this to
      *           the request returns the rows after the `pageToken`. The `pageToken` should
@@ -112,9 +112,9 @@ class SearchMediaItemsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Maximum number of media items to return in the response. The default number
-     * of media items to return at a time is 25. The maximum
-     * `pageSize` is 100.
+     * Maximum number of media items to return in the response. Fewer media items
+     * might be returned than the specified number. The default `pageSize` is 25,
+     * the maximum is 100.
      *
      * Generated from protobuf field <code>int32 page_size = 2;</code>
      * @return int
@@ -125,9 +125,9 @@ class SearchMediaItemsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Maximum number of media items to return in the response. The default number
-     * of media items to return at a time is 25. The maximum
-     * `pageSize` is 100.
+     * Maximum number of media items to return in the response. Fewer media items
+     * might be returned than the specified number. The default `pageSize` is 25,
+     * the maximum is 100.
      *
      * Generated from protobuf field <code>int32 page_size = 2;</code>
      * @param int $var

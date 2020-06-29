@@ -21,7 +21,7 @@ class LeaveSharedAlbumRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string share_token = 1;</code>
      */
-    private $share_token = '';
+    protected $share_token = '';
 
     /**
      * Constructor.

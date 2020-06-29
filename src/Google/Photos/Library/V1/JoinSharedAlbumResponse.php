@@ -20,7 +20,7 @@ class JoinSharedAlbumResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.types.Album album = 1;</code>
      */
-    private $album = null;
+    protected $album = null;
 
     /**
      * Constructor.

@@ -21,37 +21,37 @@ class Photo extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string camera_make = 1;</code>
      */
-    private $camera_make = '';
+    protected $camera_make = '';
     /**
      * Model of the camera with which the photo was taken.
      *
      * Generated from protobuf field <code>string camera_model = 2;</code>
      */
-    private $camera_model = '';
+    protected $camera_model = '';
     /**
      * Focal length of the camera lens with which the photo was taken.
      *
      * Generated from protobuf field <code>float focal_length = 3;</code>
      */
-    private $focal_length = 0.0;
+    protected $focal_length = 0.0;
     /**
      * Aperture f number of the camera lens with which the photo was taken.
      *
      * Generated from protobuf field <code>float aperture_f_number = 4;</code>
      */
-    private $aperture_f_number = 0.0;
+    protected $aperture_f_number = 0.0;
     /**
      * ISO of the camera with which the photo was taken.
      *
      * Generated from protobuf field <code>int32 iso_equivalent = 5;</code>
      */
-    private $iso_equivalent = 0;
+    protected $iso_equivalent = 0;
     /**
      * Exposure time of the camera aperture when the photo was taken.
      *
      * Generated from protobuf field <code>.google.protobuf.Duration exposure_time = 6;</code>
      */
-    private $exposure_time = null;
+    protected $exposure_time = null;
 
     /**
      * Constructor.

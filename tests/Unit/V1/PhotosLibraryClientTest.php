@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +45,7 @@ use Google\Photos\Library\V1\UnshareAlbumResponse;
 use Google\Photos\Types\Album;
 use Google\Photos\Types\MediaItem;
 use Google\Protobuf\Any;
+use Google\Protobuf\FieldMask;
 use Google\Rpc\Code;
 use stdClass;
 
@@ -1349,6 +1350,184 @@ class PhotosLibraryClientTest extends GeneratedTest
 
         try {
             $client->batchRemoveMediaItemsFromAlbum($albumId, $mediaItemIds);
+            // If the $client method call did not throw, fail the test
+            $this->fail('Expected an ApiException, but no exception was thrown.');
+        } catch (ApiException $ex) {
+            $this->assertEquals($status->code, $ex->getCode());
+            $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
+        }
+
+        // Call popReceivedCalls to ensure the stub is exhausted
+        $transport->popReceivedCalls();
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function updateAlbumTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        // Mock response
+        $id = 'id3355';
+        $title = 'title110371416';
+        $productUrl = 'productUrl-1491291617';
+        $isWriteable = true;
+        $mediaItemsCount = 927196149;
+        $coverPhotoBaseUrl = 'coverPhotoBaseUrl145443830';
+        $coverPhotoMediaItemId = 'coverPhotoMediaItemId840621207';
+        $expectedResponse = new Album();
+        $expectedResponse->setId($id);
+        $expectedResponse->setTitle($title);
+        $expectedResponse->setProductUrl($productUrl);
+        $expectedResponse->setIsWriteable($isWriteable);
+        $expectedResponse->setMediaItemsCount($mediaItemsCount);
+        $expectedResponse->setCoverPhotoBaseUrl($coverPhotoBaseUrl);
+        $expectedResponse->setCoverPhotoMediaItemId($coverPhotoMediaItemId);
+        $transport->addResponse($expectedResponse);
+
+        // Mock request
+        $album = new Album();
+        $updateMask = new FieldMask();
+
+        $response = $client->updateAlbum($album, $updateMask);
+        $this->assertEquals($expectedResponse, $response);
+        $actualRequests = $transport->popReceivedCalls();
+        $this->assertSame(1, count($actualRequests));
+        $actualFuncCall = $actualRequests[0]->getFuncCall();
+        $actualRequestObject = $actualRequests[0]->getRequestObject();
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/UpdateAlbum', $actualFuncCall);
+
+        $actualValue = $actualRequestObject->getAlbum();
+
+        $this->assertProtobufEquals($album, $actualValue);
+        $actualValue = $actualRequestObject->getUpdateMask();
+
+        $this->assertProtobufEquals($updateMask, $actualValue);
+
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function updateAlbumExceptionTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        $status = new stdClass();
+        $status->code = Code::DATA_LOSS;
+        $status->details = 'internal error';
+
+        $expectedExceptionMessage = json_encode([
+           'message' => 'internal error',
+           'code' => Code::DATA_LOSS,
+           'status' => 'DATA_LOSS',
+           'details' => [],
+        ], JSON_PRETTY_PRINT);
+        $transport->addResponse(null, $status);
+
+        // Mock request
+        $album = new Album();
+        $updateMask = new FieldMask();
+
+        try {
+            $client->updateAlbum($album, $updateMask);
+            // If the $client method call did not throw, fail the test
+            $this->fail('Expected an ApiException, but no exception was thrown.');
+        } catch (ApiException $ex) {
+            $this->assertEquals($status->code, $ex->getCode());
+            $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
+        }
+
+        // Call popReceivedCalls to ensure the stub is exhausted
+        $transport->popReceivedCalls();
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function updateMediaItemTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        // Mock response
+        $id = 'id3355';
+        $description = 'description-1724546052';
+        $productUrl = 'productUrl-1491291617';
+        $baseUrl = 'baseUrl-1721160959';
+        $mimeType = 'mimeType-196041627';
+        $filename = 'filename-734768633';
+        $expectedResponse = new MediaItem();
+        $expectedResponse->setId($id);
+        $expectedResponse->setDescription($description);
+        $expectedResponse->setProductUrl($productUrl);
+        $expectedResponse->setBaseUrl($baseUrl);
+        $expectedResponse->setMimeType($mimeType);
+        $expectedResponse->setFilename($filename);
+        $transport->addResponse($expectedResponse);
+
+        // Mock request
+        $mediaItem = new MediaItem();
+        $updateMask = new FieldMask();
+
+        $response = $client->updateMediaItem($mediaItem, $updateMask);
+        $this->assertEquals($expectedResponse, $response);
+        $actualRequests = $transport->popReceivedCalls();
+        $this->assertSame(1, count($actualRequests));
+        $actualFuncCall = $actualRequests[0]->getFuncCall();
+        $actualRequestObject = $actualRequests[0]->getRequestObject();
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/UpdateMediaItem', $actualFuncCall);
+
+        $actualValue = $actualRequestObject->getMediaItem();
+
+        $this->assertProtobufEquals($mediaItem, $actualValue);
+        $actualValue = $actualRequestObject->getUpdateMask();
+
+        $this->assertProtobufEquals($updateMask, $actualValue);
+
+        $this->assertTrue($transport->isExhausted());
+    }
+
+    /**
+     * @test
+     */
+    public function updateMediaItemExceptionTest()
+    {
+        $transport = $this->createTransport();
+        $client = $this->createClient(['transport' => $transport]);
+
+        $this->assertTrue($transport->isExhausted());
+
+        $status = new stdClass();
+        $status->code = Code::DATA_LOSS;
+        $status->details = 'internal error';
+
+        $expectedExceptionMessage = json_encode([
+           'message' => 'internal error',
+           'code' => Code::DATA_LOSS,
+           'status' => 'DATA_LOSS',
+           'details' => [],
+        ], JSON_PRETTY_PRINT);
+        $transport->addResponse(null, $status);
+
+        // Mock request
+        $mediaItem = new MediaItem();
+        $updateMask = new FieldMask();
+
+        try {
+            $client->updateMediaItem($mediaItem, $updateMask);
             // If the $client method call did not throw, fail the test
             $this->fail('Expected an ApiException, but no exception was thrown.');
         } catch (ApiException $ex) {

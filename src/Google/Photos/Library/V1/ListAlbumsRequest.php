@@ -18,12 +18,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class ListAlbumsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Maximum number of albums to return in the response. The default number of
-     * albums to return at a time is 20. The maximum `pageSize` is 50.
+     * Maximum number of albums to return in the response. Fewer albums might be
+     * returned than the specified number. The default `pageSize` is 20, the
+     * maximum is 50.
      *
      * Generated from protobuf field <code>int32 page_size = 1;</code>
      */
-    private $page_size = 0;
+    protected $page_size = 0;
     /**
      * A continuation token to get the next page of the results. Adding this to
      * the request returns the rows after the `pageToken`. The `pageToken` should
@@ -32,7 +33,7 @@ class ListAlbumsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string page_token = 2;</code>
      */
-    private $page_token = '';
+    protected $page_token = '';
     /**
      * If set, the results exclude media items that were not created by this app.
      * Defaults to false (all albums are returned). This field is ignored if the
@@ -40,7 +41,7 @@ class ListAlbumsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool exclude_non_app_created_data = 3;</code>
      */
-    private $exclude_non_app_created_data = false;
+    protected $exclude_non_app_created_data = false;
 
     /**
      * Constructor.
@@ -49,8 +50,9 @@ class ListAlbumsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $page_size
-     *           Maximum number of albums to return in the response. The default number of
-     *           albums to return at a time is 20. The maximum `pageSize` is 50.
+     *           Maximum number of albums to return in the response. Fewer albums might be
+     *           returned than the specified number. The default `pageSize` is 20, the
+     *           maximum is 50.
      *     @type string $page_token
      *           A continuation token to get the next page of the results. Adding this to
      *           the request returns the rows after the `pageToken`. The `pageToken` should
@@ -68,8 +70,9 @@ class ListAlbumsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Maximum number of albums to return in the response. The default number of
-     * albums to return at a time is 20. The maximum `pageSize` is 50.
+     * Maximum number of albums to return in the response. Fewer albums might be
+     * returned than the specified number. The default `pageSize` is 20, the
+     * maximum is 50.
      *
      * Generated from protobuf field <code>int32 page_size = 1;</code>
      * @return int
@@ -80,8 +83,9 @@ class ListAlbumsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Maximum number of albums to return in the response. The default number of
-     * albums to return at a time is 20. The maximum `pageSize` is 50.
+     * Maximum number of albums to return in the response. Fewer albums might be
+     * returned than the specified number. The default `pageSize` is 20, the
+     * maximum is 50.
      *
      * Generated from protobuf field <code>int32 page_size = 1;</code>
      * @param int $var

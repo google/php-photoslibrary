@@ -20,7 +20,7 @@ class TextEnrichment extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string text = 1;</code>
      */
-    private $text = '';
+    protected $text = '';
 
     /**
      * Constructor.

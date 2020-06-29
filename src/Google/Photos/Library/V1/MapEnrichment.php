@@ -20,13 +20,13 @@ class MapEnrichment extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.library.v1.Location origin = 1;</code>
      */
-    private $origin = null;
+    protected $origin = null;
     /**
      * Destination location for this enrichemt item.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.Location destination = 2;</code>
      */
-    private $destination = null;
+    protected $destination = null;
 
     /**
      * Constructor.

@@ -20,7 +20,7 @@ class LocationEnrichment extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.library.v1.Location location = 1;</code>
      */
-    private $location = null;
+    protected $location = null;
 
     /**
      * Constructor.

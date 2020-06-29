@@ -21,7 +21,7 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.types.SharedAlbumOptions shared_album_options = 1;</code>
      */
-    private $shared_album_options = null;
+    protected $shared_album_options = null;
     /**
      * A link to the album that's now shared on the Google Photos website and app.
      * Anyone with the link can access this shared album and see all of the items
@@ -29,27 +29,27 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string shareable_url = 2;</code>
      */
-    private $shareable_url = '';
+    protected $shareable_url = '';
     /**
      * A token that can be used by other users to join this shared album via the
      * API.
      *
      * Generated from protobuf field <code>string share_token = 3;</code>
      */
-    private $share_token = '';
+    protected $share_token = '';
     /**
      * True if the user has joined the album. This is always true for the owner
      * of the shared album.
      *
      * Generated from protobuf field <code>bool is_joined = 4;</code>
      */
-    private $is_joined = false;
+    protected $is_joined = false;
     /**
      * True if the user owns the album.
      *
      * Generated from protobuf field <code>bool is_owned = 5;</code>
      */
-    private $is_owned = false;
+    protected $is_owned = false;
 
     /**
      * Constructor.

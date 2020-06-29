@@ -23,7 +23,7 @@ class BatchCreateMediaItemsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string album_id = 1;</code>
      */
-    private $album_id = '';
+    protected $album_id = '';
     /**
      * List of media items to be created.
      *
@@ -39,7 +39,7 @@ class BatchCreateMediaItemsRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition album_position = 4;</code>
      */
-    private $album_position = null;
+    protected $album_position = null;
 
     /**
      * Constructor.

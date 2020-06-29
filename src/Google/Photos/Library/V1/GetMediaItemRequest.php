@@ -21,7 +21,7 @@ class GetMediaItemRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string media_item_id = 1;</code>
      */
-    private $media_item_id = '';
+    protected $media_item_id = '';
 
     /**
      * Constructor.

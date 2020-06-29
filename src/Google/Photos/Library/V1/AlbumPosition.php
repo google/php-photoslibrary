@@ -20,7 +20,7 @@ class AlbumPosition extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition.PositionType position = 1;</code>
      */
-    private $position = 0;
+    protected $position = 0;
     protected $relative_item;
 
     /**

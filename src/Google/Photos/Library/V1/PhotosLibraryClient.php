@@ -21,7 +21,11 @@
 
 namespace Google\Photos\Library\V1;
 
+use Google\ApiCore\ApiException;
 use Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient;
+use Google\Photos\Types\Album;
+use Google\Photos\Types\MediaItem;
+use Google\Protobuf\FieldMask;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
@@ -161,6 +165,113 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
         );
 
         return (string)$response->getBody();
+    }
+
+    /**
+     * Updates the album with a new title.
+     *
+     * Only the `id` field of the album is read to identify the album.
+     * The album must have been created by the developer via the API and
+     * must be owned by the user.
+     *
+     * @param Album $album Required. The [Album][google.photos.types.Album] to update.
+     * @param string $newTitle Required. The new title of the album.
+     * @param array $optionalArgs
+     *
+     * @return \Google\Photos\Types\Album
+     *
+     * @throws ApiException if the remote call fails
+     * @see updateAlbum
+     */
+    public function updateAlbumTitle($album, $newTitle, array $optionalArgs = [])
+    {
+        $newAlbum = new Album();
+        $newAlbum->setId($album->getId());
+        $newAlbum->setTitle($newTitle);
+
+        $updateMask = new FieldMask(['paths' => ['title']]);
+
+        return parent::updateAlbum($newAlbum, $updateMask, $optionalArgs);
+    }
+
+    /**
+     * Updates the album with a new cover photo.
+     *
+     * Only the `id` field of the album is read to identify the album.
+     * The album must have been created by the developer via the API and
+     * must be owned by the user.
+     *
+     * The $newCoverMediaItem must be a media item contained within the album.
+     *
+     * @param Album $album Required. The [Album][google.photos.types.Album] to update.
+     * @param MediaItem $newCoverMediaItem Required. The new media item cover photo.
+     * @param array $optionalArgs
+     *
+     * @return \Google\Photos\Types\Album
+     *
+     * @throws ApiException if the remote call fails
+     * @see updateAlbum
+     *
+     */
+    public function updateAlbumCoverPhotoWithMediaItem($album, $newCoverMediaItem, array $optionalArgs = [])
+    {
+        return self::updateAlbumCoverPhotoWithId($album, $newCoverMediaItem->getId(), $optionalArgs);
+    }
+
+    /**
+     * Updates the album with a new cover photo.
+     *
+     * Only the `id` field of the album is read to identify the album.
+     * The album must have been created by the developer via the API and
+     * must be owned by the user.
+     *
+     * The $newCoverMediaItemId must be the identifier of a media item contained within the
+     * album.
+     *
+     * @param Album $album Required. The [Album][google.photos.types.Album] to update.
+     * @param string $newCoverMediaItemId Required. The identifier of the new media item cover photo.
+     * @param array $optionalArgs
+     *
+     * @return \Google\Photos\Types\Album
+     *
+     * @throws ApiException if the remote call fails
+     * @see updateAlbum
+     *
+     */
+    public function updateAlbumCoverPhotoWithId($album, $newCoverMediaItemId, array $optionalArgs = [])
+    {
+        $newAlbum = new Album();
+        $newAlbum->setId($album->getId());
+        $newAlbum->setCoverPhotoMediaItemId($newCoverMediaItemId);
+
+        $updateMask = new FieldMask(['paths' => ['cover_photo_media_item_id']]);
+
+        return parent::updateAlbum($newAlbum, $updateMask, $optionalArgs);
+    }
+    /**
+     * Updates the media item with a new description.
+     *
+     * Only the `id` field of the media item is read to identify the media item.
+     * The media item must have been created by the developer via the API and
+     * must be owned by the user.
+     *
+     * @param MediaItem $mediaItem Required. The [MediaItem][google.photos.types.MediaItem] to update.
+     * @param string $newDescription The new description for the media item.
+     * @param array $optionalArgs
+     *
+     * @return \Google\Photos\Types\MediaItem
+     *
+     * @throws ApiException if the remote call fails
+     */
+    public function updateMediaItemDescription($mediaItem, $newDescription, array $optionalArgs = [])
+    {
+        $newItem = new MediaItem();
+        $newItem->setId($mediaItem->getId());
+        $newItem->setDescription($newDescription);
+
+        $updateMask = new FieldMask(['paths' => ['description']]);
+
+        return parent::updateMediaItem($newItem, $updateMask, $optionalArgs);
     }
 
     public static function contentCategories()

@@ -20,7 +20,7 @@ class EnrichmentItem extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string id = 1;</code>
      */
-    private $id = '';
+    protected $id = '';
 
     /**
      * Constructor.

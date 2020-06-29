@@ -20,7 +20,7 @@ class AddEnrichmentToAlbumResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.library.v1.EnrichmentItem enrichment_item = 1;</code>
      */
-    private $enrichment_item = null;
+    protected $enrichment_item = null;
 
     /**
      * Constructor.

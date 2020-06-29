@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,9 +68,12 @@ use Google\Photos\Library\V1\ShareAlbumRequest;
 use Google\Photos\Library\V1\ShareAlbumResponse;
 use Google\Photos\Library\V1\UnshareAlbumRequest;
 use Google\Photos\Library\V1\UnshareAlbumResponse;
+use Google\Photos\Library\V1\UpdateAlbumRequest;
+use Google\Photos\Library\V1\UpdateMediaItemRequest;
 use Google\Photos\Types\Album;
 use Google\Photos\Types\MediaItem;
 use Google\Photos\Types\SharedAlbumOptions;
+use Google\Protobuf\FieldMask;
 
 /**
  * Service Description: Service which allows developers to perform the following actions on behalf of
@@ -1229,6 +1232,130 @@ class PhotosLibraryGapicClient
         return $this->startCall(
             'BatchRemoveMediaItemsFromAlbum',
             BatchRemoveMediaItemsFromAlbumResponse::class,
+            $optionalArgs,
+            $request
+        )->wait();
+    }
+
+    /**
+     * Update the album with the specified `id`.
+     * Only the `id`, `title` and `cover_photo_media_item_id` fields of the album
+     * are read. The album must have been created by the developer via the API and
+     * must be owned by the user.
+     *
+     * Sample code:
+     * ```
+     * $photosLibraryClient = new PhotosLibraryClient();
+     * try {
+     *     $album = new Album();
+     *     $updateMask = new FieldMask();
+     *     $response = $photosLibraryClient->updateAlbum($album, $updateMask);
+     * } finally {
+     *     $photosLibraryClient->close();
+     * }
+     * ```
+     *
+     * @param Album $album Required. The [Album][google.photos.types.Album] to update.
+     *
+     * The album’s `id` field is used to identify the album to be updated.
+     * The album’s `title` field is used to set the new album title.
+     * The album’s `cover_photo_media_item_id` field is used to set the new album
+     * cover photo.
+     * @param FieldMask $updateMask   Indicate what fields in the provided album to update.
+     *                                The only valid values are `title` and `cover_photo_media_item_id`.
+     * @param array     $optionalArgs {
+     *                                Optional.
+     *
+     *     @type RetrySettings|array $retrySettings
+     *          Retry settings to use for this call. Can be a
+     *          {@see Google\ApiCore\RetrySettings} object, or an associative array
+     *          of retry settings parameters. See the documentation on
+     *          {@see Google\ApiCore\RetrySettings} for example usage.
+     * }
+     *
+     * @return \Google\Photos\Types\Album
+     *
+     * @throws ApiException if the remote call fails
+     * @experimental
+     */
+    public function updateAlbum($album, $updateMask, array $optionalArgs = [])
+    {
+        $request = new UpdateAlbumRequest();
+        $request->setAlbum($album);
+        $request->setUpdateMask($updateMask);
+
+        $requestParams = new RequestParamsHeaderDescriptor([
+          'album.id' => $request->getAlbum()->getId(),
+        ]);
+        $optionalArgs['headers'] = isset($optionalArgs['headers'])
+            ? array_merge($requestParams->getHeader(), $optionalArgs['headers'])
+            : $requestParams->getHeader();
+
+        return $this->startCall(
+            'UpdateAlbum',
+            Album::class,
+            $optionalArgs,
+            $request
+        )->wait();
+    }
+
+    /**
+     * Update the media item with the specified `id`.
+     * Only the `id` and `description` fields of the media item are read. The
+     * media item must have been created by the developer via the API and must be
+     * owned by the user.
+     *
+     * Sample code:
+     * ```
+     * $photosLibraryClient = new PhotosLibraryClient();
+     * try {
+     *     $mediaItem = new MediaItem();
+     *     $updateMask = new FieldMask();
+     *     $response = $photosLibraryClient->updateMediaItem($mediaItem, $updateMask);
+     * } finally {
+     *     $photosLibraryClient->close();
+     * }
+     * ```
+     *
+     * @param MediaItem $mediaItem Required. The [MediaItem][google.photos.types.MediaItem] to update.
+     *
+     * The media item's `id` field is used to identify the media item to be
+     * updated.
+     * The media item's `description` field is used to set the new media item
+     * description.
+     * @param FieldMask $updateMask   Indicate what fields in the provided media item to update.
+     *                                The only valid value is `description`.
+     * @param array     $optionalArgs {
+     *                                Optional.
+     *
+     *     @type RetrySettings|array $retrySettings
+     *          Retry settings to use for this call. Can be a
+     *          {@see Google\ApiCore\RetrySettings} object, or an associative array
+     *          of retry settings parameters. See the documentation on
+     *          {@see Google\ApiCore\RetrySettings} for example usage.
+     * }
+     *
+     * @return \Google\Photos\Types\MediaItem
+     *
+     * @throws ApiException if the remote call fails
+     * @experimental
+     */
+    public function updateMediaItem($mediaItem, $updateMask, array $optionalArgs = [])
+    {
+        $request = new UpdateMediaItemRequest();
+        $request->setMediaItem($mediaItem);
+        $request->setUpdateMask($updateMask);
+
+        $requestParams = new RequestParamsHeaderDescriptor([
+          'media_item.id' => $request->getMediaItem()->getId(),
+        ]);
+        $optionalArgs['headers'] = isset($optionalArgs['headers'])
+            ? array_merge($requestParams->getHeader(), $optionalArgs['headers'])
+            : $requestParams->getHeader();
+
+        return $this->startCall(
+            'UpdateMediaItem',
+            MediaItem::class,
             $optionalArgs,
             $request
         )->wait();

@@ -22,32 +22,32 @@ class Filters extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.library.v1.DateFilter date_filter = 1;</code>
      */
-    private $date_filter = null;
+    protected $date_filter = null;
     /**
      * Filters the media items based on their content.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.ContentFilter content_filter = 2;</code>
      */
-    private $content_filter = null;
+    protected $content_filter = null;
     /**
      * Filters the media items based on the type of media.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.MediaTypeFilter media_type_filter = 3;</code>
      */
-    private $media_type_filter = null;
+    protected $media_type_filter = null;
     /**
      * Filters the media items based on their features.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.FeatureFilter feature_filter = 7;</code>
      */
-    private $feature_filter = null;
+    protected $feature_filter = null;
     /**
      * If set, the results include media items that the user has archived.
      * Defaults to false (archived media items aren't included).
      *
      * Generated from protobuf field <code>bool include_archived_media = 4;</code>
      */
-    private $include_archived_media = false;
+    protected $include_archived_media = false;
     /**
      * If set, the results exclude media items that were not created by this app.
      * Defaults to false (all media items are returned). This field is ignored if
@@ -55,7 +55,7 @@ class Filters extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool exclude_non_app_created_data = 5;</code>
      */
-    private $exclude_non_app_created_data = false;
+    protected $exclude_non_app_created_data = false;
 
     /**
      * Constructor.

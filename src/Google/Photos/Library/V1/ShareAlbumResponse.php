@@ -20,7 +20,7 @@ class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 1;</code>
      */
-    private $share_info = null;
+    protected $share_info = null;
 
     /**
      * Constructor.

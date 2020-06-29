@@ -21,25 +21,25 @@ class Video extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string camera_make = 1;</code>
      */
-    private $camera_make = '';
+    protected $camera_make = '';
     /**
      * Model of the camera with which the video was taken.
      *
      * Generated from protobuf field <code>string camera_model = 2;</code>
      */
-    private $camera_model = '';
+    protected $camera_model = '';
     /**
      * Frame rate of the video.
      *
      * Generated from protobuf field <code>double fps = 3;</code>
      */
-    private $fps = 0.0;
+    protected $fps = 0.0;
     /**
      * Processing status of the video.
      *
      * Generated from protobuf field <code>.google.photos.types.VideoProcessingStatus status = 4;</code>
      */
-    private $status = 0;
+    protected $status = 0;
 
     /**
      * Constructor.

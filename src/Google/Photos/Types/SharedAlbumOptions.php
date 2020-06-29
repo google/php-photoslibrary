@@ -21,14 +21,14 @@ class SharedAlbumOptions extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool is_collaborative = 1;</code>
      */
-    private $is_collaborative = false;
+    protected $is_collaborative = false;
     /**
      * True if the shared album allows the owner and the collaborators (users
      * who have joined the album) to add comments to the album. Defaults to false.
      *
      * Generated from protobuf field <code>bool is_commentable = 2;</code>
      */
-    private $is_commentable = false;
+    protected $is_commentable = false;
 
     /**
      * Constructor.

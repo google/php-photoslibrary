@@ -22,14 +22,14 @@ class MediaItemResult extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.rpc.Status status = 1;</code>
      */
-    private $status = null;
+    protected $status = null;
     /**
      * Media item retrieved from the user's library. It's populated if no errors
      * occurred and the media item was fetched successfully.
      *
      * Generated from protobuf field <code>.google.photos.types.MediaItem media_item = 2;</code>
      */
-    private $media_item = null;
+    protected $media_item = null;
 
     /**
      * Constructor.

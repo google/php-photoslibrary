@@ -29,7 +29,7 @@ class BatchAddMediaItemsToAlbumRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string album_id = 2;</code>
      */
-    private $album_id = '';
+    protected $album_id = '';
 
     /**
      * Constructor.

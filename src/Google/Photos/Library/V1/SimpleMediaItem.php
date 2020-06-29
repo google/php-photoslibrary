@@ -20,7 +20,18 @@ class SimpleMediaItem extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string upload_token = 1;</code>
      */
-    private $upload_token = '';
+    protected $upload_token = '';
+    /**
+     * File name with extension of the media item. This is shown to the user in
+     * Google Photos. The file name specified during the <a
+     * href="https://developers.google.com/photos/library/guides/upload-media">byte
+     * upload process</a> is ignored if this field is set. The file name,
+     * including the file extension, shouldn't be more than 255 characters. This
+     * is an optional field.
+     *
+     * Generated from protobuf field <code>string file_name = 2;</code>
+     */
+    protected $file_name = '';
 
     /**
      * Constructor.
@@ -30,6 +41,13 @@ class SimpleMediaItem extends \Google\Protobuf\Internal\Message
      *
      *     @type string $upload_token
      *           Token identifying the media bytes that have been uploaded to Google.
+     *     @type string $file_name
+     *           File name with extension of the media item. This is shown to the user in
+     *           Google Photos. The file name specified during the <a
+     *           href="https://developers.google.com/photos/library/guides/upload-media">byte
+     *           upload process</a> is ignored if this field is set. The file name,
+     *           including the file extension, shouldn't be more than 255 characters. This
+     *           is an optional field.
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +77,42 @@ class SimpleMediaItem extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->upload_token = $var;
+
+        return $this;
+    }
+
+    /**
+     * File name with extension of the media item. This is shown to the user in
+     * Google Photos. The file name specified during the <a
+     * href="https://developers.google.com/photos/library/guides/upload-media">byte
+     * upload process</a> is ignored if this field is set. The file name,
+     * including the file extension, shouldn't be more than 255 characters. This
+     * is an optional field.
+     *
+     * Generated from protobuf field <code>string file_name = 2;</code>
+     * @return string
+     */
+    public function getFileName()
+    {
+        return $this->file_name;
+    }
+
+    /**
+     * File name with extension of the media item. This is shown to the user in
+     * Google Photos. The file name specified during the <a
+     * href="https://developers.google.com/photos/library/guides/upload-media">byte
+     * upload process</a> is ignored if this field is set. The file name,
+     * including the file extension, shouldn't be more than 255 characters. This
+     * is an optional field.
+     *
+     * Generated from protobuf field <code>string file_name = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setFileName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->file_name = $var;
 
         return $this;
     }

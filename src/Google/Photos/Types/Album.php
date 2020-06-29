@@ -23,21 +23,21 @@ class Album extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string id = 1;</code>
      */
-    private $id = '';
+    protected $id = '';
     /**
      * Name of the album displayed to the user in their Google Photos account.
      * This string shouldn't be more than 500 characters.
      *
      * Generated from protobuf field <code>string title = 2;</code>
      */
-    private $title = '';
+    protected $title = '';
     /**
      * [Output only] Google Photos URL for the album. The user needs to be signed
      * in to their Google Photos account to access this link.
      *
      * Generated from protobuf field <code>string product_url = 3;</code>
      */
-    private $product_url = '';
+    protected $product_url = '';
     /**
      * [Output only] True if you can create media items in this album.
      * This field is based on the scopes granted and permissions of the album. If
@@ -46,7 +46,7 @@ class Album extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool is_writeable = 4;</code>
      */
-    private $is_writeable = false;
+    protected $is_writeable = false;
     /**
      * [Output only] Information related to shared albums.
      * This field is only populated if the album is a shared album, the
@@ -55,13 +55,13 @@ class Album extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 5;</code>
      */
-    private $share_info = null;
+    protected $share_info = null;
     /**
      * [Output only] The number of media items in the album.
      *
      * Generated from protobuf field <code>int64 media_items_count = 6;</code>
      */
-    private $media_items_count = 0;
+    protected $media_items_count = 0;
     /**
      * [Output only] A URL to the cover photo's bytes. This shouldn't be used as
      * is. Parameters should be appended to this URL before use. See the
@@ -73,14 +73,14 @@ class Album extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string cover_photo_base_url = 7;</code>
      */
-    private $cover_photo_base_url = '';
+    protected $cover_photo_base_url = '';
     /**
      * [Output only] Identifier for the media item associated with the cover
      * photo.
      *
      * Generated from protobuf field <code>string cover_photo_media_item_id = 8;</code>
      */
-    private $cover_photo_media_item_id = '';
+    protected $cover_photo_media_item_id = '';
 
     /**
      * Constructor.

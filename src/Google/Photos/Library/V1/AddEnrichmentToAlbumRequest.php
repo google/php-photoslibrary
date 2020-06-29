@@ -20,19 +20,19 @@ class AddEnrichmentToAlbumRequest extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string album_id = 1;</code>
      */
-    private $album_id = '';
+    protected $album_id = '';
     /**
      * The enrichment to be added.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.NewEnrichmentItem new_enrichment_item = 2;</code>
      */
-    private $new_enrichment_item = null;
+    protected $new_enrichment_item = null;
     /**
      * The position in the album where the enrichment is to be inserted.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition album_position = 3;</code>
      */
-    private $album_position = null;
+    protected $album_position = null;
 
     /**
      * Constructor.

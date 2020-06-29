@@ -22,14 +22,14 @@ class DateRange extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.type.Date start_date = 1;</code>
      */
-    private $start_date = null;
+    protected $start_date = null;
     /**
      * The end date (included as part of the range). It must be specified in the
      * same format as the start date.
      *
      * Generated from protobuf field <code>.google.type.Date end_date = 2;</code>
      */
-    private $end_date = null;
+    protected $end_date = null;
 
     /**
      * Constructor.

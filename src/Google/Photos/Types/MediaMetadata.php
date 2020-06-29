@@ -21,19 +21,19 @@ class MediaMetadata extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp creation_time = 1;</code>
      */
-    private $creation_time = null;
+    protected $creation_time = null;
     /**
      * Original width (in pixels) of the media item.
      *
      * Generated from protobuf field <code>int64 width = 2;</code>
      */
-    private $width = 0;
+    protected $width = 0;
     /**
      * Original height (in pixels) of the media item.
      *
      * Generated from protobuf field <code>int64 height = 3;</code>
      */
-    private $height = 0;
+    protected $height = 0;
     protected $metadata;
 
     /**

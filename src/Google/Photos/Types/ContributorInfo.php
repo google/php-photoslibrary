@@ -22,13 +22,13 @@ class ContributorInfo extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string profile_picture_base_url = 1;</code>
      */
-    private $profile_picture_base_url = '';
+    protected $profile_picture_base_url = '';
     /**
      * Display name of the contributor.
      *
      * Generated from protobuf field <code>string display_name = 2;</code>
      */
-    private $display_name = '';
+    protected $display_name = '';
 
     /**
      * Constructor.

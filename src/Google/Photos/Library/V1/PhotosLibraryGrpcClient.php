@@ -2,7 +2,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 namespace Google\Photos\Library\V1;
 
@@ -335,6 +334,40 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/BatchRemoveMediaItemsFromAlbum',
         $argument,
         ['\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Update the album with the specified `id`.
+     * Only the `id`, `title` and `cover_photo_media_item_id` fields of the album
+     * are read. The album must have been created by the developer via the API and
+     * must be owned by the user.
+     * @param \Google\Photos\Library\V1\UpdateAlbumRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function UpdateAlbum(\Google\Photos\Library\V1\UpdateAlbumRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/UpdateAlbum',
+        $argument,
+        ['\Google\Photos\Types\Album', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Update the media item with the specified `id`.
+     * Only the `id` and `description` fields of the media item are read. The
+     * media item must have been created by the developer via the API and must be
+     * owned by the user.
+     * @param \Google\Photos\Library\V1\UpdateMediaItemRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function UpdateMediaItem(\Google\Photos\Library\V1\UpdateMediaItemRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/google.photos.library.v1.PhotosLibrary/UpdateMediaItem',
+        $argument,
+        ['\Google\Photos\Types\MediaItem', 'decode'],
         $metadata, $options);
     }
 

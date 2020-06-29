@@ -137,6 +137,32 @@ return [
                     ],
                 ],
             ],
+            'UpdateAlbum' => [
+                'method' => 'patch',
+                'uriTemplate' => '/v1/albums/{album.id=*}',
+                'body' => 'album',
+                'placeholders' => [
+                    'album.id' => [
+                        'getters' => [
+                            'getAlbum',
+                            'getId',
+                        ],
+                    ],
+                ],
+            ],
+            'UpdateMediaItem' => [
+                'method' => 'patch',
+                'uriTemplate' => '/v1/mediaItems/{media_item.id=*}',
+                'body' => 'media_item',
+                'placeholders' => [
+                    'media_item.id' => [
+                        'getters' => [
+                            'getMediaItem',
+                            'getId',
+                        ],
+                    ],
+                ],
+            ],
         ],
     ],
 ];
