@@ -18,7 +18,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Album extends \Google\Protobuf\Internal\Message
 {
     /**
-     * [Ouput only] Identifier for the album. This is a persistent identifier that
+     * Identifier for the album. This is a persistent identifier that
      * can be used between sessions to identify this album.
      *
      * Generated from protobuf field <code>string id = 1;</code>
@@ -75,8 +75,7 @@ class Album extends \Google\Protobuf\Internal\Message
      */
     protected $cover_photo_base_url = '';
     /**
-     * [Output only] Identifier for the media item associated with the cover
-     * photo.
+     * Identifier for the media item associated with the cover photo.
      *
      * Generated from protobuf field <code>string cover_photo_media_item_id = 8;</code>
      */
@@ -89,7 +88,7 @@ class Album extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
-     *           [Ouput only] Identifier for the album. This is a persistent identifier that
+     *           Identifier for the album. This is a persistent identifier that
      *           can be used between sessions to identify this album.
      *     @type string $title
      *           Name of the album displayed to the user in their Google Photos account.
@@ -118,8 +117,7 @@ class Album extends \Google\Protobuf\Internal\Message
      *           `'=w2048-h1024'` sets the dimensions of the cover photo to have a width of
      *           2048 px and height of 1024 px.
      *     @type string $cover_photo_media_item_id
-     *           [Output only] Identifier for the media item associated with the cover
-     *           photo.
+     *           Identifier for the media item associated with the cover photo.
      * }
      */
     public function __construct($data = NULL) {
@@ -128,7 +126,7 @@ class Album extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Ouput only] Identifier for the album. This is a persistent identifier that
+     * Identifier for the album. This is a persistent identifier that
      * can be used between sessions to identify this album.
      *
      * Generated from protobuf field <code>string id = 1;</code>
@@ -140,7 +138,7 @@ class Album extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Ouput only] Identifier for the album. This is a persistent identifier that
+     * Identifier for the album. This is a persistent identifier that
      * can be used between sessions to identify this album.
      *
      * Generated from protobuf field <code>string id = 1;</code>
@@ -340,8 +338,7 @@ class Album extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Output only] Identifier for the media item associated with the cover
-     * photo.
+     * Identifier for the media item associated with the cover photo.
      *
      * Generated from protobuf field <code>string cover_photo_media_item_id = 8;</code>
      * @return string
@@ -352,8 +349,7 @@ class Album extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * [Output only] Identifier for the media item associated with the cover
-     * photo.
+     * Identifier for the media item associated with the cover photo.
      *
      * Generated from protobuf field <code>string cover_photo_media_item_id = 8;</code>
      * @param string $var

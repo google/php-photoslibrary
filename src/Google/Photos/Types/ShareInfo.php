@@ -17,29 +17,38 @@ use Google\Protobuf\Internal\GPBUtil;
 class ShareInfo extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Options that control the sharing of an album.
+     * Options that control whether someone can add media items to, or comment on
+     * a shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.SharedAlbumOptions shared_album_options = 1;</code>
      */
     protected $shared_album_options = null;
     /**
-     * A link to the album that's now shared on the Google Photos website and app.
-     * Anyone with the link can access this shared album and see all of the items
-     * present in the album.
+     * A link to the shared Google Photos album. Anyone with the link can view the
+     * contents of the album, so it should be treated with care.
+     * The `shareableUrl` parameter is only returned if the album has link sharing
+     * turned on. If a user is already joined to an album that isn't link-shared,
+     * they can use the album's
+     * [`productUrl`](https://developers.google.com/photos/library/reference/rest/v1/albums#Album)
+     * to access it instead.
+     * A `shareableUrl` is invalidated if the owner turns off link sharing in the
+     * Google Photos app, or if the album is unshared.
      *
      * Generated from protobuf field <code>string shareable_url = 2;</code>
      */
     protected $shareable_url = '';
     /**
-     * A token that can be used by other users to join this shared album via the
-     * API.
+     * A token that is used to join, leave, or retrieve the details of a shared
+     * album on behalf of a user who isn't the owner.
+     * A `shareToken` is invalidated if the owner turns off link sharing in the
+     * Google Photos app, or if the album is unshared.
      *
      * Generated from protobuf field <code>string share_token = 3;</code>
      */
     protected $share_token = '';
     /**
-     * True if the user has joined the album. This is always true for the owner
-     * of the shared album.
+     * True if the user is joined to the album. This is always true for
+     * the owner of the album.
      *
      * Generated from protobuf field <code>bool is_joined = 4;</code>
      */
@@ -50,6 +59,12 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool is_owned = 5;</code>
      */
     protected $is_owned = false;
+    /**
+     * True if the album can be joined by users.
+     *
+     * Generated from protobuf field <code>bool is_joinable = 6;</code>
+     */
+    protected $is_joinable = false;
 
     /**
      * Constructor.
@@ -58,19 +73,30 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Photos\Types\SharedAlbumOptions $shared_album_options
-     *           Options that control the sharing of an album.
+     *           Options that control whether someone can add media items to, or comment on
+     *           a shared album.
      *     @type string $shareable_url
-     *           A link to the album that's now shared on the Google Photos website and app.
-     *           Anyone with the link can access this shared album and see all of the items
-     *           present in the album.
+     *           A link to the shared Google Photos album. Anyone with the link can view the
+     *           contents of the album, so it should be treated with care.
+     *           The `shareableUrl` parameter is only returned if the album has link sharing
+     *           turned on. If a user is already joined to an album that isn't link-shared,
+     *           they can use the album's
+     *           [`productUrl`](https://developers.google.com/photos/library/reference/rest/v1/albums#Album)
+     *           to access it instead.
+     *           A `shareableUrl` is invalidated if the owner turns off link sharing in the
+     *           Google Photos app, or if the album is unshared.
      *     @type string $share_token
-     *           A token that can be used by other users to join this shared album via the
-     *           API.
+     *           A token that is used to join, leave, or retrieve the details of a shared
+     *           album on behalf of a user who isn't the owner.
+     *           A `shareToken` is invalidated if the owner turns off link sharing in the
+     *           Google Photos app, or if the album is unshared.
      *     @type bool $is_joined
-     *           True if the user has joined the album. This is always true for the owner
-     *           of the shared album.
+     *           True if the user is joined to the album. This is always true for
+     *           the owner of the album.
      *     @type bool $is_owned
      *           True if the user owns the album.
+     *     @type bool $is_joinable
+     *           True if the album can be joined by users.
      * }
      */
     public function __construct($data = NULL) {
@@ -79,7 +105,8 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Options that control the sharing of an album.
+     * Options that control whether someone can add media items to, or comment on
+     * a shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.SharedAlbumOptions shared_album_options = 1;</code>
      * @return \Google\Photos\Types\SharedAlbumOptions
@@ -90,7 +117,8 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Options that control the sharing of an album.
+     * Options that control whether someone can add media items to, or comment on
+     * a shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.SharedAlbumOptions shared_album_options = 1;</code>
      * @param \Google\Photos\Types\SharedAlbumOptions $var
@@ -105,9 +133,15 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A link to the album that's now shared on the Google Photos website and app.
-     * Anyone with the link can access this shared album and see all of the items
-     * present in the album.
+     * A link to the shared Google Photos album. Anyone with the link can view the
+     * contents of the album, so it should be treated with care.
+     * The `shareableUrl` parameter is only returned if the album has link sharing
+     * turned on. If a user is already joined to an album that isn't link-shared,
+     * they can use the album's
+     * [`productUrl`](https://developers.google.com/photos/library/reference/rest/v1/albums#Album)
+     * to access it instead.
+     * A `shareableUrl` is invalidated if the owner turns off link sharing in the
+     * Google Photos app, or if the album is unshared.
      *
      * Generated from protobuf field <code>string shareable_url = 2;</code>
      * @return string
@@ -118,9 +152,15 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A link to the album that's now shared on the Google Photos website and app.
-     * Anyone with the link can access this shared album and see all of the items
-     * present in the album.
+     * A link to the shared Google Photos album. Anyone with the link can view the
+     * contents of the album, so it should be treated with care.
+     * The `shareableUrl` parameter is only returned if the album has link sharing
+     * turned on. If a user is already joined to an album that isn't link-shared,
+     * they can use the album's
+     * [`productUrl`](https://developers.google.com/photos/library/reference/rest/v1/albums#Album)
+     * to access it instead.
+     * A `shareableUrl` is invalidated if the owner turns off link sharing in the
+     * Google Photos app, or if the album is unshared.
      *
      * Generated from protobuf field <code>string shareable_url = 2;</code>
      * @param string $var
@@ -135,8 +175,10 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A token that can be used by other users to join this shared album via the
-     * API.
+     * A token that is used to join, leave, or retrieve the details of a shared
+     * album on behalf of a user who isn't the owner.
+     * A `shareToken` is invalidated if the owner turns off link sharing in the
+     * Google Photos app, or if the album is unshared.
      *
      * Generated from protobuf field <code>string share_token = 3;</code>
      * @return string
@@ -147,8 +189,10 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A token that can be used by other users to join this shared album via the
-     * API.
+     * A token that is used to join, leave, or retrieve the details of a shared
+     * album on behalf of a user who isn't the owner.
+     * A `shareToken` is invalidated if the owner turns off link sharing in the
+     * Google Photos app, or if the album is unshared.
      *
      * Generated from protobuf field <code>string share_token = 3;</code>
      * @param string $var
@@ -163,8 +207,8 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * True if the user has joined the album. This is always true for the owner
-     * of the shared album.
+     * True if the user is joined to the album. This is always true for
+     * the owner of the album.
      *
      * Generated from protobuf field <code>bool is_joined = 4;</code>
      * @return bool
@@ -175,8 +219,8 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * True if the user has joined the album. This is always true for the owner
-     * of the shared album.
+     * True if the user is joined to the album. This is always true for
+     * the owner of the album.
      *
      * Generated from protobuf field <code>bool is_joined = 4;</code>
      * @param bool $var
@@ -212,6 +256,32 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->is_owned = $var;
+
+        return $this;
+    }
+
+    /**
+     * True if the album can be joined by users.
+     *
+     * Generated from protobuf field <code>bool is_joinable = 6;</code>
+     * @return bool
+     */
+    public function getIsJoinable()
+    {
+        return $this->is_joinable;
+    }
+
+    /**
+     * True if the album can be joined by users.
+     *
+     * Generated from protobuf field <code>bool is_joinable = 6;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsJoinable($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_joinable = $var;
 
         return $this;
     }

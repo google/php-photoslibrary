@@ -23,8 +23,8 @@ class SharedAlbumOptions extends \Google\Protobuf\Internal\Message
      */
     protected $is_collaborative = false;
     /**
-     * True if the shared album allows the owner and the collaborators (users
-     * who have joined the album) to add comments to the album. Defaults to false.
+     * True if the shared album allows collaborators (users who have joined the
+     * album) to add comments to the album. Defaults to false.
      *
      * Generated from protobuf field <code>bool is_commentable = 2;</code>
      */
@@ -40,8 +40,8 @@ class SharedAlbumOptions extends \Google\Protobuf\Internal\Message
      *           True if the shared album allows collaborators (users who have joined
      *           the album) to add media items to it. Defaults to false.
      *     @type bool $is_commentable
-     *           True if the shared album allows the owner and the collaborators (users
-     *           who have joined the album) to add comments to the album. Defaults to false.
+     *           True if the shared album allows collaborators (users who have joined the
+     *           album) to add comments to the album. Defaults to false.
      * }
      */
     public function __construct($data = NULL) {
@@ -78,8 +78,8 @@ class SharedAlbumOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * True if the shared album allows the owner and the collaborators (users
-     * who have joined the album) to add comments to the album. Defaults to false.
+     * True if the shared album allows collaborators (users who have joined the
+     * album) to add comments to the album. Defaults to false.
      *
      * Generated from protobuf field <code>bool is_commentable = 2;</code>
      * @return bool
@@ -90,8 +90,8 @@ class SharedAlbumOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * True if the shared album allows the owner and the collaborators (users
-     * who have joined the album) to add comments to the album. Defaults to false.
+     * True if the shared album allows collaborators (users who have joined the
+     * album) to add comments to the album. Defaults to false.
      *
      * Generated from protobuf field <code>bool is_commentable = 2;</code>
      * @param bool $var

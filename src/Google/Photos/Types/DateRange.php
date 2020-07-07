@@ -10,7 +10,7 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * Defines a range of dates. Both dates must be of the same format. For more
- * information, see <a href="#Date">Date</a>
+ * information, see [Date][google.type.Date].
  *
  * Generated from protobuf message <code>google.photos.types.DateRange</code>
  */
