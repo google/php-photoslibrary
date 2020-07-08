@@ -1,0 +1,2943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Google.html">\Google</a></li>
+                                                        <li><a href="../namespaces/GPBMetadata.html">\GPBMetadata</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">147</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-263065798"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-263065798" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1015696639"></a>
+                                <a href="../namespaces/Google.html" style="margin-left: 30px; padding-left: 0">Google</a>
+            </div>
+            <div id="namespace-1015696639" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-225315160"></a>
+                                <a href="../namespaces/Google.Photos.html" style="margin-left: 30px; padding-left: 0">Photos</a>
+            </div>
+            <div id="namespace-225315160" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2067376804"></a>
+                                <a href="../namespaces/Google.Photos.Library.html" style="margin-left: 30px; padding-left: 0">Library</a>
+            </div>
+            <div id="namespace-2067376804" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-741423348"></a>
+                                <a href="../namespaces/Google.Photos.Library.V1.html" style="margin-left: 30px; padding-left: 0">V1</a>
+            </div>
+            <div id="namespace-741423348" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1236924201"></a>
+                                <a href="../namespaces/Google.Photos.Library.V1.AlbumPosition.html" style="margin-left: 30px; padding-left: 0">AlbumPosition</a>
+            </div>
+            <div id="namespace-1236924201" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AlbumPosition.PositionType.html">PositionType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1657474129"></a>
+                                <a href="../namespaces/Google.Photos.Library.V1.FeatureFilter.html" style="margin-left: 30px; padding-left: 0">FeatureFilter</a>
+            </div>
+            <div id="namespace-1657474129" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.FeatureFilter.Feature.html">Feature</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-136115518"></a>
+                                <a href="../namespaces/Google.Photos.Library.V1.Gapic.html" style="margin-left: 30px; padding-left: 0">Gapic</a>
+            </div>
+            <div id="namespace-136115518" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html">PhotosLibraryGapicClient</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2080957033"></a>
+                                <a href="../namespaces/Google.Photos.Library.V1.MediaTypeFilter.html" style="margin-left: 30px; padding-left: 0">MediaTypeFilter</a>
+            </div>
+            <div id="namespace-2080957033" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaTypeFilter.MediaType.html">MediaType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AddEnrichmentToAlbumRequest.html">AddEnrichmentToAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AddEnrichmentToAlbumResponse.html">AddEnrichmentToAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AlbumPosition.html">AlbumPosition</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.AlbumPosition_PositionType.html">AlbumPosition_PositionType</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchAddMediaItemsToAlbumRequest.html">BatchAddMediaItemsToAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchAddMediaItemsToAlbumResponse.html">BatchAddMediaItemsToAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchCreateMediaItemsRequest.html">BatchCreateMediaItemsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchCreateMediaItemsResponse.html">BatchCreateMediaItemsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchGetMediaItemsRequest.html">BatchGetMediaItemsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchGetMediaItemsResponse.html">BatchGetMediaItemsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchRemoveMediaItemsFromAlbumRequest.html">BatchRemoveMediaItemsFromAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.BatchRemoveMediaItemsFromAlbumResponse.html">BatchRemoveMediaItemsFromAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ContentCategory.html">ContentCategory</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ContentFilter.html">ContentFilter</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.CreateAlbumRequest.html">CreateAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.DateFilter.html">DateFilter</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.EnrichmentItem.html">EnrichmentItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.FeatureFilter.html">FeatureFilter</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.FeatureFilter_Feature.html">FeatureFilter_Feature</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.Filters.html">Filters</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.FiltersBuilder.html">FiltersBuilder</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.GetAlbumRequest.html">GetAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.GetMediaItemRequest.html">GetMediaItemRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.GetSharedAlbumRequest.html">GetSharedAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.JoinSharedAlbumRequest.html">JoinSharedAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.JoinSharedAlbumResponse.html">JoinSharedAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.LeaveSharedAlbumRequest.html">LeaveSharedAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.LeaveSharedAlbumResponse.html">LeaveSharedAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListAlbumsRequest.html">ListAlbumsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListAlbumsResponse.html">ListAlbumsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListMediaItemsRequest.html">ListMediaItemsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListMediaItemsResponse.html">ListMediaItemsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListSharedAlbumsRequest.html">ListSharedAlbumsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ListSharedAlbumsResponse.html">ListSharedAlbumsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.Location.html">Location</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.LocationEnrichment.html">LocationEnrichment</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MapEnrichment.html">MapEnrichment</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaItemResult.html">MediaItemResult</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaTypeFilter.html">MediaTypeFilter</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.MediaTypeFilter_MediaType.html">MediaTypeFilter_MediaType</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.NewEnrichmentItem.html">NewEnrichmentItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.NewMediaItem.html">NewMediaItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.NewMediaItemResult.html">NewMediaItemResult</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html">PhotosLibraryClient</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.PhotosLibraryGrpcClient.html">PhotosLibraryGrpcClient</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.PhotosLibraryResourceFactory.html">PhotosLibraryResourceFactory</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.SearchMediaItemsRequest.html">SearchMediaItemsRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.SearchMediaItemsResponse.html">SearchMediaItemsResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ShareAlbumRequest.html">ShareAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.ShareAlbumResponse.html">ShareAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.SimpleMediaItem.html">SimpleMediaItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.TextEnrichment.html">TextEnrichment</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.UnshareAlbumRequest.html">UnshareAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.UnshareAlbumResponse.html">UnshareAlbumResponse</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.UpdateAlbumRequest.html">UpdateAlbumRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.UpdateMediaItemRequest.html">UpdateMediaItemRequest</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Library.V1.UploadRetrySettings.html">UploadRetrySettings</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1693244037"></a>
+                                <a href="../namespaces/Google.Photos.Types.html" style="margin-left: 30px; padding-left: 0">Types</a>
+            </div>
+            <div id="namespace-1693244037" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google.Photos.Types.Album.html">Album</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Types.ContributorInfo.html">ContributorInfo</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Types.DateRange.html">DateRange</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Types.MediaItem.html">MediaItem</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Types.MediaMetadata.html">MediaMetadata</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Types.Photo.html">Photo</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Types.SharedAlbumOptions.html">SharedAlbumOptions</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Types.ShareInfo.html">ShareInfo</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Types.Video.html">Video</a></li>
+                                                    <li class="class"><a href="../classes/Google.Photos.Types.VideoProcessingStatus.html">VideoProcessingStatus</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1301622807"></a>
+                                <a href="../namespaces/GPBMetadata.html" style="margin-left: 30px; padding-left: 0">GPBMetadata</a>
+            </div>
+            <div id="namespace-1301622807" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-718014165"></a>
+                                <a href="../namespaces/GPBMetadata.Google.html" style="margin-left: 30px; padding-left: 0">Google</a>
+            </div>
+            <div id="namespace-718014165" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2054399622"></a>
+                                <a href="../namespaces/GPBMetadata.Google.Photos.html" style="margin-left: 30px; padding-left: 0">Photos</a>
+            </div>
+            <div id="namespace-2054399622" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-13398154"></a>
+                                <a href="../namespaces/GPBMetadata.Google.Photos.Library.html" style="margin-left: 30px; padding-left: 0">Library</a>
+            </div>
+            <div id="namespace-13398154" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1170993083"></a>
+                                <a href="../namespaces/GPBMetadata.Google.Photos.Library.V1.html" style="margin-left: 30px; padding-left: 0">V1</a>
+            </div>
+            <div id="namespace-1170993083" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/GPBMetadata.Google.Photos.Library.V1.PhotosLibrary.html">PhotosLibrary</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-440202270"></a>
+                                <a href="../namespaces/GPBMetadata.Google.Photos.Types.html" style="margin-left: 30px; padding-left: 0">Types</a>
+            </div>
+            <div id="namespace-440202270" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/GPBMetadata.Google.Photos.Types.Album.html">Album</a></li>
+                                                    <li class="class"><a href="../classes/GPBMetadata.Google.Photos.Types.DateRange.html">DateRange</a></li>
+                                                    <li class="class"><a href="../classes/GPBMetadata.Google.Photos.Types.MediaItem.html">MediaItem</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Google.Photos.Library.V1.html">\Google\Photos\Library\V1</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Google\Photos\Library\V1</small>PhotosLibraryClient</h1>
+                    <p><em>Service Description: Service which allows developers to perform the following actions on behalf of
+the user:
+- upload media items directly to their Google Photos library
+- create albums
+- add media items (including album enrichments) to albums
+- list and download content from their Google Photos library
+- filter results by media type, date range or content category
+- create, join, and access shared albums.</em></p>
+                    <p>This class provides the ability to make remote calls to the backing service through method
+calls that map to API methods. Sample code to get started:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $album = new Album();
+    $response = $photosLibraryClient-&gt;createAlbum($album);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_createAlbum" class="">createAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_batchCreateMediaItems" class="">batchCreateMediaItems()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_batchAddMediaItemsToAlbum" class="">batchAddMediaItemsToAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_searchMediaItems" class="">searchMediaItems()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_listMediaItems" class="">listMediaItems()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_getMediaItem" class="">getMediaItem()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_batchGetMediaItems" class="">batchGetMediaItems()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_listAlbums" class="">listAlbums()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_getAlbum" class="">getAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_getSharedAlbum" class="">getSharedAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_addEnrichmentToAlbum" class="">addEnrichmentToAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_joinSharedAlbum" class="">joinSharedAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_leaveSharedAlbum" class="">leaveSharedAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_shareAlbum" class="">shareAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_listSharedAlbums" class="">listSharedAlbums()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_unshareAlbum" class="">unshareAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_batchRemoveMediaItemsFromAlbum" class="">batchRemoveMediaItemsFromAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_updateAlbum" class="">updateAlbum()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_updateMediaItem" class="">updateMediaItem()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method_upload" class="">upload()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method_updateAlbumTitle" class="">updateAlbumTitle()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method_updateAlbumCoverPhoto" class="">updateAlbumCoverPhoto()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method_updateMediaItemDescription" class="">updateMediaItemDescription()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method_contentCategories" class="">contentCategories()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method_mediaTypes" class="">mediaTypes()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method_features" class="">features()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#property_serviceScopes" class="">$serviceScopes</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#constant_SERVICE_NAME" class="">SERVICE_NAME</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#constant_SERVICE_ADDRESS" class="">SERVICE_ADDRESS</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#constant_DEFAULT_SERVICE_PORT" class="">DEFAULT_SERVICE_PORT</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#constant_CODEGEN_NAME" class="">CODEGEN_NAME</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#constant_UPLOAD_URL" class="">UPLOAD_URL</a><br />
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html#method_getClientDefaults" class="">getClientDefaults()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method_retryDecider" class="">retryDecider()</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#method_retryDelay" class="">retryDelay()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#property_httpClient" class="">$httpClient</a><br />
+                                                                    <a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html#property_uploadRetrySettings" class="">$uploadRetrySettings</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">Google/Photos/Library/V1/PhotosLibraryClient.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper"><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</a></div>
+                                                                                                    <div class="namespace-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                                    <a id="constants" name="constants"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Constants</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_SERVICE_NAME" name="constant_SERVICE_NAME" class="anchor"></a>
+            <article id="constant_SERVICE_NAME" class="constant">
+                <h3 class="">SERVICE_NAME</h3>
+                <pre class="signature">SERVICE_NAME = &#039;google.photos.library.v1.PhotosLibrary&#039;</pre>
+                <p><em>The name of the service.</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_SERVICE_ADDRESS" name="constant_SERVICE_ADDRESS" class="anchor"></a>
+            <article id="constant_SERVICE_ADDRESS" class="constant">
+                <h3 class="">SERVICE_ADDRESS</h3>
+                <pre class="signature">SERVICE_ADDRESS = &#039;photoslibrary.googleapis.com&#039;</pre>
+                <p><em>The default address of the service.</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_DEFAULT_SERVICE_PORT" name="constant_DEFAULT_SERVICE_PORT" class="anchor"></a>
+            <article id="constant_DEFAULT_SERVICE_PORT" class="constant">
+                <h3 class="">DEFAULT_SERVICE_PORT</h3>
+                <pre class="signature">DEFAULT_SERVICE_PORT = 443</pre>
+                <p><em>The default port of the service.</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_CODEGEN_NAME" name="constant_CODEGEN_NAME" class="anchor"></a>
+            <article id="constant_CODEGEN_NAME" class="constant">
+                <h3 class="">CODEGEN_NAME</h3>
+                <pre class="signature">CODEGEN_NAME = &#039;gapic&#039;</pre>
+                <p><em>The name of the code generator, to be included in the agent header.</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_UPLOAD_URL" name="constant_UPLOAD_URL" class="anchor"></a>
+            <article id="constant_UPLOAD_URL" class="constant">
+                <h3 class="">UPLOAD_URL</h3>
+                <pre class="signature">UPLOAD_URL = &#039;https://photoslibrary.googleapis.com/v1/uploads&#039;</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_serviceScopes" name="property_serviceScopes" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$serviceScopes</h3>
+                <pre class="signature">$serviceScopes : </pre>
+                <p><em>The default scopes required by the service.</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_httpClient" name="property_httpClient" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$httpClient</h3>
+                <pre class="signature">$httpClient : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_uploadRetrySettings" name="property_uploadRetrySettings" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$uploadRetrySettings</h3>
+                <pre class="signature">$uploadRetrySettings : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(array  <span class="argument">$options = array()</span>) </pre>
+                <p><em>Constructor.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$options </td>
+                                <td><p>{
+Optional. Options for configuring the service API wrapper.</p>
+<pre><code>@type string $serviceAddress
+      The address of the API remote host. May optionally include the port, formatted
+      as "&lt;uri&gt;:&lt;port&gt;". Default 'photoslibrary.googleapis.com:443'.
+@type string|array|FetchAuthTokenInterface|CredentialsWrapper $credentials
+      The credentials to be used by the client to authorize API calls. This option
+      accepts either a path to a credentials file, or a decoded credentials file as a
+      PHP array.
+      *Advanced usage*: In addition, this option can also accept a pre-constructed
+      {@see \Google\Auth\FetchAuthTokenInterface} object or
+      {@see \Google\ApiCore\CredentialsWrapper} object. Note that when one of these
+      objects are provided, any settings in $credentialsConfig will be ignored.
+@type array $credentialsConfig
+      Options used to configure credentials, including auth token caching, for the client.
+      For a full list of supporting configuration options, see
+      {@see \Google\ApiCore\CredentialsWrapper::build()}.
+@type bool $disableRetries
+      Determines whether or not retries defined by the client configuration should be
+      disabled. Defaults to `false`.
+@type string|array $clientConfig
+      Client method configuration, including retry settings. This option can be either a
+      path to a JSON file, or a PHP array containing the decoded JSON data.
+      By default this settings points to the default client config file, which is provided
+      in the resources folder.
+@type string|TransportInterface $transport
+      The transport used for executing network requests. May be either the string `rest`
+      or `grpc`. Defaults to `grpc` if gRPC support is detected on the system.
+      *Advanced usage*: Additionally, it is possible to pass in an already instantiated
+      {@see \Google\ApiCore\Transport\TransportInterface} object. Note that when this
+      object is provided, any settings in $transportConfig, and any $serviceAddress
+      setting, will be ignored.
+@type array $transportConfig
+      Configuration options that will be used to construct the transport. Options for
+      each supported transport type should be passed in a key for that transport. For
+      example:
+      $transportConfig = [
+          'grpc' =&gt; [...],
+          'rest' =&gt; [...]
+      ];
+      See the {@see \Google\ApiCore\Transport\GrpcTransport::build()} and
+      {@see \Google\ApiCore\Transport\RestTransport::build()} methods for the
+      supported options.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_createAlbum" name="method_createAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">createAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">createAlbum(\Google\Photos\Types\Album  <span class="argument">$album</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Types\Album</pre>
+                <p><em>Creates an album in a user&#039;s Google Photos library.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $album = new Album();
+    $response = $photosLibraryClient-&gt;createAlbum($album);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Google.Photos.Types.Album.html">\Google\Photos\Types\Album</a></td>
+                                <td>$album </td>
+                                <td><p>The album to be created.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Types.Album.html">\Google\Photos\Types\Album</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_batchCreateMediaItems" name="method_batchCreateMediaItems" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">batchCreateMediaItems()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">batchCreateMediaItems(array&lt;mixed,\Google\Photos\Library\V1\NewMediaItem&gt;  <span class="argument">$newMediaItems</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Library\V1\BatchCreateMediaItemsResponse</pre>
+                <p><em>Creates one or more media items in a user&#039;s Google Photos library.</em></p>
+                <p>This is the second step for creating a media item. For details regarding
+Step 1, uploading the raw bytes to a Google Server, see
+<a href="/photos/library/guides/upload-media">Uploading media</a>.</p>
+<p>This call adds the media item to the library. If an album <code>id</code> is
+specified, the call adds the media item to the album too. Each album can
+contain up to 20,000 media items. By default, the media item will be added
+to the end of the library or album.</p>
+<p>If an album <code>id</code> and position are both defined, the media item is
+added to the album at the specified position.</p>
+<p>If the call contains multiple media items, they're added at the specified
+position.
+If you are creating a media item in a shared album where you are not the
+owner, you are not allowed to position the media item. Doing so will result
+in a <code>BAD REQUEST</code> error.</p>
+<p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $newMediaItems = [];
+    $response = $photosLibraryClient-&gt;batchCreateMediaItems($newMediaItems);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array&lt;mixed,<a href="../classes/Google.Photos.Library.V1.NewMediaItem.html">\Google\Photos\Library\V1\NewMediaItem</a>&gt;</td>
+                                <td>$newMediaItems </td>
+                                <td><p>List of media items to be created.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type string $albumId
+     Identifier of the album where the media items are added. The media items
+     are also added to the user's library. This is an optional field.
+@type AlbumPosition $albumPosition
+     Position in the album where the media items are added. If not
+     specified, the media items are added to the end of the album (as per
+     the default value, that is, `LAST_IN_ALBUM`). The request fails if this
+     field is set and the `albumId` is not specified. The request will also fail
+     if you set the field and are not the owner of the shared album.
+@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Library.V1.BatchCreateMediaItemsResponse.html">\Google\Photos\Library\V1\BatchCreateMediaItemsResponse</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_batchAddMediaItemsToAlbum" name="method_batchAddMediaItemsToAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">batchAddMediaItemsToAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">batchAddMediaItemsToAlbum(string  <span class="argument">$albumId</span>, array&lt;mixed,string&gt;  <span class="argument">$mediaItemIds</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Library\V1\BatchAddMediaItemsToAlbumResponse</pre>
+                <p><em>Adds one or more media items in a user&#039;s Google Photos library to
+an album. The media items and albums must have been created by the
+developer via the API.</em></p>
+                <p>Media items are added to the end of the album. If multiple media items are
+given, they are added in the order specified in this call.</p>
+<p>Each album can contain up to 20,000 media items.</p>
+<p>Only media items that are in the user's library can be added to an
+album. For albums that are shared, the album must either be owned by the
+user or the user must have joined the album as a collaborator.</p>
+<p>Partial success is not supported. The entire request will fail if an
+invalid media item or album is specified.</p>
+<p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = '';
+    $mediaItemIds = [];
+    $response = $photosLibraryClient-&gt;batchAddMediaItemsToAlbum($albumId, $mediaItemIds);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$albumId </td>
+                                <td><p>Identifier of the [Album][google.photos.types.Album] that the
+media items are added to.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array&lt;mixed,string&gt;</td>
+                                <td>$mediaItemIds </td>
+                                <td><p>Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
+added.
+The maximum number of media items that can be added in one call is 50.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Library.V1.BatchAddMediaItemsToAlbumResponse.html">\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumResponse</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_searchMediaItems" name="method_searchMediaItems" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">searchMediaItems()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">searchMediaItems(array  <span class="argument">$optionalArgs = array()</span>) : \Google\ApiCore\PagedListResponse</pre>
+                <p><em>Searches for media items in a user&#039;s Google Photos library.</em></p>
+                <p>If no filters are set, then all media items in the user's library are
+returned.
+If an album is set, all media items in the specified album are returned.
+If filters are specified, media items that match the filters from the
+user's library are listed. If you set both the album and the filters, the
+request results in an error.</p>
+<p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    // Iterate over pages of elements
+    $pagedResponse = $photosLibraryClient-&gt;searchMediaItems();
+    foreach ($pagedResponse-&gt;iteratePages() as $page) {
+        foreach ($page as $element) {
+            // doSomethingWith($element);
+        }
+    }
+
+    // Alternatively:
+
+    // Iterate through all elements
+    $pagedResponse = $photosLibraryClient-&gt;searchMediaItems();
+    foreach ($pagedResponse-&gt;iterateAllElements() as $element) {
+        // doSomethingWith($element);
+    }
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type string $albumId
+     Identifier of an album. If populated, lists all media items in
+     specified album. Can't set in conjunction with any filters.
+@type int $pageSize
+     The maximum number of resources contained in the underlying API
+     response. The API may return fewer values in a page, even if
+     there are additional values to be retrieved.
+@type string $pageToken
+     A page token is used to specify a page of values to be returned.
+     If no page token is specified (the default), the first page
+     of values will be returned. Any page token used here must have
+     been generated by a previous call to the API.
+@type Filters $filters
+     Filters to apply to the request. Can't be set in conjunction with an
+     `albumId`.
+@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    \Google\ApiCore\PagedListResponse
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_listMediaItems" name="method_listMediaItems" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">listMediaItems()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">listMediaItems(array  <span class="argument">$optionalArgs = array()</span>) : \Google\ApiCore\PagedListResponse</pre>
+                <p><em>List all media items from a user&#039;s Google Photos library.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    // Iterate over pages of elements
+    $pagedResponse = $photosLibraryClient-&gt;listMediaItems();
+    foreach ($pagedResponse-&gt;iteratePages() as $page) {
+        foreach ($page as $element) {
+            // doSomethingWith($element);
+        }
+    }
+
+    // Alternatively:
+
+    // Iterate through all elements
+    $pagedResponse = $photosLibraryClient-&gt;listMediaItems();
+    foreach ($pagedResponse-&gt;iterateAllElements() as $element) {
+        // doSomethingWith($element);
+    }
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type int $pageSize
+     The maximum number of resources contained in the underlying API
+     response. The API may return fewer values in a page, even if
+     there are additional values to be retrieved.
+@type string $pageToken
+     A page token is used to specify a page of values to be returned.
+     If no page token is specified (the default), the first page
+     of values will be returned. Any page token used here must have
+     been generated by a previous call to the API.
+@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    \Google\ApiCore\PagedListResponse
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getMediaItem" name="method_getMediaItem" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getMediaItem()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getMediaItem(string  <span class="argument">$mediaItemId</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Types\MediaItem</pre>
+                <p><em>Returns the media item for the specified media item identifier.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $mediaItemId = '';
+    $response = $photosLibraryClient-&gt;getMediaItem($mediaItemId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$mediaItemId </td>
+                                <td><p>Identifier of the media item to be requested.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Types.MediaItem.html">\Google\Photos\Types\MediaItem</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_batchGetMediaItems" name="method_batchGetMediaItems" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">batchGetMediaItems()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">batchGetMediaItems(array&lt;mixed,string&gt;  <span class="argument">$mediaItemIds</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Library\V1\BatchGetMediaItemsResponse</pre>
+                <p><em>Returns the list of media items for the specified media item identifiers.</em></p>
+                <p>Items are returned in the same order as the supplied identifiers.</p>
+<p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $mediaItemIds = [];
+    $response = $photosLibraryClient-&gt;batchGetMediaItems($mediaItemIds);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array&lt;mixed,string&gt;</td>
+                                <td>$mediaItemIds </td>
+                                <td><p>Identifiers of the media items to be requested.
+Must not contain repeated identifiers and cannot be empty. The maximum
+number of media items that can be retrieved in one call is 50.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Library.V1.BatchGetMediaItemsResponse.html">\Google\Photos\Library\V1\BatchGetMediaItemsResponse</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_listAlbums" name="method_listAlbums" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">listAlbums()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">listAlbums(array  <span class="argument">$optionalArgs = array()</span>) : \Google\ApiCore\PagedListResponse</pre>
+                <p><em>Lists all albums shown to a user in the Albums tab of the Google
+Photos app.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    // Iterate over pages of elements
+    $pagedResponse = $photosLibraryClient-&gt;listAlbums();
+    foreach ($pagedResponse-&gt;iteratePages() as $page) {
+        foreach ($page as $element) {
+            // doSomethingWith($element);
+        }
+    }
+
+    // Alternatively:
+
+    // Iterate through all elements
+    $pagedResponse = $photosLibraryClient-&gt;listAlbums();
+    foreach ($pagedResponse-&gt;iterateAllElements() as $element) {
+        // doSomethingWith($element);
+    }
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type int $pageSize
+     The maximum number of resources contained in the underlying API
+     response. The API may return fewer values in a page, even if
+     there are additional values to be retrieved.
+@type string $pageToken
+     A page token is used to specify a page of values to be returned.
+     If no page token is specified (the default), the first page
+     of values will be returned. Any page token used here must have
+     been generated by a previous call to the API.
+@type bool $excludeNonAppCreatedData
+     If set, the results exclude media items that were not created by this app.
+     Defaults to false (all albums are returned). This field is ignored if the
+     photoslibrary.readonly.appcreateddata scope is used.
+@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    \Google\ApiCore\PagedListResponse
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAlbum" name="method_getAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAlbum(string  <span class="argument">$albumId</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Types\Album</pre>
+                <p><em>Returns the album based on the specified `albumId`.</em></p>
+                <p>The <code>albumId</code> must be the ID of an album owned by the user or a shared
+album that the user has joined.</p>
+<p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = '';
+    $response = $photosLibraryClient-&gt;getAlbum($albumId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$albumId </td>
+                                <td><p>Identifier of the album to be requested.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Types.Album.html">\Google\Photos\Types\Album</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getSharedAlbum" name="method_getSharedAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getSharedAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getSharedAlbum(string  <span class="argument">$shareToken</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Types\Album</pre>
+                <p><em>Returns the album based on the specified `shareToken`.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $shareToken = '';
+    $response = $photosLibraryClient-&gt;getSharedAlbum($shareToken);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$shareToken </td>
+                                <td><p>Share token of the album to be requested.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Types.Album.html">\Google\Photos\Types\Album</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_addEnrichmentToAlbum" name="method_addEnrichmentToAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">addEnrichmentToAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">addEnrichmentToAlbum(string  <span class="argument">$albumId</span>, \Google\Photos\Library\V1\NewEnrichmentItem  <span class="argument">$newEnrichmentItem</span>, \Google\Photos\Library\V1\AlbumPosition  <span class="argument">$albumPosition</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Library\V1\AddEnrichmentToAlbumResponse</pre>
+                <p><em>Adds an enrichment at a specified position in a defined album.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = '';
+    $newEnrichmentItem = new NewEnrichmentItem();
+    $albumPosition = new AlbumPosition();
+    $response = $photosLibraryClient-&gt;addEnrichmentToAlbum($albumId, $newEnrichmentItem, $albumPosition);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$albumId </td>
+                                <td><p>Identifier of the album where the enrichment is to be added.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../classes/Google.Photos.Library.V1.NewEnrichmentItem.html">\Google\Photos\Library\V1\NewEnrichmentItem</a></td>
+                                <td>$newEnrichmentItem </td>
+                                <td><p>The enrichment to be added.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../classes/Google.Photos.Library.V1.AlbumPosition.html">\Google\Photos\Library\V1\AlbumPosition</a></td>
+                                <td>$albumPosition </td>
+                                <td><p>The position in the album where the enrichment is to be inserted.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Library.V1.AddEnrichmentToAlbumResponse.html">\Google\Photos\Library\V1\AddEnrichmentToAlbumResponse</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_joinSharedAlbum" name="method_joinSharedAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">joinSharedAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">joinSharedAlbum(string  <span class="argument">$shareToken</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Library\V1\JoinSharedAlbumResponse</pre>
+                <p><em>Joins a shared album on behalf of the Google Photos user.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $shareToken = '';
+    $response = $photosLibraryClient-&gt;joinSharedAlbum($shareToken);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$shareToken </td>
+                                <td><p>Token to join the shared album on behalf of the user.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Library.V1.JoinSharedAlbumResponse.html">\Google\Photos\Library\V1\JoinSharedAlbumResponse</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_leaveSharedAlbum" name="method_leaveSharedAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">leaveSharedAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">leaveSharedAlbum(string  <span class="argument">$shareToken</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Library\V1\LeaveSharedAlbumResponse</pre>
+                <p><em>Leaves a previously-joined shared album on behalf of the Google Photos
+user. The user must not own this album.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $shareToken = '';
+    $response = $photosLibraryClient-&gt;leaveSharedAlbum($shareToken);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$shareToken </td>
+                                <td><p>Token to leave the shared album on behalf of the user.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Library.V1.LeaveSharedAlbumResponse.html">\Google\Photos\Library\V1\LeaveSharedAlbumResponse</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_shareAlbum" name="method_shareAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">shareAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">shareAlbum(string  <span class="argument">$albumId</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Library\V1\ShareAlbumResponse</pre>
+                <p><em>Marks an album as shared and accessible to other users. This action can
+only be performed on albums which were created by the developer via the
+API.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = '';
+    $response = $photosLibraryClient-&gt;shareAlbum($albumId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$albumId </td>
+                                <td><p>Identifier of the album to be shared. This <code>albumId</code> must belong to an
+album created by the developer.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type SharedAlbumOptions $sharedAlbumOptions
+     Options to be set when converting the album to a shared album.
+@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Library.V1.ShareAlbumResponse.html">\Google\Photos\Library\V1\ShareAlbumResponse</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_listSharedAlbums" name="method_listSharedAlbums" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">listSharedAlbums()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">listSharedAlbums(array  <span class="argument">$optionalArgs = array()</span>) : \Google\ApiCore\PagedListResponse</pre>
+                <p><em>Lists all shared albums available in the Sharing tab of the
+user&#039;s Google Photos app.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    // Iterate over pages of elements
+    $pagedResponse = $photosLibraryClient-&gt;listSharedAlbums();
+    foreach ($pagedResponse-&gt;iteratePages() as $page) {
+        foreach ($page as $element) {
+            // doSomethingWith($element);
+        }
+    }
+
+    // Alternatively:
+
+    // Iterate through all elements
+    $pagedResponse = $photosLibraryClient-&gt;listSharedAlbums();
+    foreach ($pagedResponse-&gt;iterateAllElements() as $element) {
+        // doSomethingWith($element);
+    }
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type int $pageSize
+     The maximum number of resources contained in the underlying API
+     response. The API may return fewer values in a page, even if
+     there are additional values to be retrieved.
+@type string $pageToken
+     A page token is used to specify a page of values to be returned.
+     If no page token is specified (the default), the first page
+     of values will be returned. Any page token used here must have
+     been generated by a previous call to the API.
+@type bool $excludeNonAppCreatedData
+     If set, the results exclude media items that were not created by this app.
+     Defaults to false (all albums are returned). This field is ignored if the
+     photoslibrary.readonly.appcreateddata scope is used.
+@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    \Google\ApiCore\PagedListResponse
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_unshareAlbum" name="method_unshareAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">unshareAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">unshareAlbum(string  <span class="argument">$albumId</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Library\V1\UnshareAlbumResponse</pre>
+                <p><em>Marks a previously shared album as private. This means that the album is
+no longer shared and all the non-owners will lose access to the album. All
+non-owner content will be removed from the album. If a non-owner has
+previously added the album to their library, they will retain all photos in
+their library. This action can only be performed on albums which were
+created by the developer via the API.</em></p>
+                <p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = '';
+    $response = $photosLibraryClient-&gt;unshareAlbum($albumId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$albumId </td>
+                                <td><p>Identifier of the album to be unshared. This album id must belong to an
+album created by the developer.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Library.V1.UnshareAlbumResponse.html">\Google\Photos\Library\V1\UnshareAlbumResponse</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_batchRemoveMediaItemsFromAlbum" name="method_batchRemoveMediaItemsFromAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">batchRemoveMediaItemsFromAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">batchRemoveMediaItemsFromAlbum(string  <span class="argument">$albumId</span>, array&lt;mixed,string&gt;  <span class="argument">$mediaItemIds</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumResponse</pre>
+                <p><em>Removes one or more media items from a specified album. The media items and
+the album must have been created by the developer via the API.</em></p>
+                <p>For albums that are shared, this action is only supported for media items
+that were added to the album by this user, or for all media items if the
+album was created by this user.</p>
+<p>Partial success is not supported. The entire request will fail and no
+action will be performed on the album if an invalid media item or album is
+specified.</p>
+<p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = '';
+    $mediaItemIds = [];
+    $response = $photosLibraryClient-&gt;batchRemoveMediaItemsFromAlbum($albumId, $mediaItemIds);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$albumId </td>
+                                <td><p>Identifier of the [Album][google.photos.types.Album] that the media
+items are to be removed from.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array&lt;mixed,string&gt;</td>
+                                <td>$mediaItemIds </td>
+                                <td><p>Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
+removed.</p>
+<p>Must not contain repeated identifiers and cannot be empty. The maximum
+number of media items that can be removed in one call is 50.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Library.V1.BatchRemoveMediaItemsFromAlbumResponse.html">\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumResponse</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_updateAlbum" name="method_updateAlbum" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">updateAlbum()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">updateAlbum(\Google\Photos\Types\Album  <span class="argument">$album</span>, \Google\Protobuf\FieldMask  <span class="argument">$updateMask</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Types\Album</pre>
+                <p><em>Update the album with the specified `id`.</em></p>
+                <p>Only the <code>id</code>, <code>title</code> and <code>cover_photo_media_item_id</code> fields of the album
+are read. The album must have been created by the developer via the API and
+must be owned by the user.</p>
+<p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $album = new Album();
+    $updateMask = new FieldMask();
+    $response = $photosLibraryClient-&gt;updateAlbum($album, $updateMask);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Google.Photos.Types.Album.html">\Google\Photos\Types\Album</a></td>
+                                <td>$album </td>
+                                <td><p>Required. The [Album][google.photos.types.Album] to update.</p>
+<p>The album’s <code>id</code> field is used to identify the album to be updated.
+The album’s <code>title</code> field is used to set the new album title.
+The album’s <code>cover_photo_media_item_id</code> field is used to set the new album
+cover photo.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>\Google\Protobuf\FieldMask</td>
+                                <td>$updateMask </td>
+                                <td><p>Indicate what fields in the provided album to update.
+The only valid values are <code>title</code> and <code>cover_photo_media_item_id</code>.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Types.Album.html">\Google\Photos\Types\Album</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_updateMediaItem" name="method_updateMediaItem" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">updateMediaItem()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">updateMediaItem(\Google\Photos\Types\MediaItem  <span class="argument">$mediaItem</span>, \Google\Protobuf\FieldMask  <span class="argument">$updateMask</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Types\MediaItem</pre>
+                <p><em>Update the media item with the specified `id`.</em></p>
+                <p>Only the <code>id</code> and <code>description</code> fields of the media item are read. The
+media item must have been created by the developer via the API and must be
+owned by the user.</p>
+<p>Sample code:</p>
+<pre><code>$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $mediaItem = new MediaItem();
+    $updateMask = new FieldMask();
+    $response = $photosLibraryClient-&gt;updateMediaItem($mediaItem, $updateMask);
+} finally {
+    $photosLibraryClient-&gt;close();
+}</code></pre>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Google.Photos.Types.MediaItem.html">\Google\Photos\Types\MediaItem</a></td>
+                                <td>$mediaItem </td>
+                                <td><p>Required. The [MediaItem][google.photos.types.MediaItem] to update.</p>
+<p>The media item's <code>id</code> field is used to identify the media item to be
+updated.
+The media item's <code>description</code> field is used to set the new media item
+description.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>\Google\Protobuf\FieldMask</td>
+                                <td>$updateMask </td>
+                                <td><p>Indicate what fields in the provided media item to update.
+The only valid value is <code>description</code>.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td><p>{
+Optional.</p>
+<pre><code>@type RetrySettings|array $retrySettings
+     Retry settings to use for this call. Can be a
+     {@see Google\ApiCore\RetrySettings} object, or an associative array
+     of retry settings parameters. See the documentation on
+     {@see Google\ApiCore\RetrySettings} for example usage.</code></pre>
+<p>}</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Types.MediaItem.html">\Google\Photos\Types\MediaItem</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            experimental
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_upload" name="method_upload" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">upload()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">upload(string  <span class="argument">$rawFile</span>, string  <span class="argument">$fileName = &#039;&#039;</span>, string  <span class="argument">$mimeType = &#039;&#039;</span>) : string</pre>
+                <p><em>Uploads a media item to Google. This won&#039;t create a media item in the user&#039;s Google Photos
+library.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$rawFile </td>
+                                <td><p>The raw bytes of the file, obtained by something like
+file_get_contents().</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$fileName </td>
+                                <td><p>The name of the file to be uploaded. This is no longer recommended
+Filenames should be set in the batchCreate call instead.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$mimeType </td>
+                                <td><p>The MIME type of the file to be uploaded. For example, text/html.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\GuzzleHttp\Exception\GuzzleException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>An upload token</p>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_updateAlbumTitle" name="method_updateAlbumTitle" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">updateAlbumTitle()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">updateAlbumTitle(string  <span class="argument">$albumId</span>, string  <span class="argument">$newTitle</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Types\Album</pre>
+                <p><em>Updates the album with a new title.</em></p>
+                <p>The album must have been created by the developer via the API and
+must be owned by the user.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$albumId </td>
+                                <td><p>Identifier of the [Album][google.photos.types.Album] to update</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$newTitle </td>
+                                <td><p>Required. The new title of the album.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Types.Album.html">\Google\Photos\Types\Album</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">\Google\Photos\Library\V1\updateAlbum</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_updateAlbumCoverPhoto" name="method_updateAlbumCoverPhoto" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">updateAlbumCoverPhoto()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">updateAlbumCoverPhoto(string  <span class="argument">$albumId</span>, string  <span class="argument">$newCoverMediaItemId</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Types\Album</pre>
+                <p><em>Updates the album with a new cover photo.</em></p>
+                <p>The album must have been created by the developer via the API and
+must be owned by the user.</p>
+<p>The $newCoverMediaItemId must be the identifier of a media item contained within the
+album.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$albumId </td>
+                                <td><p>Identifier of the [Album][google.photos.types.Album] to update</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$newCoverMediaItemId </td>
+                                <td><p>Required. The identifier of the new media item cover photo.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Types.Album.html">\Google\Photos\Types\Album</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">\Google\Photos\Library\V1\updateAlbum</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_updateMediaItemDescription" name="method_updateMediaItemDescription" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">updateMediaItemDescription()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">updateMediaItemDescription(string  <span class="argument">$mediaItemId</span>, string  <span class="argument">$newDescription</span>, array  <span class="argument">$optionalArgs = array()</span>) : \Google\Photos\Types\MediaItem</pre>
+                <p><em>Updates the media item with a new description.</em></p>
+                <p>The media item must have been created by the developer via the API and
+must be owned by the user.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$mediaItemId </td>
+                                <td><p>Required. Identifier of the [MediaItem][google.photos.types.MediaItem] to update.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$newDescription </td>
+                                <td><p>The new description for the media item.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$optionalArgs </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Google\ApiCore\ApiException</dt>
+                            <dd><p>if the remote call fails</p></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Google.Photos.Types.MediaItem.html">\Google\Photos\Types\MediaItem</a>
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_contentCategories" name="method_contentCategories" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">contentCategories()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">contentCategories() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_mediaTypes" name="method_mediaTypes" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">mediaTypes()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">mediaTypes() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_features" name="method_features" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">features()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">features() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getClientDefaults" name="method_getClientDefaults" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">getClientDefaults()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getClientDefaults() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.Gapic.PhotosLibraryGapicClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_retryDecider" name="method_retryDecider" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">retryDecider()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">retryDecider(\Google\Photos\Library\V1\UploadRetrySettings  <span class="argument">$uploadRetrySettings</span>) : \Closure</pre>
+                <p><em>Returns a function that determines if a given request should be retried.</em></p>
+                <p>The returned function returns true if the status was not okay, the error was in one of the
+acceptable retry codes, and the maximum number of retries has not been exceeded.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Google.Photos.Library.V1.UploadRetrySettings.html">\Google\Photos\Library\V1\UploadRetrySettings</a></td>
+                                <td>$uploadRetrySettings </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+                                    <h4>Returns</h4>
+                    \Closure
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_retryDelay" name="method_retryDelay" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">retryDelay()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">retryDelay(\Google\Photos\Library\V1\UploadRetrySettings  <span class="argument">$uploadRetrySettings</span>) : \Closure</pre>
+                <p><em>Returns a function that determines the delay before a request is retried.</em></p>
+                <p>Implements exponential backoff, with some maximum delay.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Google.Photos.Library.V1.UploadRetrySettings.html">\Google\Photos\Library\V1\UploadRetrySettings</a></td>
+                                <td>$uploadRetrySettings </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+Warning: count(): Parameter must be an array or an object that implements Countable in phar:///Users/jfschmakeit/Downloads/phpDocumentor (2).phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 1275
+
+                                    <h4>Returns</h4>
+                    \Closure
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google.Photos.Library.V1.PhotosLibraryClient.html"><div class="path-wrapper">\Google\Photos\Library\V1\PhotosLibraryClient</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">PhotosLibraryClient.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Google/Photos/Library/V1/PhotosLibraryClient.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Google.html">\Google</a></li>
+                                                                            <li><a href="../namespaces/GPBMetadata.html">\GPBMetadata</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on July 8th, 2020 at 01:39.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
