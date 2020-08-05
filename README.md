@@ -11,7 +11,7 @@ on the command line as `composer`, follow the
 [Linux/unix/OS X](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) or 
 [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows) installation guides.
 
-*   System requirements and dependencies can be found in [`composer.json`](/google/php-photoslibrary/blob/master/composer.json)
+*   System requirements and dependencies can be found in [`composer.json`](composer.json)
     of this library. If you are not familiar with Composer, see 
     [this page](https://getcomposer.org/doc/01-basic-usage.md) for more details.
 *   Your PHP installation must include the [`bcmath` extension](http://php.net/manual/en/book.bc.php).
