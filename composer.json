@@ -12,10 +12,13 @@
       "Google\\Photos\\Library\\Tests\\": "tests"
     }
   },
+  "config": {
+    "sort-packages": true
+  },
   "require": {
+    "php": "^5.5 || ^7.0",
     "google/gax": "^1.0.2",
-    "google/protobuf": "^3.7.1",
-    "php" : "^5.5 || ^7.0"
+    "google/protobuf": "^3.7.1"
   },
   "require-dev": {
     "phpunit/phpunit": "^4.8|^5.0"
