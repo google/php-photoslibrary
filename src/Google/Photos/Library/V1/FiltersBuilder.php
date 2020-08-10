@@ -42,6 +42,7 @@ class FiltersBuilder
     private $ranges = [];
     private $dates = [];
     private $includeArchivedMedia;
+    private $excludeNonAppCreatedData;
 
     public static function construct()
     {
@@ -85,6 +86,7 @@ class FiltersBuilder
         }
 
         $filters->setIncludeArchivedMedia($this->includeArchivedMedia);
+        $filters->setExcludeNonAppCreatedData($this->excludeNonAppCreatedData);
         return $filters;
     }
 
@@ -268,6 +270,19 @@ class FiltersBuilder
     public function setIncludeArchivedMedia($includeArchivedMedia)
     {
         $this->includeArchivedMedia = $includeArchivedMedia;
+        return $this;
+    }
+
+    /**
+     * Sets the flag to exclude non-app created data. If true, media that was not created by this
+     * application will not be returned.
+     *
+     * @param boolean $excludeNonAppCreatedData
+     * @return $this
+     */
+    public function setExcludeNonAppCreatedData($excludeNonAppCreatedData)
+    {
+        $this->excludeNonAppCreatedData = $excludeNonAppCreatedData;
         return $this;
     }
 }
