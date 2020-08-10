@@ -78,14 +78,19 @@ class PhotosLibraryResourceFactory
      */
     public static function newMediaItemWithFileName($uploadToken, $fileName)
     {
-        $newMediaItem = self::newMediaItem($uploadToken);
-        $newMediaItem->setFileName($fileName);
+        $simpleMediaItem = new SimpleMediaItem();
+        $simpleMediaItem->setUploadToken($uploadToken);
+        $simpleMediaItem->setFileName($fileName);
+
+        $newMediaItem = new NewMediaItem();
+        $newMediaItem->setSimpleMediaItem($simpleMediaItem);
+
         return $newMediaItem;
     }
 
     /**
-     * Returns a {@link NewMediaItem} with the given description, fileName and a {@link SimpleMediaItem} with
-     * the given upload token.
+     * Returns a {@link NewMediaItem} with the given description and a {@link SimpleMediaItem} with
+     * the given upload token and fileName.
      *
      * @param string $uploadToken
      * @param string $description
@@ -95,9 +100,8 @@ class PhotosLibraryResourceFactory
     public static function newMediaItemWithDescriptionAndFileName($uploadToken, $description,
                                                                   $fileName)
     {
-        $newMediaItem = self::newMediaItem($uploadToken);
+        $newMediaItem = self::newMediaItemWithFileName($uploadToken, $fileName);
         $newMediaItem->setDescription($description);
-        $newMediaItem->setFileName($fileName);
         return $newMediaItem;
     }
 
