@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/google.html"><abbr title="\Google">normal</abbr></a></li>
+                                                        <li><a href="../namespaces/gpbmetadata.html"><abbr title="\GPBMetadata">normal</abbr></a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-691668467"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-691668467" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-197969595"></a>
+                                <a href="../namespaces/google.html" style="margin-left: 30px; padding-left: 0">Google</a>
+            </div>
+            <div id="namespace-197969595" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-870375050"></a>
+                                <a href="../namespaces/google-photos.html" style="margin-left: 30px; padding-left: 0">Photos</a>
+            </div>
+            <div id="namespace-870375050" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1607601414"></a>
+                                <a href="../namespaces/google-photos-library.html" style="margin-left: 30px; padding-left: 0">Library</a>
+            </div>
+            <div id="namespace-1607601414" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1999583044"></a>
+                                <a href="../namespaces/google-photos-library-v1.html" style="margin-left: 30px; padding-left: 0">V1</a>
+            </div>
+            <div id="namespace-1999583044" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-867002296"></a>
+                                <a href="../namespaces/google-photos-library-v1-albumposition.html" style="margin-left: 30px; padding-left: 0">AlbumPosition</a>
+            </div>
+            <div id="namespace-867002296" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AlbumPosition-PositionType.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition\PositionType">PositionType</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-401894410"></a>
+                                <a href="../namespaces/google-photos-library-v1-featurefilter.html" style="margin-left: 30px; padding-left: 0">FeatureFilter</a>
+            </div>
+            <div id="namespace-401894410" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-FeatureFilter-Feature.html"><abbr title="\Google\Photos\Library\V1\FeatureFilter\Feature">Feature</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1930390513"></a>
+                                <a href="../namespaces/google-photos-library-v1-gapic.html" style="margin-left: 30px; padding-left: 0">Gapic</a>
+            </div>
+            <div id="namespace-1930390513" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html"><abbr title="\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient">PhotosLibraryGapicClient</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1957213743"></a>
+                                <a href="../namespaces/google-photos-library-v1-mediatypefilter.html" style="margin-left: 30px; padding-left: 0">MediaTypeFilter</a>
+            </div>
+            <div id="namespace-1957213743" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MediaTypeFilter-MediaType.html"><abbr title="\Google\Photos\Library\V1\MediaTypeFilter\MediaType">MediaType</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AddEnrichmentToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumRequest">AddEnrichmentToAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AddEnrichmentToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumResponse">AddEnrichmentToAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AlbumPosition.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition">AlbumPosition</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AlbumPosition-PositionType.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition_PositionType">AlbumPosition_PositionType</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumRequest">BatchAddMediaItemsToAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumResponse">BatchAddMediaItemsToAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchCreateMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsRequest">BatchCreateMediaItemsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchCreateMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsResponse">BatchCreateMediaItemsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchGetMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsRequest">BatchGetMediaItemsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchGetMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsResponse">BatchGetMediaItemsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumRequest">BatchRemoveMediaItemsFromAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumResponse">BatchRemoveMediaItemsFromAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ContentCategory.html"><abbr title="\Google\Photos\Library\V1\ContentCategory">ContentCategory</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ContentFilter.html"><abbr title="\Google\Photos\Library\V1\ContentFilter">ContentFilter</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-CreateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\CreateAlbumRequest">CreateAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-DateFilter.html"><abbr title="\Google\Photos\Library\V1\DateFilter">DateFilter</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-EnrichmentItem.html"><abbr title="\Google\Photos\Library\V1\EnrichmentItem">EnrichmentItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-FeatureFilter.html"><abbr title="\Google\Photos\Library\V1\FeatureFilter">FeatureFilter</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-FeatureFilter-Feature.html"><abbr title="\Google\Photos\Library\V1\FeatureFilter_Feature">FeatureFilter_Feature</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-Filters.html"><abbr title="\Google\Photos\Library\V1\Filters">Filters</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-FiltersBuilder.html"><abbr title="\Google\Photos\Library\V1\FiltersBuilder">FiltersBuilder</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-GetAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetAlbumRequest">GetAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-GetMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\GetMediaItemRequest">GetMediaItemRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-GetSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetSharedAlbumRequest">GetSharedAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-JoinSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumRequest">JoinSharedAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-JoinSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumResponse">JoinSharedAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-LeaveSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumRequest">LeaveSharedAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-LeaveSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumResponse">LeaveSharedAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListAlbumsRequest">ListAlbumsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListAlbumsResponse.html"><abbr title="\Google\Photos\Library\V1\ListAlbumsResponse">ListAlbumsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\ListMediaItemsRequest">ListMediaItemsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\ListMediaItemsResponse">ListMediaItemsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListSharedAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListSharedAlbumsRequest">ListSharedAlbumsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListSharedAlbumsResponse.html"><abbr title="\Google\Photos\Library\V1\ListSharedAlbumsResponse">ListSharedAlbumsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-Location.html"><abbr title="\Google\Photos\Library\V1\Location">Location</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-LocationEnrichment.html"><abbr title="\Google\Photos\Library\V1\LocationEnrichment">LocationEnrichment</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MapEnrichment.html"><abbr title="\Google\Photos\Library\V1\MapEnrichment">MapEnrichment</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MediaItemResult.html"><abbr title="\Google\Photos\Library\V1\MediaItemResult">MediaItemResult</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MediaTypeFilter.html"><abbr title="\Google\Photos\Library\V1\MediaTypeFilter">MediaTypeFilter</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MediaTypeFilter-MediaType.html"><abbr title="\Google\Photos\Library\V1\MediaTypeFilter_MediaType">MediaTypeFilter_MediaType</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-NewEnrichmentItem.html"><abbr title="\Google\Photos\Library\V1\NewEnrichmentItem">NewEnrichmentItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-NewMediaItem.html"><abbr title="\Google\Photos\Library\V1\NewMediaItem">NewMediaItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-NewMediaItemResult.html"><abbr title="\Google\Photos\Library\V1\NewMediaItemResult">NewMediaItemResult</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-PhotosLibraryClient.html"><abbr title="\Google\Photos\Library\V1\PhotosLibraryClient">PhotosLibraryClient</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html"><abbr title="\Google\Photos\Library\V1\PhotosLibraryGrpcClient">PhotosLibraryGrpcClient</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-PhotosLibraryResourceFactory.html"><abbr title="\Google\Photos\Library\V1\PhotosLibraryResourceFactory">PhotosLibraryResourceFactory</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-SearchMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\SearchMediaItemsRequest">SearchMediaItemsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-SearchMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\SearchMediaItemsResponse">SearchMediaItemsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ShareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumRequest">ShareAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ShareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumResponse">ShareAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-SimpleMediaItem.html"><abbr title="\Google\Photos\Library\V1\SimpleMediaItem">SimpleMediaItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-TextEnrichment.html"><abbr title="\Google\Photos\Library\V1\TextEnrichment">TextEnrichment</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UnshareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumRequest">UnshareAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UnshareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumResponse">UnshareAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UpdateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateAlbumRequest">UpdateAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UpdateMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateMediaItemRequest">UpdateMediaItemRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UploadRetrySettings.html"><abbr title="\Google\Photos\Library\V1\UploadRetrySettings">UploadRetrySettings</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1741474721"></a>
+                                <a href="../namespaces/google-photos-types.html" style="margin-left: 30px; padding-left: 0">Types</a>
+            </div>
+            <div id="namespace-1741474721" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-ContributorInfo.html"><abbr title="\Google\Photos\Types\ContributorInfo">ContributorInfo</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-DateRange.html"><abbr title="\Google\Photos\Types\DateRange">DateRange</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-MediaMetadata.html"><abbr title="\Google\Photos\Types\MediaMetadata">MediaMetadata</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-Photo.html"><abbr title="\Google\Photos\Types\Photo">Photo</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-SharedAlbumOptions.html"><abbr title="\Google\Photos\Types\SharedAlbumOptions">SharedAlbumOptions</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-ShareInfo.html"><abbr title="\Google\Photos\Types\ShareInfo">ShareInfo</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-Video.html"><abbr title="\Google\Photos\Types\Video">Video</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-VideoProcessingStatus.html"><abbr title="\Google\Photos\Types\VideoProcessingStatus">VideoProcessingStatus</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-956347042"></a>
+                                <a href="../namespaces/gpbmetadata.html" style="margin-left: 30px; padding-left: 0">GPBMetadata</a>
+            </div>
+            <div id="namespace-956347042" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1474661076"></a>
+                                <a href="../namespaces/gpbmetadata-google.html" style="margin-left: 30px; padding-left: 0">Google</a>
+            </div>
+            <div id="namespace-1474661076" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1419727922"></a>
+                                <a href="../namespaces/gpbmetadata-google-photos.html" style="margin-left: 30px; padding-left: 0">Photos</a>
+            </div>
+            <div id="namespace-1419727922" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1133292606"></a>
+                                <a href="../namespaces/gpbmetadata-google-photos-library.html" style="margin-left: 30px; padding-left: 0">Library</a>
+            </div>
+            <div id="namespace-1133292606" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1477170154"></a>
+                                <a href="../namespaces/gpbmetadata-google-photos-library-v1.html" style="margin-left: 30px; padding-left: 0">V1</a>
+            </div>
+            <div id="namespace-1477170154" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/GPBMetadata-Google-Photos-Library-V1-PhotosLibrary.html"><abbr title="\GPBMetadata\Google\Photos\Library\V1\PhotosLibrary">PhotosLibrary</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1745990855"></a>
+                                <a href="../namespaces/gpbmetadata-google-photos-types.html" style="margin-left: 30px; padding-left: 0">Types</a>
+            </div>
+            <div id="namespace-1745990855" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/GPBMetadata-Google-Photos-Types-Album.html"><abbr title="\GPBMetadata\Google\Photos\Types\Album">Album</abbr></a></li>
+                                                    <li class="class"><a href="../classes/GPBMetadata-Google-Photos-Types-DateRange.html"><abbr title="\GPBMetadata\Google\Photos\Types\DateRange">DateRange</abbr></a></li>
+                                                    <li class="class"><a href="../classes/GPBMetadata-Google-Photos-Types-MediaItem.html"><abbr title="\GPBMetadata\Google\Photos\Types\MediaItem">MediaItem</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/google-photos-library-v1.html"><abbr title="\Google\Photos\Library\V1">normal</abbr></a> <i class="icon-level-up"></i>
+                                            </nav>
+                    
+                    <h1><small>\Google\Photos\Library\V1</small>ContentCategory</h1>
+                    <p><em>This is a set of pre-defined content categories that you can filter on.</em></p>
+                    <p>Protobuf type <code class="prettyprint">google.photos.library.v1.ContentCategory</code></p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#method_name" class="">name()</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#method_value" class="">value()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_NONE" class="">NONE</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_LANDSCAPES" class="">LANDSCAPES</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_RECEIPTS" class="">RECEIPTS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_CITYSCAPES" class="">CITYSCAPES</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_LANDMARKS" class="">LANDMARKS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_SELFIES" class="">SELFIES</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_PEOPLE" class="">PEOPLE</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_PETS" class="">PETS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_WEDDINGS" class="">WEDDINGS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_BIRTHDAYS" class="">BIRTHDAYS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_DOCUMENTS" class="">DOCUMENTS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_TRAVEL" class="">TRAVEL</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_ANIMALS" class="">ANIMALS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_FOOD" class="">FOOD</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_SPORT" class="">SPORT</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_NIGHT" class="">NIGHT</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_PERFORMANCES" class="">PERFORMANCES</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_WHITEBOARDS" class="">WHITEBOARDS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_SCREENSHOTS" class="">SCREENSHOTS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_UTILITY" class="">UTILITY</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_ARTS" class="">ARTS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_CRAFTS" class="">CRAFTS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_FASHION" class="">FASHION</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_HOUSES" class="">HOUSES</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_GARDENS" class="">GARDENS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_FLOWERS" class="">FLOWERS</a><br />
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#constant_HOLIDAYS" class="">HOLIDAYS</a><br />
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Google-Photos-Library-V1-ContentCategory.html#property_valueToName" class="">$valueToName</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Google\Photos\Library\V1\ContentCategory</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                                    <a id="constants" name="constants"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Constants</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_NONE" name="constant_NONE" class="anchor"></a>
+            <article id="constant_NONE" class="constant">
+                <h3 class="">NONE</h3>
+                <pre class="signature">NONE = 0 : </pre>
+                <p><em>Default content category. This category is ignored when any other category
+is used in the filter.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">NONE = 0;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_LANDSCAPES" name="constant_LANDSCAPES" class="anchor"></a>
+            <article id="constant_LANDSCAPES" class="constant">
+                <h3 class="">LANDSCAPES</h3>
+                <pre class="signature">LANDSCAPES = 1 : </pre>
+                <p><em>Media items containing landscapes.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">LANDSCAPES = 1;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_RECEIPTS" name="constant_RECEIPTS" class="anchor"></a>
+            <article id="constant_RECEIPTS" class="constant">
+                <h3 class="">RECEIPTS</h3>
+                <pre class="signature">RECEIPTS = 2 : </pre>
+                <p><em>Media items containing receipts.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">RECEIPTS = 2;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_CITYSCAPES" name="constant_CITYSCAPES" class="anchor"></a>
+            <article id="constant_CITYSCAPES" class="constant">
+                <h3 class="">CITYSCAPES</h3>
+                <pre class="signature">CITYSCAPES = 3 : </pre>
+                <p><em>Media items containing cityscapes.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">CITYSCAPES = 3;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_LANDMARKS" name="constant_LANDMARKS" class="anchor"></a>
+            <article id="constant_LANDMARKS" class="constant">
+                <h3 class="">LANDMARKS</h3>
+                <pre class="signature">LANDMARKS = 4 : </pre>
+                <p><em>Media items containing landmarks.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">LANDMARKS = 4;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_SELFIES" name="constant_SELFIES" class="anchor"></a>
+            <article id="constant_SELFIES" class="constant">
+                <h3 class="">SELFIES</h3>
+                <pre class="signature">SELFIES = 5 : </pre>
+                <p><em>Media items that are selfies.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">SELFIES = 5;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_PEOPLE" name="constant_PEOPLE" class="anchor"></a>
+            <article id="constant_PEOPLE" class="constant">
+                <h3 class="">PEOPLE</h3>
+                <pre class="signature">PEOPLE = 6 : </pre>
+                <p><em>Media items containing people.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">PEOPLE = 6;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_PETS" name="constant_PETS" class="anchor"></a>
+            <article id="constant_PETS" class="constant">
+                <h3 class="">PETS</h3>
+                <pre class="signature">PETS = 7 : </pre>
+                <p><em>Media items containing pets.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">PETS = 7;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WEDDINGS" name="constant_WEDDINGS" class="anchor"></a>
+            <article id="constant_WEDDINGS" class="constant">
+                <h3 class="">WEDDINGS</h3>
+                <pre class="signature">WEDDINGS = 8 : </pre>
+                <p><em>Media items from weddings.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">WEDDINGS = 8;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_BIRTHDAYS" name="constant_BIRTHDAYS" class="anchor"></a>
+            <article id="constant_BIRTHDAYS" class="constant">
+                <h3 class="">BIRTHDAYS</h3>
+                <pre class="signature">BIRTHDAYS = 9 : </pre>
+                <p><em>Media items from birthdays.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">BIRTHDAYS = 9;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_DOCUMENTS" name="constant_DOCUMENTS" class="anchor"></a>
+            <article id="constant_DOCUMENTS" class="constant">
+                <h3 class="">DOCUMENTS</h3>
+                <pre class="signature">DOCUMENTS = 10 : </pre>
+                <p><em>Media items containing documents.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">DOCUMENTS = 10;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_TRAVEL" name="constant_TRAVEL" class="anchor"></a>
+            <article id="constant_TRAVEL" class="constant">
+                <h3 class="">TRAVEL</h3>
+                <pre class="signature">TRAVEL = 11 : </pre>
+                <p><em>Media items taken during travel.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">TRAVEL = 11;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_ANIMALS" name="constant_ANIMALS" class="anchor"></a>
+            <article id="constant_ANIMALS" class="constant">
+                <h3 class="">ANIMALS</h3>
+                <pre class="signature">ANIMALS = 12 : </pre>
+                <p><em>Media items containing animals.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">ANIMALS = 12;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_FOOD" name="constant_FOOD" class="anchor"></a>
+            <article id="constant_FOOD" class="constant">
+                <h3 class="">FOOD</h3>
+                <pre class="signature">FOOD = 13 : </pre>
+                <p><em>Media items containing food.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">FOOD = 13;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_SPORT" name="constant_SPORT" class="anchor"></a>
+            <article id="constant_SPORT" class="constant">
+                <h3 class="">SPORT</h3>
+                <pre class="signature">SPORT = 14 : </pre>
+                <p><em>Media items from sporting events.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">SPORT = 14;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_NIGHT" name="constant_NIGHT" class="anchor"></a>
+            <article id="constant_NIGHT" class="constant">
+                <h3 class="">NIGHT</h3>
+                <pre class="signature">NIGHT = 15 : </pre>
+                <p><em>Media items taken at night.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">NIGHT = 15;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_PERFORMANCES" name="constant_PERFORMANCES" class="anchor"></a>
+            <article id="constant_PERFORMANCES" class="constant">
+                <h3 class="">PERFORMANCES</h3>
+                <pre class="signature">PERFORMANCES = 16 : </pre>
+                <p><em>Media items from performances.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">PERFORMANCES = 16;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_WHITEBOARDS" name="constant_WHITEBOARDS" class="anchor"></a>
+            <article id="constant_WHITEBOARDS" class="constant">
+                <h3 class="">WHITEBOARDS</h3>
+                <pre class="signature">WHITEBOARDS = 17 : </pre>
+                <p><em>Media items containing whiteboards.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">WHITEBOARDS = 17;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_SCREENSHOTS" name="constant_SCREENSHOTS" class="anchor"></a>
+            <article id="constant_SCREENSHOTS" class="constant">
+                <h3 class="">SCREENSHOTS</h3>
+                <pre class="signature">SCREENSHOTS = 18 : </pre>
+                <p><em>Media items that are screenshots.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">SCREENSHOTS = 18;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_UTILITY" name="constant_UTILITY" class="anchor"></a>
+            <article id="constant_UTILITY" class="constant">
+                <h3 class="">UTILITY</h3>
+                <pre class="signature">UTILITY = 19 : </pre>
+                <p><em>Media items that are considered to be utility. These include, but aren&#039;t
+limited to documents, screenshots, whiteboards etc.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">UTILITY = 19;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_ARTS" name="constant_ARTS" class="anchor"></a>
+            <article id="constant_ARTS" class="constant">
+                <h3 class="">ARTS</h3>
+                <pre class="signature">ARTS = 20 : </pre>
+                <p><em>Media items containing art.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">ARTS = 20;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_CRAFTS" name="constant_CRAFTS" class="anchor"></a>
+            <article id="constant_CRAFTS" class="constant">
+                <h3 class="">CRAFTS</h3>
+                <pre class="signature">CRAFTS = 21 : </pre>
+                <p><em>Media items containing crafts.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">CRAFTS = 21;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_FASHION" name="constant_FASHION" class="anchor"></a>
+            <article id="constant_FASHION" class="constant">
+                <h3 class="">FASHION</h3>
+                <pre class="signature">FASHION = 22 : </pre>
+                <p><em>Media items related to fashion.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">FASHION = 22;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_HOUSES" name="constant_HOUSES" class="anchor"></a>
+            <article id="constant_HOUSES" class="constant">
+                <h3 class="">HOUSES</h3>
+                <pre class="signature">HOUSES = 23 : </pre>
+                <p><em>Media items containing houses.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">HOUSES = 23;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_GARDENS" name="constant_GARDENS" class="anchor"></a>
+            <article id="constant_GARDENS" class="constant">
+                <h3 class="">GARDENS</h3>
+                <pre class="signature">GARDENS = 24 : </pre>
+                <p><em>Media items containing gardens.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">GARDENS = 24;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_FLOWERS" name="constant_FLOWERS" class="anchor"></a>
+            <article id="constant_FLOWERS" class="constant">
+                <h3 class="">FLOWERS</h3>
+                <pre class="signature">FLOWERS = 25 : </pre>
+                <p><em>Media items containing flowers.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">FLOWERS = 25;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_HOLIDAYS" name="constant_HOLIDAYS" class="anchor"></a>
+            <article id="constant_HOLIDAYS" class="constant">
+                <h3 class="">HOLIDAYS</h3>
+                <pre class="signature">HOLIDAYS = 26 : </pre>
+                <p><em>Media items taken of holidays.</em></p>
+                <p>Generated from protobuf enum <code class="prettyprint">HOLIDAYS = 26;</code></p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href="../files/client-php-src-google-photos-library-v1-contentcategory.html"><div class="path-wrapper">client-php/src/Google/Photos/Library/V1/ContentCategory.php</div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_valueToName" name="property_valueToName" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$valueToName</h3>
+                <pre class="signature">$valueToName</pre>
+                <p><em></em></p>
+                
+
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_name" name="method_name" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">name()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">name(mixed  <span class="argument">$value</span>) : mixed</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$value </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google-Photos-Library-V1-ContentCategory.html"><div class="path-wrapper">\Google\Photos\Library\V1\ContentCategory</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_value" name="method_value" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">value()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">value(mixed  <span class="argument">$name</span>) : mixed</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Google-Photos-Library-V1-ContentCategory.html"><div class="path-wrapper">\Google\Photos\Library\V1\ContentCategory</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">ContentCategory.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/client-php/src/Google/Photos/Library/V1/ContentCategory.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/google.html"><abbr title="\Google">normal</abbr></a></li>
+                                                                            <li><a href="../namespaces/gpbmetadata.html"><abbr title="\GPBMetadata">normal</abbr></a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on August 11th, 2020 at 08:15.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

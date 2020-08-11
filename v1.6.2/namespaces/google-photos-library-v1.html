@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/google.html"><abbr title="\Google">normal</abbr></a></li>
+                                                        <li><a href="../namespaces/gpbmetadata.html"><abbr title="\GPBMetadata">normal</abbr></a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-212060606"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-212060606" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1952799566"></a>
+                                <a href="../namespaces/google.html" style="margin-left: 30px; padding-left: 0">Google</a>
+            </div>
+            <div id="namespace-1952799566" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-121829174"></a>
+                                <a href="../namespaces/google-photos.html" style="margin-left: 30px; padding-left: 0">Photos</a>
+            </div>
+            <div id="namespace-121829174" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1779055843"></a>
+                                <a href="../namespaces/google-photos-library.html" style="margin-left: 30px; padding-left: 0">Library</a>
+            </div>
+            <div id="namespace-1779055843" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-590780437"></a>
+                                <a href="../namespaces/google-photos-library-v1.html" style="margin-left: 30px; padding-left: 0">V1</a>
+            </div>
+            <div id="namespace-590780437" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-32094049"></a>
+                                <a href="../namespaces/google-photos-library-v1-albumposition.html" style="margin-left: 30px; padding-left: 0">AlbumPosition</a>
+            </div>
+            <div id="namespace-32094049" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AlbumPosition-PositionType.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition\PositionType">PositionType</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-66206679"></a>
+                                <a href="../namespaces/google-photos-library-v1-featurefilter.html" style="margin-left: 30px; padding-left: 0">FeatureFilter</a>
+            </div>
+            <div id="namespace-66206679" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-FeatureFilter-Feature.html"><abbr title="\Google\Photos\Library\V1\FeatureFilter\Feature">Feature</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1683885787"></a>
+                                <a href="../namespaces/google-photos-library-v1-gapic.html" style="margin-left: 30px; padding-left: 0">Gapic</a>
+            </div>
+            <div id="namespace-1683885787" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html"><abbr title="\Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient">PhotosLibraryGapicClient</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-665000505"></a>
+                                <a href="../namespaces/google-photos-library-v1-mediatypefilter.html" style="margin-left: 30px; padding-left: 0">MediaTypeFilter</a>
+            </div>
+            <div id="namespace-665000505" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MediaTypeFilter-MediaType.html"><abbr title="\Google\Photos\Library\V1\MediaTypeFilter\MediaType">MediaType</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AddEnrichmentToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumRequest">AddEnrichmentToAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AddEnrichmentToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumResponse">AddEnrichmentToAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AlbumPosition.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition">AlbumPosition</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-AlbumPosition-PositionType.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition_PositionType">AlbumPosition_PositionType</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumRequest">BatchAddMediaItemsToAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumResponse">BatchAddMediaItemsToAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchCreateMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsRequest">BatchCreateMediaItemsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchCreateMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsResponse">BatchCreateMediaItemsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchGetMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsRequest">BatchGetMediaItemsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchGetMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsResponse">BatchGetMediaItemsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumRequest">BatchRemoveMediaItemsFromAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumResponse">BatchRemoveMediaItemsFromAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ContentCategory.html"><abbr title="\Google\Photos\Library\V1\ContentCategory">ContentCategory</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ContentFilter.html"><abbr title="\Google\Photos\Library\V1\ContentFilter">ContentFilter</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-CreateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\CreateAlbumRequest">CreateAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-DateFilter.html"><abbr title="\Google\Photos\Library\V1\DateFilter">DateFilter</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-EnrichmentItem.html"><abbr title="\Google\Photos\Library\V1\EnrichmentItem">EnrichmentItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-FeatureFilter.html"><abbr title="\Google\Photos\Library\V1\FeatureFilter">FeatureFilter</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-FeatureFilter-Feature.html"><abbr title="\Google\Photos\Library\V1\FeatureFilter_Feature">FeatureFilter_Feature</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-Filters.html"><abbr title="\Google\Photos\Library\V1\Filters">Filters</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-FiltersBuilder.html"><abbr title="\Google\Photos\Library\V1\FiltersBuilder">FiltersBuilder</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-GetAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetAlbumRequest">GetAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-GetMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\GetMediaItemRequest">GetMediaItemRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-GetSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetSharedAlbumRequest">GetSharedAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-JoinSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumRequest">JoinSharedAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-JoinSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumResponse">JoinSharedAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-LeaveSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumRequest">LeaveSharedAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-LeaveSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumResponse">LeaveSharedAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListAlbumsRequest">ListAlbumsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListAlbumsResponse.html"><abbr title="\Google\Photos\Library\V1\ListAlbumsResponse">ListAlbumsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\ListMediaItemsRequest">ListMediaItemsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\ListMediaItemsResponse">ListMediaItemsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListSharedAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListSharedAlbumsRequest">ListSharedAlbumsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ListSharedAlbumsResponse.html"><abbr title="\Google\Photos\Library\V1\ListSharedAlbumsResponse">ListSharedAlbumsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-Location.html"><abbr title="\Google\Photos\Library\V1\Location">Location</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-LocationEnrichment.html"><abbr title="\Google\Photos\Library\V1\LocationEnrichment">LocationEnrichment</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MapEnrichment.html"><abbr title="\Google\Photos\Library\V1\MapEnrichment">MapEnrichment</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MediaItemResult.html"><abbr title="\Google\Photos\Library\V1\MediaItemResult">MediaItemResult</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MediaTypeFilter.html"><abbr title="\Google\Photos\Library\V1\MediaTypeFilter">MediaTypeFilter</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-MediaTypeFilter-MediaType.html"><abbr title="\Google\Photos\Library\V1\MediaTypeFilter_MediaType">MediaTypeFilter_MediaType</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-NewEnrichmentItem.html"><abbr title="\Google\Photos\Library\V1\NewEnrichmentItem">NewEnrichmentItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-NewMediaItem.html"><abbr title="\Google\Photos\Library\V1\NewMediaItem">NewMediaItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-NewMediaItemResult.html"><abbr title="\Google\Photos\Library\V1\NewMediaItemResult">NewMediaItemResult</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-PhotosLibraryClient.html"><abbr title="\Google\Photos\Library\V1\PhotosLibraryClient">PhotosLibraryClient</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html"><abbr title="\Google\Photos\Library\V1\PhotosLibraryGrpcClient">PhotosLibraryGrpcClient</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-PhotosLibraryResourceFactory.html"><abbr title="\Google\Photos\Library\V1\PhotosLibraryResourceFactory">PhotosLibraryResourceFactory</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-SearchMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\SearchMediaItemsRequest">SearchMediaItemsRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-SearchMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\SearchMediaItemsResponse">SearchMediaItemsResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ShareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumRequest">ShareAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-ShareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumResponse">ShareAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-SimpleMediaItem.html"><abbr title="\Google\Photos\Library\V1\SimpleMediaItem">SimpleMediaItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-TextEnrichment.html"><abbr title="\Google\Photos\Library\V1\TextEnrichment">TextEnrichment</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UnshareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumRequest">UnshareAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UnshareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumResponse">UnshareAlbumResponse</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UpdateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateAlbumRequest">UpdateAlbumRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UpdateMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateMediaItemRequest">UpdateMediaItemRequest</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Library-V1-UploadRetrySettings.html"><abbr title="\Google\Photos\Library\V1\UploadRetrySettings">UploadRetrySettings</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1495950725"></a>
+                                <a href="../namespaces/google-photos-types.html" style="margin-left: 30px; padding-left: 0">Types</a>
+            </div>
+            <div id="namespace-1495950725" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-ContributorInfo.html"><abbr title="\Google\Photos\Types\ContributorInfo">ContributorInfo</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-DateRange.html"><abbr title="\Google\Photos\Types\DateRange">DateRange</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-MediaMetadata.html"><abbr title="\Google\Photos\Types\MediaMetadata">MediaMetadata</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-Photo.html"><abbr title="\Google\Photos\Types\Photo">Photo</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-SharedAlbumOptions.html"><abbr title="\Google\Photos\Types\SharedAlbumOptions">SharedAlbumOptions</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-ShareInfo.html"><abbr title="\Google\Photos\Types\ShareInfo">ShareInfo</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-Video.html"><abbr title="\Google\Photos\Types\Video">Video</abbr></a></li>
+                                                    <li class="class"><a href="../classes/Google-Photos-Types-VideoProcessingStatus.html"><abbr title="\Google\Photos\Types\VideoProcessingStatus">VideoProcessingStatus</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1420521117"></a>
+                                <a href="../namespaces/gpbmetadata.html" style="margin-left: 30px; padding-left: 0">GPBMetadata</a>
+            </div>
+            <div id="namespace-1420521117" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-283077777"></a>
+                                <a href="../namespaces/gpbmetadata-google.html" style="margin-left: 30px; padding-left: 0">Google</a>
+            </div>
+            <div id="namespace-283077777" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-512659583"></a>
+                                <a href="../namespaces/gpbmetadata-google-photos.html" style="margin-left: 30px; padding-left: 0">Photos</a>
+            </div>
+            <div id="namespace-512659583" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1981854528"></a>
+                                <a href="../namespaces/gpbmetadata-google-photos-library.html" style="margin-left: 30px; padding-left: 0">Library</a>
+            </div>
+            <div id="namespace-1981854528" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2033293886"></a>
+                                <a href="../namespaces/gpbmetadata-google-photos-library-v1.html" style="margin-left: 30px; padding-left: 0">V1</a>
+            </div>
+            <div id="namespace-2033293886" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/GPBMetadata-Google-Photos-Library-V1-PhotosLibrary.html"><abbr title="\GPBMetadata\Google\Photos\Library\V1\PhotosLibrary">PhotosLibrary</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-346035951"></a>
+                                <a href="../namespaces/gpbmetadata-google-photos-types.html" style="margin-left: 30px; padding-left: 0">Types</a>
+            </div>
+            <div id="namespace-346035951" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/GPBMetadata-Google-Photos-Types-Album.html"><abbr title="\GPBMetadata\Google\Photos\Types\Album">Album</abbr></a></li>
+                                                    <li class="class"><a href="../classes/GPBMetadata-Google-Photos-Types-DateRange.html"><abbr title="\GPBMetadata\Google\Photos\Types\DateRange">DateRange</abbr></a></li>
+                                                    <li class="class"><a href="../classes/GPBMetadata-Google-Photos-Types-MediaItem.html"><abbr title="\GPBMetadata\Google\Photos\Types\MediaItem">MediaItem</abbr></a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content namespace">
+                    <nav>
+                                                <a href="../namespaces/google-photos-library.html"><abbr title="\Google\Photos\Library">normal</abbr></a>
+                                            </nav>
+                    <h1><small>\Google\Photos\Library</small>V1</h1>
+
+                                        <h2>Namespaces</h2>
+                    <table class="table table-hover">
+                                                    <tr>
+                                <td><a href="../namespaces/google-photos-library-v1-albumposition.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition">AlbumPosition</abbr></a></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../namespaces/google-photos-library-v1-featurefilter.html"><abbr title="\Google\Photos\Library\V1\FeatureFilter">FeatureFilter</abbr></a></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../namespaces/google-photos-library-v1-gapic.html"><abbr title="\Google\Photos\Library\V1\Gapic">Gapic</abbr></a></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../namespaces/google-photos-library-v1-mediatypefilter.html"><abbr title="\Google\Photos\Library\V1\MediaTypeFilter">MediaTypeFilter</abbr></a></td>
+                            </tr>
+                                            </table>
+                    
+                    
+                    
+                                        <h2>Classes</h2>
+                    <table class="table table-hover">
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-AddEnrichmentToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumRequest">AddEnrichmentToAlbumRequest</abbr></a></td>
+                            <td><em>Request to add an enrichment to a specific album at a specific position.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-AddEnrichmentToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumResponse">AddEnrichmentToAlbumResponse</abbr></a></td>
+                            <td><em>The enrichment item that&#039;s created.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-AlbumPosition.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition">AlbumPosition</abbr></a></td>
+                            <td><em>Specifies a position in an album.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-AlbumPosition-PositionType.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition_PositionType">AlbumPosition_PositionType</abbr></a></td>
+                            <td><em>This class is deprecated. Use Google\Photos\Library\V1\AlbumPosition\PositionType instead.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumRequest">BatchAddMediaItemsToAlbumRequest</abbr></a></td>
+                            <td><em>Request to add media items to an album.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumResponse">BatchAddMediaItemsToAlbumResponse</abbr></a></td>
+                            <td><em>Response for adding media items to an album.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-BatchCreateMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsRequest">BatchCreateMediaItemsRequest</abbr></a></td>
+                            <td><em>Request to create one or more media items in a user&#039;s Google Photos library.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-BatchCreateMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsResponse">BatchCreateMediaItemsResponse</abbr></a></td>
+                            <td><em>List of media items created.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-BatchGetMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsRequest">BatchGetMediaItemsRequest</abbr></a></td>
+                            <td><em>Request to retrieve a list of media items.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-BatchGetMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsResponse">BatchGetMediaItemsResponse</abbr></a></td>
+                            <td><em>Response to retrieve a list of media items.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumRequest">BatchRemoveMediaItemsFromAlbumRequest</abbr></a></td>
+                            <td><em>Request to remove a list of media items from an album.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumResponse">BatchRemoveMediaItemsFromAlbumResponse</abbr></a></td>
+                            <td><em>Response for successfully removing all specified media items from the album.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ContentCategory.html"><abbr title="\Google\Photos\Library\V1\ContentCategory">ContentCategory</abbr></a></td>
+                            <td><em>This is a set of pre-defined content categories that you can filter on.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ContentFilter.html"><abbr title="\Google\Photos\Library\V1\ContentFilter">ContentFilter</abbr></a></td>
+                            <td><em>This filter allows you to return media items based on the content type.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-CreateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\CreateAlbumRequest">CreateAlbumRequest</abbr></a></td>
+                            <td><em>Request to create an album in Google Photos.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-DateFilter.html"><abbr title="\Google\Photos\Library\V1\DateFilter">DateFilter</abbr></a></td>
+                            <td><em>This filter defines the allowed dates or date ranges for the media returned.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-EnrichmentItem.html"><abbr title="\Google\Photos\Library\V1\EnrichmentItem">EnrichmentItem</abbr></a></td>
+                            <td><em>An enrichment item.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-FeatureFilter.html"><abbr title="\Google\Photos\Library\V1\FeatureFilter">FeatureFilter</abbr></a></td>
+                            <td><em>This filter defines the features that the media items should have.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-FeatureFilter-Feature.html"><abbr title="\Google\Photos\Library\V1\FeatureFilter_Feature">FeatureFilter_Feature</abbr></a></td>
+                            <td><em>This class is deprecated. Use Google\Photos\Library\V1\FeatureFilter\Feature instead.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-Filters.html"><abbr title="\Google\Photos\Library\V1\Filters">Filters</abbr></a></td>
+                            <td><em>Filters that can be applied to a media item search.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-FiltersBuilder.html"><abbr title="\Google\Photos\Library\V1\FiltersBuilder">FiltersBuilder</abbr></a></td>
+                            <td><em>Provides an easier interface for constructing {@link Filters} objects.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-GetAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetAlbumRequest">GetAlbumRequest</abbr></a></td>
+                            <td><em>Request to retrieve a specific album.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-GetMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\GetMediaItemRequest">GetMediaItemRequest</abbr></a></td>
+                            <td><em>Request to retrieve a specific media item from the user&#039;s Google Photos
+library.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-GetSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetSharedAlbumRequest">GetSharedAlbumRequest</abbr></a></td>
+                            <td><em>Request to retrieve a specific shared album.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-JoinSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumRequest">JoinSharedAlbumRequest</abbr></a></td>
+                            <td><em>Request to join a shared album on behalf of the user. This uses a shareToken
+which can be acquired via the shareAlbum or listSharedAlbums calls.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-JoinSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumResponse">JoinSharedAlbumResponse</abbr></a></td>
+                            <td><em>Response to successfully joining the shared album on behalf of the user.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-LeaveSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumRequest">LeaveSharedAlbumRequest</abbr></a></td>
+                            <td><em>Request to leave a shared album on behalf of the user. This uses a shareToken
+which can be acquired via the or listSharedAlbums or getAlbum calls.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-LeaveSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumResponse">LeaveSharedAlbumResponse</abbr></a></td>
+                            <td><em>Response to successfully leaving the shared album on behalf of the user.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ListAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListAlbumsRequest">ListAlbumsRequest</abbr></a></td>
+                            <td><em>Request to retrieve the list of albums created by the user.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ListAlbumsResponse.html"><abbr title="\Google\Photos\Library\V1\ListAlbumsResponse">ListAlbumsResponse</abbr></a></td>
+                            <td><em>List of albums requested.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ListMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\ListMediaItemsRequest">ListMediaItemsRequest</abbr></a></td>
+                            <td><em>Request to list all media items in a user&#039;s Google Photos library.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ListMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\ListMediaItemsResponse">ListMediaItemsResponse</abbr></a></td>
+                            <td><em>List of all media items from the user&#039;s Google Photos library.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ListSharedAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListSharedAlbumsRequest">ListSharedAlbumsRequest</abbr></a></td>
+                            <td><em>Request to retrieve the user&#039;s list of shared albums. This will return the
+list of albums corresponding to the user&#039;s &#039;Sharing&#039; tab in the Google Photos
+app.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ListSharedAlbumsResponse.html"><abbr title="\Google\Photos\Library\V1\ListSharedAlbumsResponse">ListSharedAlbumsResponse</abbr></a></td>
+                            <td><em>List of shared albums requested.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-Location.html"><abbr title="\Google\Photos\Library\V1\Location">Location</abbr></a></td>
+                            <td><em>Represents a physical location.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-LocationEnrichment.html"><abbr title="\Google\Photos\Library\V1\LocationEnrichment">LocationEnrichment</abbr></a></td>
+                            <td><em>An enrichment containing a single location.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-MapEnrichment.html"><abbr title="\Google\Photos\Library\V1\MapEnrichment">MapEnrichment</abbr></a></td>
+                            <td><em>An enrichment containing a map, showing origin and destination locations.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-MediaItemResult.html"><abbr title="\Google\Photos\Library\V1\MediaItemResult">MediaItemResult</abbr></a></td>
+                            <td><em>Result of retrieving a media item.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-MediaTypeFilter.html"><abbr title="\Google\Photos\Library\V1\MediaTypeFilter">MediaTypeFilter</abbr></a></td>
+                            <td><em>This filter defines the type of media items to be returned, for example,
+videos or photos. All the specified media types are treated as an OR when
+used together.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-MediaTypeFilter-MediaType.html"><abbr title="\Google\Photos\Library\V1\MediaTypeFilter_MediaType">MediaTypeFilter_MediaType</abbr></a></td>
+                            <td><em>This class is deprecated. Use Google\Photos\Library\V1\MediaTypeFilter\MediaType instead.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-NewEnrichmentItem.html"><abbr title="\Google\Photos\Library\V1\NewEnrichmentItem">NewEnrichmentItem</abbr></a></td>
+                            <td><em>A new enrichment item to be added to an album, used by the
+`albums.addEnrichment` call.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-NewMediaItem.html"><abbr title="\Google\Photos\Library\V1\NewMediaItem">NewMediaItem</abbr></a></td>
+                            <td><em>New media item that&#039;s created in a user&#039;s Google Photos account.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-NewMediaItemResult.html"><abbr title="\Google\Photos\Library\V1\NewMediaItemResult">NewMediaItemResult</abbr></a></td>
+                            <td><em>Result of creating a new media item.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-PhotosLibraryClient.html"><abbr title="\Google\Photos\Library\V1\PhotosLibraryClient">PhotosLibraryClient</abbr></a></td>
+                            <td><em>Service Description: Service which allows developers to perform the following actions on behalf of
+the user:
+- upload media items directly to their Google Photos library
+- create albums
+- add media items (including album enrichments) to albums
+- list and download content from their Google Photos library
+- filter results by media type, date range or content category
+- create, join, and access shared albums.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html"><abbr title="\Google\Photos\Library\V1\PhotosLibraryGrpcClient">PhotosLibraryGrpcClient</abbr></a></td>
+                            <td><em>Service which allows developers to perform the following actions on behalf of
+the user:
+- upload media items directly to their Google Photos library
+- create albums
+- add media items (including album enrichments) to albums
+- list and download content from their Google Photos library
+- filter results by media type, date range or content category
+- create, join, and access shared albums</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-PhotosLibraryResourceFactory.html"><abbr title="\Google\Photos\Library\V1\PhotosLibraryResourceFactory">PhotosLibraryResourceFactory</abbr></a></td>
+                            <td><em></em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-SearchMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\SearchMediaItemsRequest">SearchMediaItemsRequest</abbr></a></td>
+                            <td><em>Request to search for media items in a user&#039;s library.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-SearchMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\SearchMediaItemsResponse">SearchMediaItemsResponse</abbr></a></td>
+                            <td><em>List of media items that match the search parameters.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ShareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumRequest">ShareAlbumRequest</abbr></a></td>
+                            <td><em>Request to make an album shared in Google Photos.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-ShareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumResponse">ShareAlbumResponse</abbr></a></td>
+                            <td><em>Response to successfully sharing an album.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-SimpleMediaItem.html"><abbr title="\Google\Photos\Library\V1\SimpleMediaItem">SimpleMediaItem</abbr></a></td>
+                            <td><em>A simple media item to be created in Google Photos via an upload token.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-TextEnrichment.html"><abbr title="\Google\Photos\Library\V1\TextEnrichment">TextEnrichment</abbr></a></td>
+                            <td><em>An enrichment containing text.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-UnshareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumRequest">UnshareAlbumRequest</abbr></a></td>
+                            <td><em>Request to unshare a shared album in Google Photos.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-UnshareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumResponse">UnshareAlbumResponse</abbr></a></td>
+                            <td><em>Response of a successful unshare of a shared album.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-UpdateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateAlbumRequest">UpdateAlbumRequest</abbr></a></td>
+                            <td><em>Request to update an album in Google Photos.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-UpdateMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateMediaItemRequest">UpdateMediaItemRequest</abbr></a></td>
+                            <td><em>Request to update a media item in Google Photos.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="../classes/Google-Photos-Library-V1-UploadRetrySettings.html"><abbr title="\Google\Photos\Library\V1\UploadRetrySettings">UploadRetrySettings</abbr></a></td>
+                            <td><em>Stores properties for retrying uploads.</em></td>
+                        </tr>
+                                        </table>
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                        <dt>Namespace hierarchy</dt>
+                        <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    <div class="namespace-wrapper"><a href="../namespaces/default.html"><abbr title="\">normal</abbr></a></div>
+                                                            
+                                    <div class="namespace-wrapper"><a href="../namespaces/google.html"><abbr title="\Google">normal</abbr></a></div>
+                                                            
+                                    <div class="namespace-wrapper"><a href="../namespaces/google-photos.html"><abbr title="\Google\Photos">normal</abbr></a></div>
+                                                            
+                                    <div class="namespace-wrapper"><a href="../namespaces/google-photos-library.html"><abbr title="\Google\Photos\Library">normal</abbr></a></div>
+                                                                                        <div class="namespace-wrapper">\Google\Photos\Library\V1</div>
+                        </dd>
+                    </dl>
+                </aside>
+            </div>
+
+            
+            
+        </div>
+    </section>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/google.html"><abbr title="\Google">normal</abbr></a></li>
+                                                                            <li><a href="../namespaces/gpbmetadata.html"><abbr title="\GPBMetadata">normal</abbr></a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on August 11th, 2020 at 08:15.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
