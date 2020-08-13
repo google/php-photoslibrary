@@ -11,7 +11,7 @@
     </testsuites>
     <filter>
         <whitelist>
-            <directory suffix=".php">src/Google/Photos/Library/V1/</directory>
+            <directory suffix=".php">src/Google/</directory>
         </whitelist>
     </filter>
     <logging>
