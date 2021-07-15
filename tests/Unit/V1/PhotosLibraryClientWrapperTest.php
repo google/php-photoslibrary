@@ -36,9 +36,32 @@ use GuzzleHttp\Psr7\Response;
  */
 class PhotosLibraryClientWrapperTest extends GeneratedTest
 {
+    /**
+     * Photos library client instance.
+     *
+     * @var \Google\Photos\Library\V1\PhotosLibraryClient
+     */
     private $photosLibraryClient;
+
+    /**
+     * Guzzle mocked http handler.
+     *
+     * @var \GuzzleHttp\Handler\MockHandler
+     */
     private $mockHttpHandler;
+
+    /**
+     * Mocked credentials handler.
+     *
+     * @var \Google\ApiCore\CredentialsWrapper|\PHPUnit_Framework_MockObject_MockObject
+     */
     private $mockCredentialsHandler;
+
+    /**
+     * Mock transport testing from Google API core.
+     *
+     * @var \Google\ApiCore\Testing\MockTransport
+     */
     private $mockTransport;
 
     /**
