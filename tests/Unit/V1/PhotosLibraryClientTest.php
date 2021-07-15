@@ -44,19 +44,24 @@ use Google\Photos\Library\V1\ShareAlbumResponse;
 use Google\Photos\Library\V1\UnshareAlbumResponse;
 use Google\Photos\Types\Album;
 use Google\Photos\Types\MediaItem;
-use Google\Protobuf\Any;
 use Google\Protobuf\FieldMask;
 use Google\Rpc\Code;
 use stdClass;
 
 /**
+ * Class PhotosLibraryClientTest
+ *
  * @group library
  * @group gapic
+ * @package Google\Photos\Library\Tests\Unit\V1
  */
 class PhotosLibraryClientTest extends GeneratedTest
 {
     /**
-     * @return TransportInterface
+     * Creates mocked transport interface.
+     *
+     * @param mixed|null $deserialize
+     * @return \Google\ApiCore\Transport\TransportInterface
      */
     private function createTransport($deserialize = null)
     {
@@ -64,7 +69,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * @return CredentialsWrapper
+     * Creates mocked credentials.
+     *
+     * @return \Google\ApiCore\CredentialsWrapper|\PHPUnit_Framework_MockObject_MockObject
      */
     private function createCredentials()
     {
@@ -74,7 +81,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * @return PhotosLibraryClient
+     * Creates client instance with credentials.
+     *
+     * @param array $options The options for photo library client.
+     * @return \Google\Photos\Library\V1\PhotosLibraryClient
+     * @throws \Google\ApiCore\ValidationException
      */
     private function createClient(array $options = [])
     {
@@ -86,7 +97,10 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Album creation test.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException|\Google\ApiCore\ApiException
      */
     public function createAlbumTest()
     {
@@ -127,12 +141,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getAlbum();
 
         $this->assertProtobufEquals($album, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Album creation test with API Exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function createAlbumExceptionTest()
     {
@@ -171,7 +187,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Batch create media items testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function batchCreateMediaItemsTest()
     {
@@ -198,12 +218,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getNewMediaItems();
 
         $this->assertProtobufEquals($newMediaItems, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Batch create media items testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function batchCreateMediaItemsExceptionTest()
     {
@@ -242,7 +264,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Batch add media items to album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function batchAddMediaItemsToAlbumTest()
     {
@@ -273,12 +299,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getMediaItemIds();
 
         $this->assertProtobufEquals($mediaItemIds, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Batch add media items to album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function batchAddMediaItemsToAlbumExceptionTest()
     {
@@ -318,7 +346,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Search media items testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function searchMediaItemsTest()
     {
@@ -345,14 +377,16 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualRequests = $transport->popReceivedCalls();
         $this->assertSame(1, count($actualRequests));
         $actualFuncCall = $actualRequests[0]->getFuncCall();
-        $actualRequestObject = $actualRequests[0]->getRequestObject();
-        $this->assertSame('/google.photos.library.v1.PhotosLibrary/SearchMediaItems', $actualFuncCall);
 
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/SearchMediaItems', $actualFuncCall);
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Search media items testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function searchMediaItemsExceptionTest()
     {
@@ -388,7 +422,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * List media items testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function listMediaItemsTest()
     {
@@ -415,14 +453,16 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualRequests = $transport->popReceivedCalls();
         $this->assertSame(1, count($actualRequests));
         $actualFuncCall = $actualRequests[0]->getFuncCall();
-        $actualRequestObject = $actualRequests[0]->getRequestObject();
-        $this->assertSame('/google.photos.library.v1.PhotosLibrary/ListMediaItems', $actualFuncCall);
 
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/ListMediaItems', $actualFuncCall);
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * List media items testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function listMediaItemsExceptionTest()
     {
@@ -458,7 +498,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Get media item testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function getMediaItemTest()
     {
@@ -497,12 +541,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getMediaItemId();
 
         $this->assertProtobufEquals($mediaItemId, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Get media item testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function getMediaItemExceptionTest()
     {
@@ -541,7 +587,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Batch get media items testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function batchGetMediaItemsTest()
     {
@@ -568,12 +618,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getMediaItemIds();
 
         $this->assertProtobufEquals($mediaItemIds, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Batch get media items testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function batchGetMediaItemsExceptionTest()
     {
@@ -612,7 +664,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * List albums testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function listAlbumsTest()
     {
@@ -639,14 +695,16 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualRequests = $transport->popReceivedCalls();
         $this->assertSame(1, count($actualRequests));
         $actualFuncCall = $actualRequests[0]->getFuncCall();
-        $actualRequestObject = $actualRequests[0]->getRequestObject();
-        $this->assertSame('/google.photos.library.v1.PhotosLibrary/ListAlbums', $actualFuncCall);
 
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/ListAlbums', $actualFuncCall);
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * List albums testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function listAlbumsExceptionTest()
     {
@@ -682,7 +740,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Get album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function getAlbumTest()
     {
@@ -723,12 +785,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getAlbumId();
 
         $this->assertProtobufEquals($albumId, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Get album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function getAlbumExceptionTest()
     {
@@ -767,7 +831,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Get shared album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function getSharedAlbumTest()
     {
@@ -808,12 +876,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getShareToken();
 
         $this->assertProtobufEquals($shareToken, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Get shared album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function getSharedAlbumExceptionTest()
     {
@@ -852,7 +922,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Add enrichment to album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function addEnrichmentToAlbumTest()
     {
@@ -887,12 +961,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getAlbumPosition();
 
         $this->assertProtobufEquals($albumPosition, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Add enrichment to album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function addEnrichmentToAlbumExceptionTest()
     {
@@ -933,7 +1009,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Join shared album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function joinSharedAlbumTest()
     {
@@ -960,12 +1040,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getShareToken();
 
         $this->assertProtobufEquals($shareToken, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Join shared album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function joinSharedAlbumExceptionTest()
     {
@@ -1004,7 +1086,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Leave shared album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function leaveSharedAlbumTest()
     {
@@ -1031,12 +1117,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getShareToken();
 
         $this->assertProtobufEquals($shareToken, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Leave shared album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function leaveSharedAlbumExceptionTest()
     {
@@ -1075,7 +1163,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Share album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function shareAlbumTest()
     {
@@ -1102,12 +1194,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getAlbumId();
 
         $this->assertProtobufEquals($albumId, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Share album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function shareAlbumExceptionTest()
     {
@@ -1146,7 +1240,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * List shared albums testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function listSharedAlbumsTest()
     {
@@ -1173,14 +1271,16 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualRequests = $transport->popReceivedCalls();
         $this->assertSame(1, count($actualRequests));
         $actualFuncCall = $actualRequests[0]->getFuncCall();
-        $actualRequestObject = $actualRequests[0]->getRequestObject();
-        $this->assertSame('/google.photos.library.v1.PhotosLibrary/ListSharedAlbums', $actualFuncCall);
 
+        $this->assertSame('/google.photos.library.v1.PhotosLibrary/ListSharedAlbums', $actualFuncCall);
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * List shared albums testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function listSharedAlbumsExceptionTest()
     {
@@ -1216,7 +1316,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Unshare album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function unshareAlbumTest()
     {
@@ -1243,12 +1347,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getAlbumId();
 
         $this->assertProtobufEquals($albumId, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Unshare album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function unshareAlbumExceptionTest()
     {
@@ -1287,7 +1393,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Batch remove media items from album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function batchRemoveMediaItemsFromAlbumTest()
     {
@@ -1318,12 +1428,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getMediaItemIds();
 
         $this->assertProtobufEquals($mediaItemIds, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Batch remove media items from album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function batchRemoveMediaItemsFromAlbumExceptionTest()
     {
@@ -1363,7 +1475,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Update album testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function updateAlbumTest()
     {
@@ -1408,12 +1524,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getUpdateMask();
 
         $this->assertProtobufEquals($updateMask, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Update album testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function updateAlbumExceptionTest()
     {
@@ -1453,7 +1571,11 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
+     * Update media item testing.
+     *
      * @test
+     * @throws \Google\ApiCore\ApiException
+     * @throws \Google\ApiCore\ValidationException
      */
     public function updateMediaItemTest()
     {
@@ -1496,12 +1618,14 @@ class PhotosLibraryClientTest extends GeneratedTest
         $actualValue = $actualRequestObject->getUpdateMask();
 
         $this->assertProtobufEquals($updateMask, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
+     * Update media item testing with exception handling.
+     *
      * @test
+     * @throws \Google\ApiCore\ValidationException
      */
     public function updateMediaItemExceptionTest()
     {
