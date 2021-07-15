@@ -20,16 +20,11 @@ namespace Google\Photos\Library\Tests\Unit\V1;
 use Google\ApiCore\CredentialsWrapper;
 use Google\ApiCore\Testing\GeneratedTest;
 use Google\ApiCore\Testing\MockTransport;
-use Google\Photos\Library\V1\BatchCreateMediaItemsRequest;
-use Google\Photos\Library\V1\BatchCreateMediaItemsResponse;
-use Google\Photos\Library\V1\NewMediaItem;
-use Google\Photos\Library\V1\NewMediaItemResult;
 use Google\Photos\Library\V1\PhotosLibraryClient;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Unit tests for {@link PhotosLibraryClient}, in addition to those in
@@ -46,6 +41,11 @@ class PhotosLibraryClientWrapperTest extends GeneratedTest
     private $mockCredentialsHandler;
     private $mockTransport;
 
+    /**
+     * Set up function for the test class.
+     *
+     * @throws \Google\ApiCore\ValidationException
+     */
     protected function setUp()
     {
         $this->mockCredentialsHandler = $this->getMockBuilder(CredentialsWrapper::class)
@@ -63,6 +63,11 @@ class PhotosLibraryClientWrapperTest extends GeneratedTest
         $this->photosLibraryClient = new PhotosLibraryClient($options);
     }
 
+    /**
+     * Upload testing.
+     *
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function testUpload()
     {
         $this->mockHttpHandler->append(new Response(200, [], "upload token"));
