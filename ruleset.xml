@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ruleset name="Google-Cloud-PHP-PSR2">
+  <rule ref="PSR2">
+    <!--
+      Exclude this sniff because we override methods with underscores in some classes
+    -->
+    <exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
+  </rule>
+  <exclude-pattern type="relative">^/tests/*</exclude-pattern>
+  <file>src</file>
+</ruleset>
