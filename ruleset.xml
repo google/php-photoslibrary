@@ -8,5 +8,6 @@
   </rule>
   <exclude-pattern>tests/*</exclude-pattern>
   <exclude-pattern>src/GPBMetadata/Google/*</exclude-pattern>
+  <exclude-pattern>src/Google/Photos/*</exclude-pattern>
   <file>src</file>
 </ruleset>
