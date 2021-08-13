@@ -25,9 +25,9 @@ class BatchCreateMediaItemsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $album_id = '';
     /**
-     * List of media items to be created.
+     * Required. List of media items to be created.
      *
-     * Generated from protobuf field <code>repeated .google.photos.library.v1.NewMediaItem new_media_items = 2;</code>
+     * Generated from protobuf field <code>repeated .google.photos.library.v1.NewMediaItem new_media_items = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private $new_media_items;
     /**
@@ -51,7 +51,7 @@ class BatchCreateMediaItemsRequest extends \Google\Protobuf\Internal\Message
      *           Identifier of the album where the media items are added. The media items
      *           are also added to the user's library. This is an optional field.
      *     @type \Google\Photos\Library\V1\NewMediaItem[]|\Google\Protobuf\Internal\RepeatedField $new_media_items
-     *           List of media items to be created.
+     *           Required. List of media items to be created.
      *     @type \Google\Photos\Library\V1\AlbumPosition $album_position
      *           Position in the album where the media items are added. If not
      *           specified, the media items are added to the end of the album (as per
@@ -94,9 +94,9 @@ class BatchCreateMediaItemsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * List of media items to be created.
+     * Required. List of media items to be created.
      *
-     * Generated from protobuf field <code>repeated .google.photos.library.v1.NewMediaItem new_media_items = 2;</code>
+     * Generated from protobuf field <code>repeated .google.photos.library.v1.NewMediaItem new_media_items = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getNewMediaItems()
@@ -105,9 +105,9 @@ class BatchCreateMediaItemsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * List of media items to be created.
+     * Required. List of media items to be created.
      *
-     * Generated from protobuf field <code>repeated .google.photos.library.v1.NewMediaItem new_media_items = 2;</code>
+     * Generated from protobuf field <code>repeated .google.photos.library.v1.NewMediaItem new_media_items = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Photos\Library\V1\NewMediaItem[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -127,11 +127,21 @@ class BatchCreateMediaItemsRequest extends \Google\Protobuf\Internal\Message
      * if you set the field and are not the owner of the shared album.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition album_position = 4;</code>
-     * @return \Google\Photos\Library\V1\AlbumPosition
+     * @return \Google\Photos\Library\V1\AlbumPosition|null
      */
     public function getAlbumPosition()
     {
-        return $this->album_position;
+        return isset($this->album_position) ? $this->album_position : null;
+    }
+
+    public function hasAlbumPosition()
+    {
+        return isset($this->album_position);
+    }
+
+    public function clearAlbumPosition()
+    {
+        unset($this->album_position);
     }
 
     /**

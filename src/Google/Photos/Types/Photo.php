@@ -212,11 +212,21 @@ class Photo extends \Google\Protobuf\Internal\Message
      * Exposure time of the camera aperture when the photo was taken.
      *
      * Generated from protobuf field <code>.google.protobuf.Duration exposure_time = 6;</code>
-     * @return \Google\Protobuf\Duration
+     * @return \Google\Protobuf\Duration|null
      */
     public function getExposureTime()
     {
-        return $this->exposure_time;
+        return isset($this->exposure_time) ? $this->exposure_time : null;
+    }
+
+    public function hasExposureTime()
+    {
+        return isset($this->exposure_time);
+    }
+
+    public function clearExposureTime()
+    {
+        unset($this->exposure_time);
     }
 
     /**

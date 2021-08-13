@@ -26,10 +26,10 @@ class UpdateMediaItemRequest extends \Google\Protobuf\Internal\Message
      */
     protected $media_item = null;
     /**
-     * Indicate what fields in the provided media item to update.
+     * Required. Indicate what fields in the provided media item to update.
      * The only valid value is `description`.
      *
-     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $update_mask = null;
 
@@ -46,7 +46,7 @@ class UpdateMediaItemRequest extends \Google\Protobuf\Internal\Message
      *           The media item's `description` field is used to set the new media item
      *           description.
      *     @type \Google\Protobuf\FieldMask $update_mask
-     *           Indicate what fields in the provided media item to update.
+     *           Required. Indicate what fields in the provided media item to update.
      *           The only valid value is `description`.
      * }
      */
@@ -63,11 +63,21 @@ class UpdateMediaItemRequest extends \Google\Protobuf\Internal\Message
      * description.
      *
      * Generated from protobuf field <code>.google.photos.types.MediaItem media_item = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Photos\Types\MediaItem
+     * @return \Google\Photos\Types\MediaItem|null
      */
     public function getMediaItem()
     {
-        return $this->media_item;
+        return isset($this->media_item) ? $this->media_item : null;
+    }
+
+    public function hasMediaItem()
+    {
+        return isset($this->media_item);
+    }
+
+    public function clearMediaItem()
+    {
+        unset($this->media_item);
     }
 
     /**
@@ -90,22 +100,32 @@ class UpdateMediaItemRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Indicate what fields in the provided media item to update.
+     * Required. Indicate what fields in the provided media item to update.
      * The only valid value is `description`.
      *
-     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2;</code>
-     * @return \Google\Protobuf\FieldMask
+     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return \Google\Protobuf\FieldMask|null
      */
     public function getUpdateMask()
     {
-        return $this->update_mask;
+        return isset($this->update_mask) ? $this->update_mask : null;
+    }
+
+    public function hasUpdateMask()
+    {
+        return isset($this->update_mask);
+    }
+
+    public function clearUpdateMask()
+    {
+        unset($this->update_mask);
     }
 
     /**
-     * Indicate what fields in the provided media item to update.
+     * Required. Indicate what fields in the provided media item to update.
      * The only valid value is `description`.
      *
-     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\FieldMask $var
      * @return $this
      */

@@ -41,11 +41,21 @@ class ShareAlbumResponse extends \Google\Protobuf\Internal\Message
      * Output only. Information about the shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 1;</code>
-     * @return \Google\Photos\Types\ShareInfo
+     * @return \Google\Photos\Types\ShareInfo|null
      */
     public function getShareInfo()
     {
-        return $this->share_info;
+        return isset($this->share_info) ? $this->share_info : null;
+    }
+
+    public function hasShareInfo()
+    {
+        return isset($this->share_info);
+    }
+
+    public function clearShareInfo()
+    {
+        unset($this->share_info);
     }
 
     /**

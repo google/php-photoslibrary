@@ -178,11 +178,21 @@ class SearchMediaItemsRequest extends \Google\Protobuf\Internal\Message
      * `albumId`.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.Filters filters = 4;</code>
-     * @return \Google\Photos\Library\V1\Filters
+     * @return \Google\Photos\Library\V1\Filters|null
      */
     public function getFilters()
     {
-        return $this->filters;
+        return isset($this->filters) ? $this->filters : null;
+    }
+
+    public function hasFilters()
+    {
+        return isset($this->filters);
+    }
+
+    public function clearFilters()
+    {
+        unset($this->filters);
     }
 
     /**

@@ -89,11 +89,21 @@ class Filters extends \Google\Protobuf\Internal\Message
      * Filters the media items based on their creation date.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.DateFilter date_filter = 1;</code>
-     * @return \Google\Photos\Library\V1\DateFilter
+     * @return \Google\Photos\Library\V1\DateFilter|null
      */
     public function getDateFilter()
     {
-        return $this->date_filter;
+        return isset($this->date_filter) ? $this->date_filter : null;
+    }
+
+    public function hasDateFilter()
+    {
+        return isset($this->date_filter);
+    }
+
+    public function clearDateFilter()
+    {
+        unset($this->date_filter);
     }
 
     /**
@@ -115,11 +125,21 @@ class Filters extends \Google\Protobuf\Internal\Message
      * Filters the media items based on their content.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.ContentFilter content_filter = 2;</code>
-     * @return \Google\Photos\Library\V1\ContentFilter
+     * @return \Google\Photos\Library\V1\ContentFilter|null
      */
     public function getContentFilter()
     {
-        return $this->content_filter;
+        return isset($this->content_filter) ? $this->content_filter : null;
+    }
+
+    public function hasContentFilter()
+    {
+        return isset($this->content_filter);
+    }
+
+    public function clearContentFilter()
+    {
+        unset($this->content_filter);
     }
 
     /**
@@ -141,11 +161,21 @@ class Filters extends \Google\Protobuf\Internal\Message
      * Filters the media items based on the type of media.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.MediaTypeFilter media_type_filter = 3;</code>
-     * @return \Google\Photos\Library\V1\MediaTypeFilter
+     * @return \Google\Photos\Library\V1\MediaTypeFilter|null
      */
     public function getMediaTypeFilter()
     {
-        return $this->media_type_filter;
+        return isset($this->media_type_filter) ? $this->media_type_filter : null;
+    }
+
+    public function hasMediaTypeFilter()
+    {
+        return isset($this->media_type_filter);
+    }
+
+    public function clearMediaTypeFilter()
+    {
+        unset($this->media_type_filter);
     }
 
     /**
@@ -167,11 +197,21 @@ class Filters extends \Google\Protobuf\Internal\Message
      * Filters the media items based on their features.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.FeatureFilter feature_filter = 7;</code>
-     * @return \Google\Photos\Library\V1\FeatureFilter
+     * @return \Google\Photos\Library\V1\FeatureFilter|null
      */
     public function getFeatureFilter()
     {
-        return $this->feature_filter;
+        return isset($this->feature_filter) ? $this->feature_filter : null;
+    }
+
+    public function hasFeatureFilter()
+    {
+        return isset($this->feature_filter);
+    }
+
+    public function clearFeatureFilter()
+    {
+        unset($this->feature_filter);
     }
 
     /**

@@ -75,11 +75,21 @@ class Location extends \Google\Protobuf\Internal\Message
      * Position of the location on the map.
      *
      * Generated from protobuf field <code>.google.type.LatLng latlng = 2;</code>
-     * @return \Google\Type\LatLng
+     * @return \Google\Type\LatLng|null
      */
     public function getLatlng()
     {
-        return $this->latlng;
+        return isset($this->latlng) ? $this->latlng : null;
+    }
+
+    public function hasLatlng()
+    {
+        return isset($this->latlng);
+    }
+
+    public function clearLatlng()
+    {
+        unset($this->latlng);
     }
 
     /**

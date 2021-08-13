@@ -16,9 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class CreateAlbumRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The album to be created.
+     * Required. The album to be created.
      *
-     * Generated from protobuf field <code>.google.photos.types.Album album = 1;</code>
+     * Generated from protobuf field <code>.google.photos.types.Album album = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $album = null;
 
@@ -29,7 +29,7 @@ class CreateAlbumRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Photos\Types\Album $album
-     *           The album to be created.
+     *           Required. The album to be created.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,20 +38,30 @@ class CreateAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The album to be created.
+     * Required. The album to be created.
      *
-     * Generated from protobuf field <code>.google.photos.types.Album album = 1;</code>
-     * @return \Google\Photos\Types\Album
+     * Generated from protobuf field <code>.google.photos.types.Album album = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return \Google\Photos\Types\Album|null
      */
     public function getAlbum()
     {
-        return $this->album;
+        return isset($this->album) ? $this->album : null;
+    }
+
+    public function hasAlbum()
+    {
+        return isset($this->album);
+    }
+
+    public function clearAlbum()
+    {
+        unset($this->album);
     }
 
     /**
-     * The album to be created.
+     * Required. The album to be created.
      *
-     * Generated from protobuf field <code>.google.photos.types.Album album = 1;</code>
+     * Generated from protobuf field <code>.google.photos.types.Album album = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Photos\Types\Album $var
      * @return $this
      */

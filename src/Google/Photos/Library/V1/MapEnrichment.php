@@ -49,11 +49,21 @@ class MapEnrichment extends \Google\Protobuf\Internal\Message
      * Origin location for this enrichment item.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.Location origin = 1;</code>
-     * @return \Google\Photos\Library\V1\Location
+     * @return \Google\Photos\Library\V1\Location|null
      */
     public function getOrigin()
     {
-        return $this->origin;
+        return isset($this->origin) ? $this->origin : null;
+    }
+
+    public function hasOrigin()
+    {
+        return isset($this->origin);
+    }
+
+    public function clearOrigin()
+    {
+        unset($this->origin);
     }
 
     /**
@@ -75,11 +85,21 @@ class MapEnrichment extends \Google\Protobuf\Internal\Message
      * Destination location for this enrichemt item.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.Location destination = 2;</code>
-     * @return \Google\Photos\Library\V1\Location
+     * @return \Google\Photos\Library\V1\Location|null
      */
     public function getDestination()
     {
-        return $this->destination;
+        return isset($this->destination) ? $this->destination : null;
+    }
+
+    public function hasDestination()
+    {
+        return isset($this->destination);
+    }
+
+    public function clearDestination()
+    {
+        unset($this->destination);
     }
 
     /**

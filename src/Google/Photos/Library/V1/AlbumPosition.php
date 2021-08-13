@@ -64,7 +64,7 @@ class AlbumPosition extends \Google\Protobuf\Internal\Message
      */
     public function setPosition($var)
     {
-        GPBUtil::checkEnum($var, \Google\Photos\Library\V1\AlbumPosition_PositionType::class);
+        GPBUtil::checkEnum($var, \Google\Photos\Library\V1\AlbumPosition\PositionType::class);
         $this->position = $var;
 
         return $this;
@@ -80,6 +80,11 @@ class AlbumPosition extends \Google\Protobuf\Internal\Message
     public function getRelativeMediaItemId()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasRelativeMediaItemId()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -108,6 +113,11 @@ class AlbumPosition extends \Google\Protobuf\Internal\Message
     public function getRelativeEnrichmentItemId()
     {
         return $this->readOneof(3);
+    }
+
+    public function hasRelativeEnrichmentItemId()
+    {
+        return $this->hasOneof(3);
     }
 
     /**

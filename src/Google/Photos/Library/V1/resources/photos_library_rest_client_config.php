@@ -3,15 +3,17 @@
 return [
     'interfaces' => [
         'google.photos.library.v1.PhotosLibrary' => [
-            'CreateAlbum' => [
+            'AddEnrichmentToAlbum' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/albums',
+                'uriTemplate' => '/v1/albums/{album_id=*}:addEnrichment',
                 'body' => '*',
-            ],
-            'BatchCreateMediaItems' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/mediaItems:batchCreate',
-                'body' => '*',
+                'placeholders' => [
+                    'album_id' => [
+                        'getters' => [
+                            'getAlbumId',
+                        ],
+                    ],
+                ],
             ],
             'BatchAddMediaItemsToAlbum' => [
                 'method' => 'post',
@@ -25,33 +27,31 @@ return [
                     ],
                 ],
             ],
-            'SearchMediaItems' => [
+            'BatchCreateMediaItems' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/mediaItems:search',
+                'uriTemplate' => '/v1/mediaItems:batchCreate',
                 'body' => '*',
-            ],
-            'ListMediaItems' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/mediaItems',
-            ],
-            'GetMediaItem' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/mediaItems/{media_item_id=*}',
-                'placeholders' => [
-                    'media_item_id' => [
-                        'getters' => [
-                            'getMediaItemId',
-                        ],
-                    ],
-                ],
             ],
             'BatchGetMediaItems' => [
                 'method' => 'get',
                 'uriTemplate' => '/v1/mediaItems:batchGet',
             ],
-            'ListAlbums' => [
-                'method' => 'get',
+            'BatchRemoveMediaItemsFromAlbum' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/albums/{album_id=*}:batchRemoveMediaItems',
+                'body' => '*',
+                'placeholders' => [
+                    'album_id' => [
+                        'getters' => [
+                            'getAlbumId',
+                        ],
+                    ],
+                ],
+            ],
+            'CreateAlbum' => [
+                'method' => 'post',
                 'uriTemplate' => '/v1/albums',
+                'body' => '*',
             ],
             'GetAlbum' => [
                 'method' => 'get',
@@ -60,6 +60,17 @@ return [
                     'album_id' => [
                         'getters' => [
                             'getAlbumId',
+                        ],
+                    ],
+                ],
+            ],
+            'GetMediaItem' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/mediaItems/{media_item_id=*}',
+                'placeholders' => [
+                    'media_item_id' => [
+                        'getters' => [
+                            'getMediaItemId',
                         ],
                     ],
                 ],
@@ -75,18 +86,6 @@ return [
                     ],
                 ],
             ],
-            'AddEnrichmentToAlbum' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/albums/{album_id=*}:addEnrichment',
-                'body' => '*',
-                'placeholders' => [
-                    'album_id' => [
-                        'getters' => [
-                            'getAlbumId',
-                        ],
-                    ],
-                ],
-            ],
             'JoinSharedAlbum' => [
                 'method' => 'post',
                 'uriTemplate' => '/v1/sharedAlbums:join',
@@ -95,6 +94,23 @@ return [
             'LeaveSharedAlbum' => [
                 'method' => 'post',
                 'uriTemplate' => '/v1/sharedAlbums:leave',
+                'body' => '*',
+            ],
+            'ListAlbums' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/albums',
+            ],
+            'ListMediaItems' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/mediaItems',
+            ],
+            'ListSharedAlbums' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/sharedAlbums',
+            ],
+            'SearchMediaItems' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/mediaItems:search',
                 'body' => '*',
             ],
             'ShareAlbum' => [
@@ -109,25 +125,9 @@ return [
                     ],
                 ],
             ],
-            'ListSharedAlbums' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/sharedAlbums',
-            ],
             'UnshareAlbum' => [
                 'method' => 'post',
                 'uriTemplate' => '/v1/albums/{album_id=*}:unshare',
-                'body' => '*',
-                'placeholders' => [
-                    'album_id' => [
-                        'getters' => [
-                            'getAlbumId',
-                        ],
-                    ],
-                ],
-            ],
-            'BatchRemoveMediaItemsFromAlbum' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/albums/{album_id=*}:batchRemoveMediaItems',
                 'body' => '*',
                 'placeholders' => [
                     'album_id' => [
@@ -149,6 +149,9 @@ return [
                         ],
                     ],
                 ],
+                'queryParams' => [
+                    'update_mask',
+                ],
             ],
             'UpdateMediaItem' => [
                 'method' => 'patch',
@@ -161,6 +164,9 @@ return [
                             'getId',
                         ],
                     ],
+                ],
+                'queryParams' => [
+                    'update_mask',
                 ],
             ],
         ],

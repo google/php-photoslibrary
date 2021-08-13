@@ -41,11 +41,21 @@ class JoinSharedAlbumResponse extends \Google\Protobuf\Internal\Message
      * Shared album that the user has joined.
      *
      * Generated from protobuf field <code>.google.photos.types.Album album = 1;</code>
-     * @return \Google\Photos\Types\Album
+     * @return \Google\Photos\Types\Album|null
      */
     public function getAlbum()
     {
-        return $this->album;
+        return isset($this->album) ? $this->album : null;
+    }
+
+    public function hasAlbum()
+    {
+        return isset($this->album);
+    }
+
+    public function clearAlbum()
+    {
+        unset($this->album);
     }
 
     /**

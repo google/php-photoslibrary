@@ -16,9 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetSharedAlbumRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Share token of the album to be requested.
+     * Required. Share token of the album to be requested.
      *
-     * Generated from protobuf field <code>string share_token = 1;</code>
+     * Generated from protobuf field <code>string share_token = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $share_token = '';
 
@@ -29,7 +29,7 @@ class GetSharedAlbumRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $share_token
-     *           Share token of the album to be requested.
+     *           Required. Share token of the album to be requested.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,9 +38,9 @@ class GetSharedAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Share token of the album to be requested.
+     * Required. Share token of the album to be requested.
      *
-     * Generated from protobuf field <code>string share_token = 1;</code>
+     * Generated from protobuf field <code>string share_token = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getShareToken()
@@ -49,9 +49,9 @@ class GetSharedAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Share token of the album to be requested.
+     * Required. Share token of the album to be requested.
      *
-     * Generated from protobuf field <code>string share_token = 1;</code>
+     * Generated from protobuf field <code>string share_token = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

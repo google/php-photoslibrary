@@ -248,11 +248,21 @@ class Album extends \Google\Protobuf\Internal\Message
      * `photoslibrary.sharing` scope.
      *
      * Generated from protobuf field <code>.google.photos.types.ShareInfo share_info = 5;</code>
-     * @return \Google\Photos\Types\ShareInfo
+     * @return \Google\Photos\Types\ShareInfo|null
      */
     public function getShareInfo()
     {
-        return $this->share_info;
+        return isset($this->share_info) ? $this->share_info : null;
+    }
+
+    public function hasShareInfo()
+    {
+        return isset($this->share_info);
+    }
+
+    public function clearShareInfo()
+    {
+        unset($this->share_info);
     }
 
     /**

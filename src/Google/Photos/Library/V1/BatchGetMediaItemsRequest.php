@@ -16,11 +16,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class BatchGetMediaItemsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Identifiers of the media items to be requested.
+     * Required. Identifiers of the media items to be requested.
      * Must not contain repeated identifiers and cannot be empty. The maximum
      * number of media items that can be retrieved in one call is 50.
      *
-     * Generated from protobuf field <code>repeated string media_item_ids = 1;</code>
+     * Generated from protobuf field <code>repeated string media_item_ids = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private $media_item_ids;
 
@@ -31,7 +31,7 @@ class BatchGetMediaItemsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $media_item_ids
-     *           Identifiers of the media items to be requested.
+     *           Required. Identifiers of the media items to be requested.
      *           Must not contain repeated identifiers and cannot be empty. The maximum
      *           number of media items that can be retrieved in one call is 50.
      * }
@@ -42,11 +42,11 @@ class BatchGetMediaItemsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifiers of the media items to be requested.
+     * Required. Identifiers of the media items to be requested.
      * Must not contain repeated identifiers and cannot be empty. The maximum
      * number of media items that can be retrieved in one call is 50.
      *
-     * Generated from protobuf field <code>repeated string media_item_ids = 1;</code>
+     * Generated from protobuf field <code>repeated string media_item_ids = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMediaItemIds()
@@ -55,11 +55,11 @@ class BatchGetMediaItemsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifiers of the media items to be requested.
+     * Required. Identifiers of the media items to be requested.
      * Must not contain repeated identifiers and cannot be empty. The maximum
      * number of media items that can be retrieved in one call is 50.
      *
-     * Generated from protobuf field <code>repeated string media_item_ids = 1;</code>
+     * Generated from protobuf field <code>repeated string media_item_ids = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

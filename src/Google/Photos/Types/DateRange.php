@@ -55,11 +55,21 @@ class DateRange extends \Google\Protobuf\Internal\Message
      * described.
      *
      * Generated from protobuf field <code>.google.type.Date start_date = 1;</code>
-     * @return \Google\Type\Date
+     * @return \Google\Type\Date|null
      */
     public function getStartDate()
     {
-        return $this->start_date;
+        return isset($this->start_date) ? $this->start_date : null;
+    }
+
+    public function hasStartDate()
+    {
+        return isset($this->start_date);
+    }
+
+    public function clearStartDate()
+    {
+        unset($this->start_date);
     }
 
     /**
@@ -83,11 +93,21 @@ class DateRange extends \Google\Protobuf\Internal\Message
      * same format as the start date.
      *
      * Generated from protobuf field <code>.google.type.Date end_date = 2;</code>
-     * @return \Google\Type\Date
+     * @return \Google\Type\Date|null
      */
     public function getEndDate()
     {
-        return $this->end_date;
+        return isset($this->end_date) ? $this->end_date : null;
+    }
+
+    public function hasEndDate()
+    {
+        return isset($this->end_date);
+    }
+
+    public function clearEndDate()
+    {
+        unset($this->end_date);
     }
 
     /**

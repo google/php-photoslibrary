@@ -2,7 +2,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -44,6 +44,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\CreateAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function CreateAlbum(\Google\Photos\Library\V1\CreateAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -76,6 +77,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\BatchCreateMediaItemsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function BatchCreateMediaItems(\Google\Photos\Library\V1\BatchCreateMediaItemsRequest $argument,
       $metadata = [], $options = []) {
@@ -104,6 +106,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\BatchAddMediaItemsToAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function BatchAddMediaItemsToAlbum(\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -124,6 +127,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\SearchMediaItemsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function SearchMediaItems(\Google\Photos\Library\V1\SearchMediaItemsRequest $argument,
       $metadata = [], $options = []) {
@@ -138,6 +142,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\ListMediaItemsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListMediaItems(\Google\Photos\Library\V1\ListMediaItemsRequest $argument,
       $metadata = [], $options = []) {
@@ -152,6 +157,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\GetMediaItemRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetMediaItem(\Google\Photos\Library\V1\GetMediaItemRequest $argument,
       $metadata = [], $options = []) {
@@ -167,6 +173,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\BatchGetMediaItemsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function BatchGetMediaItems(\Google\Photos\Library\V1\BatchGetMediaItemsRequest $argument,
       $metadata = [], $options = []) {
@@ -182,6 +189,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\ListAlbumsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListAlbums(\Google\Photos\Library\V1\ListAlbumsRequest $argument,
       $metadata = [], $options = []) {
@@ -198,6 +206,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\GetAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetAlbum(\Google\Photos\Library\V1\GetAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -212,6 +221,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\GetSharedAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function GetSharedAlbum(\Google\Photos\Library\V1\GetSharedAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -226,6 +236,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\AddEnrichmentToAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function AddEnrichmentToAlbum(\Google\Photos\Library\V1\AddEnrichmentToAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -240,6 +251,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\JoinSharedAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function JoinSharedAlbum(\Google\Photos\Library\V1\JoinSharedAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -255,6 +267,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\LeaveSharedAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function LeaveSharedAlbum(\Google\Photos\Library\V1\LeaveSharedAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -271,6 +284,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\ShareAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ShareAlbum(\Google\Photos\Library\V1\ShareAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -286,6 +300,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\ListSharedAlbumsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function ListSharedAlbums(\Google\Photos\Library\V1\ListSharedAlbumsRequest $argument,
       $metadata = [], $options = []) {
@@ -305,6 +320,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\UnshareAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function UnshareAlbum(\Google\Photos\Library\V1\UnshareAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -328,6 +344,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function BatchRemoveMediaItemsFromAlbum(\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -345,6 +362,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\UpdateAlbumRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function UpdateAlbum(\Google\Photos\Library\V1\UpdateAlbumRequest $argument,
       $metadata = [], $options = []) {
@@ -362,6 +380,7 @@ class PhotosLibraryGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Photos\Library\V1\UpdateMediaItemRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function UpdateMediaItem(\Google\Photos\Library\V1\UpdateMediaItemRequest $argument,
       $metadata = [], $options = []) {

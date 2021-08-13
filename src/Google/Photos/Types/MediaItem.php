@@ -264,11 +264,21 @@ class MediaItem extends \Google\Protobuf\Internal\Message
      * creation time.
      *
      * Generated from protobuf field <code>.google.photos.types.MediaMetadata media_metadata = 6;</code>
-     * @return \Google\Photos\Types\MediaMetadata
+     * @return \Google\Photos\Types\MediaMetadata|null
      */
     public function getMediaMetadata()
     {
-        return $this->media_metadata;
+        return isset($this->media_metadata) ? $this->media_metadata : null;
+    }
+
+    public function hasMediaMetadata()
+    {
+        return isset($this->media_metadata);
+    }
+
+    public function clearMediaMetadata()
+    {
+        unset($this->media_metadata);
     }
 
     /**
@@ -291,11 +301,21 @@ class MediaItem extends \Google\Protobuf\Internal\Message
      * Information about the user who created this media item.
      *
      * Generated from protobuf field <code>.google.photos.types.ContributorInfo contributor_info = 7;</code>
-     * @return \Google\Photos\Types\ContributorInfo
+     * @return \Google\Photos\Types\ContributorInfo|null
      */
     public function getContributorInfo()
     {
-        return $this->contributor_info;
+        return isset($this->contributor_info) ? $this->contributor_info : null;
+    }
+
+    public function hasContributorInfo()
+    {
+        return isset($this->contributor_info);
+    }
+
+    public function clearContributorInfo()
+    {
+        unset($this->contributor_info);
     }
 
     /**

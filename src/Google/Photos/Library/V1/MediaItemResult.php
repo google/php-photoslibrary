@@ -57,11 +57,21 @@ class MediaItemResult extends \Google\Protobuf\Internal\Message
      * this field, see [Status][google.rpc.Status].
      *
      * Generated from protobuf field <code>.google.rpc.Status status = 1;</code>
-     * @return \Google\Rpc\Status
+     * @return \Google\Rpc\Status|null
      */
     public function getStatus()
     {
-        return $this->status;
+        return isset($this->status) ? $this->status : null;
+    }
+
+    public function hasStatus()
+    {
+        return isset($this->status);
+    }
+
+    public function clearStatus()
+    {
+        unset($this->status);
     }
 
     /**
@@ -86,11 +96,21 @@ class MediaItemResult extends \Google\Protobuf\Internal\Message
      * occurred and the media item was fetched successfully.
      *
      * Generated from protobuf field <code>.google.photos.types.MediaItem media_item = 2;</code>
-     * @return \Google\Photos\Types\MediaItem
+     * @return \Google\Photos\Types\MediaItem|null
      */
     public function getMediaItem()
     {
-        return $this->media_item;
+        return isset($this->media_item) ? $this->media_item : null;
+    }
+
+    public function hasMediaItem()
+    {
+        return isset($this->media_item);
+    }
+
+    public function clearMediaItem()
+    {
+        unset($this->media_item);
     }
 
     /**
