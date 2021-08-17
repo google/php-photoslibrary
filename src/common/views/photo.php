@@ -43,10 +43,11 @@
                 <th class="mdl-data-table__cell--non-numeric">Camera Details</th>
                 <?php if (null !== $mediaItem->getMediaMetadata()->getPhoto()) : ?>
                     <td class="mdl-data-table__cell--non-numeric">
-                        <?= $mediaItem->getMediaMetadata()->getPhoto()->getFocalLength() . ' ' .
-                            $mediaItem->getMediaMetadata()->getPhoto()->getApertureFNumber() . ' ' .
-                            $mediaItem->getMediaMetadata()->getPhoto()->getIsoEquivalent() . ' ' .
-                            $mediaItem->getMediaMetadata()->getPhoto()->getExposureTime() ?>
+                        <?= sprintf("%.2f mm, ƒ/%.2f, ISO%d,",
+                            $mediaItem->getMediaMetadata()->getPhoto()->getFocalLength(),
+                            $mediaItem->getMediaMetadata()->getPhoto()->getApertureFNumber(),
+                            $mediaItem->getMediaMetadata()->getPhoto()->getIsoEquivalent()) ?>
+                        <?= $this->formatDuration($mediaItem->getMediaMetadata()->getPhoto()->getExposureTime()) ?>
                     </td>
                 <?php elseif (null !== $mediaItem->getMediaMetadata()->getVideo()) : ?>
                     <td class="mdl-data-table__cell-non-numeric">

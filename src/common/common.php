@@ -29,6 +29,16 @@ $templates->addFolder('share', '../share/views');
 $ini = parse_ini_file('../../photoslibrary-sample.ini');
 
 /**
+ * Convert a Duration object into a human readable string for display.
+ */
+$templates->registerFunction('formatDuration', function ($duration) {
+    // Add the fraction at nano second accuracy.
+    $durationSeconds = $duration->getSeconds() +
+        ($duration->getNanos() / 10E8);
+    return sprintf(" %.5fs", $durationSeconds);
+});
+
+/**
  * If there are no credentials, renders the $template page.
  * @param string $connectTemplate The page to render if there are no credentials, which should allow
  * the user to connect again.
