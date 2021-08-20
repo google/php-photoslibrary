@@ -1,5 +1,7 @@
 # Google Photos Library API PHP Client Library
 
+![PHP CI](https://github.com/google/php-photoslibrary/actions/workflows/ci.yml/badge.svg)
+
 This repository contains the PHP client library for the [Google Photos Library
 API](https://developers.google.com/photos).
 
