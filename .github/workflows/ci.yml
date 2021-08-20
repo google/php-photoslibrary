@@ -32,4 +32,4 @@ jobs:
       run: composer install --no-interaction
 
     - name: Unit Tests
-      run: ./vendor/bin/php
+      run: ./vendor/bin/phpunit
