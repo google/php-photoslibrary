@@ -37,11 +37,8 @@ use GuzzleHttp\Psr7\Response;
 class PhotosLibraryClientWrapperTest extends GeneratedTest
 {
     private $photosLibraryClient;
-
     private $mockHttpHandler;
-
     private $mockCredentialsHandler;
-
     private $mockTransport;
 
     protected function setUp()
@@ -61,11 +58,6 @@ class PhotosLibraryClientWrapperTest extends GeneratedTest
         $this->photosLibraryClient = new PhotosLibraryClient($options);
     }
 
-    /**
-     * Upload testing.
-     *
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
     public function testUpload()
     {
         $this->mockHttpHandler->append(new Response(200, [], "upload token"));
