@@ -26,17 +26,10 @@ use Google\Photos\Library\V1\MediaTypeFilter\MediaType;
 use Google\Type\Date;
 use UnexpectedValueException;
 
-/**
- * Class FiltersBuilderTest
- *
- * Filters builder test class,
- *
- * @package Google\Photos\Library\Tests\Unit\V1
- */
 class FiltersBuilderTest extends GeneratedTest
 {
     /**
-     * Build with fields testing.
+     * Test filters builder using all fields.
      *
      * @throws \ErrorException
      */
@@ -89,9 +82,6 @@ class FiltersBuilderTest extends GeneratedTest
         $this->assertTrue($filters->getIncludeArchivedMedia());
     }
 
-    /**
-     * Add invalid included category testing.
-     */
     public function testAddInvalidIncludedCategory()
     {
         $this->expectException(UnexpectedValueException::class);
@@ -99,9 +89,6 @@ class FiltersBuilderTest extends GeneratedTest
             ->addIncludedCategoryFromString("not a category");
     }
 
-    /**
-     * Added included category from string testing.
-     */
     public function testAddIncludedCategoryFromString()
     {
         $filters = FiltersBuilder::construct()
@@ -113,9 +100,6 @@ class FiltersBuilderTest extends GeneratedTest
         );
     }
 
-    /**
-     * Add invalid included feature testing.
-     */
     public function testAddInvalidIncludedFeature()
     {
         $this->expectException(UnexpectedValueException::class);
@@ -123,9 +107,6 @@ class FiltersBuilderTest extends GeneratedTest
             ->addIncludedFeatureFromString("not a feature");
     }
 
-    /**
-     * Add included feature from string testing.
-     */
     public function testAddIncludedFeatureFromString()
     {
         $filters = FiltersBuilder::construct()
@@ -137,9 +118,6 @@ class FiltersBuilderTest extends GeneratedTest
         );
     }
 
-    /**
-     * Add invalid excluded category testing.
-     */
     public function testAddInvalidExcludedCategory()
     {
         $this->expectException(UnexpectedValueException::class);
@@ -147,9 +125,6 @@ class FiltersBuilderTest extends GeneratedTest
             ->addExcludedCategoryFromString("not a category");
     }
 
-    /**
-     * Add excluded category from string testing.
-     */
     public function testAddExcludedCategoryFromString()
     {
         $filters = FiltersBuilder::construct()
@@ -161,11 +136,6 @@ class FiltersBuilderTest extends GeneratedTest
         );
     }
 
-    /**
-     * Add date from date time.
-     *
-     * @throws \ErrorException
-     */
     public function testAddDateFromDateTime()
     {
         $dateTime = new DateTime("2005-12-03");
@@ -177,11 +147,6 @@ class FiltersBuilderTest extends GeneratedTest
         $this->assertProtobufEquals($expectedDate, $actualDate);
     }
 
-    /**
-     * Add date range from date times testing.
-     *
-     * @throws \ErrorException
-     */
     public function testAddDateRangeFromDateTimes()
     {
         $startDateTime = new DateTime("2005-12-03");
@@ -199,20 +164,12 @@ class FiltersBuilderTest extends GeneratedTest
         $this->assertProtobufEquals($expectedEndDate, $actualEndDate);
     }
 
-    /**
-     * Add invalid media type testing.
-     */
     public function testAddInvalidMediaType()
     {
         $this->expectException(UnexpectedValueException::class);
         FiltersBuilder::construct()->setMediaTypeFromString("not a media type");
     }
 
-    /**
-     * Add media type from string testing.
-     *
-     * @throws \ErrorException
-     */
     public function testAddMediaTypeFromString()
     {
         $filters = FiltersBuilder::construct()->setMediaTypeFromString("PHOTO")->build();

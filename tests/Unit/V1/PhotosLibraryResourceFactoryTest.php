@@ -31,18 +31,8 @@ use Google\Photos\Library\V1\SimpleMediaItem;
 use Google\Photos\Library\V1\TextEnrichment;
 use Google\Type\LatLng;
 
-/**
- * Class PhotosLibraryResourceFactoryTest
- *
- * Photos library resource factory testing class.
- *
- * @package Google\Photos\Library\Tests\Unit\V1
- */
 class PhotosLibraryResourceFactoryTest extends GeneratedTest
 {
-    /**
-     * Album testing
-     */
     public function testAlbum()
     {
         $expectedAlbum = new Album();
@@ -56,9 +46,6 @@ class PhotosLibraryResourceFactoryTest extends GeneratedTest
         );
     }
 
-    /**
-     * New media item testing.
-     */
     public function testNewMediaItem()
     {
         $expectedSimpleMediaItem = new SimpleMediaItem();
@@ -74,9 +61,6 @@ class PhotosLibraryResourceFactoryTest extends GeneratedTest
         );
     }
 
-    /**
-     * New media item with description testing.
-     */
     public function testNewMediaItemWithDescription()
     {
         $expectedSimpleMediaItem = new SimpleMediaItem();
@@ -97,9 +81,6 @@ class PhotosLibraryResourceFactoryTest extends GeneratedTest
         );
     }
 
-    /**
-     * Album position after media item testing.
-     */
     public function testAlbumPositionAfterMediaItem()
     {
         $expectedAlbumPosition = new AlbumPosition();
@@ -111,9 +92,6 @@ class PhotosLibraryResourceFactoryTest extends GeneratedTest
         $this->assertProtobufEquals($expectedAlbumPosition, $actualAlbumPosition);
     }
 
-    /**
-     * Album position after enrichment item testing.
-     */
     public function testAlbumPositionAfterEnrichmentItem()
     {
         $expectedAlbumPosition = new AlbumPosition();
@@ -130,9 +108,6 @@ class PhotosLibraryResourceFactoryTest extends GeneratedTest
         );
     }
 
-    /**
-     * New enrichment item with text testing.
-     */
     public function testNewEnrichmentItemWithText()
     {
         $expectedTextEnrichment = new TextEnrichment();
@@ -148,9 +123,6 @@ class PhotosLibraryResourceFactoryTest extends GeneratedTest
         );
     }
 
-    /**
-     * New enrichment item with location testing.
-     */
     public function testNewEnrichmentItemWithLocation()
     {
         $latlng = new LatLng();
@@ -173,9 +145,6 @@ class PhotosLibraryResourceFactoryTest extends GeneratedTest
         );
     }
 
-    /**
-     * New enrichment with map testing.
-     */
     public function testNewEnrichmentWithMap()
     {
         $originLatlng = new LatLng();
