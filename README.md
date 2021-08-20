@@ -145,13 +145,13 @@ directory of your project, to check for coding style violations,
 run
 
 ```shell
-./vendor/bin/phpcs src --standard=ruleset.xml -np
+./vendor/bin/phpcs src --standard=phpcs_ruleset.xml -np
 ```
 
 To automatically fix (fixable) coding style violations, run
 
 ```shell
-./vendor/bin/phpcbf src --standard=ruleset.xml
+./vendor/bin/phpcbf src --standard=phpcs_ruleset.xml
 ```
 
 ## Getting support
