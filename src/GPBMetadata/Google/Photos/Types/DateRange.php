@@ -15,17 +15,16 @@ class DateRange
           return;
         }
         \GPBMetadata\Google\Type\Date::initOnce();
-        $pool->internalAddGeneratedFile(hex2bin(
-            "0a89020a24676f6f676c652f70686f746f732f74797065732f646174655f" .
-            "72616e67652e70726f746f1213676f6f676c652e70686f746f732e747970" .
-            "657322570a094461746552616e676512250a0a73746172745f6461746518" .
-            "012001280b32112e676f6f676c652e747970652e4461746512230a08656e" .
-            "645f6461746518022001280b32112e676f6f676c652e747970652e446174" .
-            "65426b0a1d636f6d2e676f6f676c652e70686f746f732e74797065732e70" .
-            "726f746f420e4461746552616e676550726f746f50015a38676f6f676c65" .
-            "2e676f6c616e672e6f72672f67656e70726f746f2f676f6f676c65617069" .
-            "732f70686f746f732f74797065733b7479706573620670726f746f33"
-        ), true);
+        $pool->internalAddGeneratedFile(
+            '
+‰
+$google/photos/types/date_range.protogoogle.photos.types"W
+	DateRange%
+
+start_date (2.google.type.Date#
+end_date (2.google.type.DateBk
+com.google.photos.types.protoBDateRangeProtoPZ8google.golang.org/genproto/googleapis/photos/types;typesbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

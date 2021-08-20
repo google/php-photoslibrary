@@ -16,10 +16,10 @@ use Google\Protobuf\Internal\GPBUtil;
 class ShareAlbumRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Identifier of the album to be shared. This `albumId` must belong to an
+     * Required. Identifier of the album to be shared. This `albumId` must belong to an
      * album created by the developer.
      *
-     * Generated from protobuf field <code>string album_id = 1;</code>
+     * Generated from protobuf field <code>string album_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $album_id = '';
     /**
@@ -36,7 +36,7 @@ class ShareAlbumRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $album_id
-     *           Identifier of the album to be shared. This `albumId` must belong to an
+     *           Required. Identifier of the album to be shared. This `albumId` must belong to an
      *           album created by the developer.
      *     @type \Google\Photos\Types\SharedAlbumOptions $shared_album_options
      *           Options to be set when converting the album to a shared album.
@@ -48,10 +48,10 @@ class ShareAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the album to be shared. This `albumId` must belong to an
+     * Required. Identifier of the album to be shared. This `albumId` must belong to an
      * album created by the developer.
      *
-     * Generated from protobuf field <code>string album_id = 1;</code>
+     * Generated from protobuf field <code>string album_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAlbumId()
@@ -60,10 +60,10 @@ class ShareAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the album to be shared. This `albumId` must belong to an
+     * Required. Identifier of the album to be shared. This `albumId` must belong to an
      * album created by the developer.
      *
-     * Generated from protobuf field <code>string album_id = 1;</code>
+     * Generated from protobuf field <code>string album_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -79,11 +79,21 @@ class ShareAlbumRequest extends \Google\Protobuf\Internal\Message
      * Options to be set when converting the album to a shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.SharedAlbumOptions shared_album_options = 2;</code>
-     * @return \Google\Photos\Types\SharedAlbumOptions
+     * @return \Google\Photos\Types\SharedAlbumOptions|null
      */
     public function getSharedAlbumOptions()
     {
-        return $this->shared_album_options;
+        return isset($this->shared_album_options) ? $this->shared_album_options : null;
+    }
+
+    public function hasSharedAlbumOptions()
+    {
+        return isset($this->shared_album_options);
+    }
+
+    public function clearSharedAlbumOptions()
+    {
+        unset($this->shared_album_options);
     }
 
     /**

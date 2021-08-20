@@ -41,11 +41,16 @@ class NewEnrichmentItem extends \Google\Protobuf\Internal\Message
      * Text to be added to the album.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.TextEnrichment text_enrichment = 1;</code>
-     * @return \Google\Photos\Library\V1\TextEnrichment
+     * @return \Google\Photos\Library\V1\TextEnrichment|null
      */
     public function getTextEnrichment()
     {
         return $this->readOneof(1);
+    }
+
+    public function hasTextEnrichment()
+    {
+        return $this->hasOneof(1);
     }
 
     /**
@@ -67,11 +72,16 @@ class NewEnrichmentItem extends \Google\Protobuf\Internal\Message
      * Location to be added to the album.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.LocationEnrichment location_enrichment = 2;</code>
-     * @return \Google\Photos\Library\V1\LocationEnrichment
+     * @return \Google\Photos\Library\V1\LocationEnrichment|null
      */
     public function getLocationEnrichment()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasLocationEnrichment()
+    {
+        return $this->hasOneof(2);
     }
 
     /**
@@ -93,11 +103,16 @@ class NewEnrichmentItem extends \Google\Protobuf\Internal\Message
      * Map to be added to the album.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.MapEnrichment map_enrichment = 3;</code>
-     * @return \Google\Photos\Library\V1\MapEnrichment
+     * @return \Google\Photos\Library\V1\MapEnrichment|null
      */
     public function getMapEnrichment()
     {
         return $this->readOneof(3);
+    }
+
+    public function hasMapEnrichment()
+    {
+        return $this->hasOneof(3);
     }
 
     /**

@@ -78,11 +78,16 @@ class NewMediaItem extends \Google\Protobuf\Internal\Message
      * A new media item that has been uploaded via the included `uploadToken`.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.SimpleMediaItem simple_media_item = 2;</code>
-     * @return \Google\Photos\Library\V1\SimpleMediaItem
+     * @return \Google\Photos\Library\V1\SimpleMediaItem|null
      */
     public function getSimpleMediaItem()
     {
         return $this->readOneof(2);
+    }
+
+    public function hasSimpleMediaItem()
+    {
+        return $this->hasOneof(2);
     }
 
     /**

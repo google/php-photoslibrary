@@ -14,30 +14,34 @@ class Album
         if (static::$is_initialized == true) {
           return;
         }
-        $pool->internalAddGeneratedFile(hex2bin(
-            "0a8a050a1f676f6f676c652f70686f746f732f74797065732f616c62756d" .
-            "2e70726f746f1213676f6f676c652e70686f746f732e747970657322dd01" .
-            "0a05416c62756d120a0a026964180120012809120d0a057469746c651802" .
-            "2001280912130a0b70726f647563745f75726c18032001280912140a0c69" .
-            "735f777269746561626c6518042001280812320a0a73686172655f696e66" .
-            "6f18052001280b321e2e676f6f676c652e70686f746f732e74797065732e" .
-            "5368617265496e666f12190a116d656469615f6974656d735f636f756e74" .
-            "180620012803121c0a14636f7665725f70686f746f5f626173655f75726c" .
-            "18072001280912210a19636f7665725f70686f746f5f6d656469615f6974" .
-            "656d5f696418082001280922b8010a095368617265496e666f12450a1473" .
-            "68617265645f616c62756d5f6f7074696f6e7318012001280b32272e676f" .
-            "6f676c652e70686f746f732e74797065732e536861726564416c62756d4f" .
-            "7074696f6e7312150a0d736861726561626c655f75726c18022001280912" .
-            "130a0b73686172655f746f6b656e18032001280912110a0969735f6a6f69" .
-            "6e656418042001280812100a0869735f6f776e656418052001280812130a" .
-            "0b69735f6a6f696e61626c6518062001280822460a12536861726564416c" .
-            "62756d4f7074696f6e7312180a1069735f636f6c6c61626f726174697665" .
-            "18012001280812160a0e69735f636f6d6d656e7461626c65180220012808" .
-            "42670a1d636f6d2e676f6f676c652e70686f746f732e74797065732e7072" .
-            "6f746f420a416c62756d50726f746f50015a38676f6f676c652e676f6c61" .
-            "6e672e6f72672f67656e70726f746f2f676f6f676c65617069732f70686f" .
-            "746f732f74797065733b7479706573620670726f746f33"
-        ), true);
+        $pool->internalAddGeneratedFile(
+            '
+Š
+google/photos/types/album.protogoogle.photos.types"Ý
+Album
+
+id (	
+title (	
+product_url (	
+is_writeable (2
+
+share_info (2.google.photos.types.ShareInfo
+media_items_count (
+cover_photo_base_url (	!
+cover_photo_media_item_id (	"¸
+	ShareInfoE
+shared_album_options (2\'.google.photos.types.SharedAlbumOptions
+shareable_url (	
+share_token (	
+	is_joined (
+is_owned (
+is_joinable ("F
+SharedAlbumOptions
+is_collaborative (
+is_commentable (Bg
+com.google.photos.types.protoB
+AlbumProtoPZ8google.golang.org/genproto/googleapis/photos/types;typesbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

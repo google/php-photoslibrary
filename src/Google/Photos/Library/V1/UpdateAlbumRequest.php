@@ -26,10 +26,10 @@ class UpdateAlbumRequest extends \Google\Protobuf\Internal\Message
      */
     protected $album = null;
     /**
-     * Indicate what fields in the provided album to update.
+     * Required. Indicate what fields in the provided album to update.
      * The only valid values are `title` and `cover_photo_media_item_id`.
      *
-     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $update_mask = null;
 
@@ -46,7 +46,7 @@ class UpdateAlbumRequest extends \Google\Protobuf\Internal\Message
      *           The album’s `cover_photo_media_item_id` field is used to set the new album
      *           cover photo.
      *     @type \Google\Protobuf\FieldMask $update_mask
-     *           Indicate what fields in the provided album to update.
+     *           Required. Indicate what fields in the provided album to update.
      *           The only valid values are `title` and `cover_photo_media_item_id`.
      * }
      */
@@ -63,11 +63,21 @@ class UpdateAlbumRequest extends \Google\Protobuf\Internal\Message
      * cover photo.
      *
      * Generated from protobuf field <code>.google.photos.types.Album album = 1 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Photos\Types\Album
+     * @return \Google\Photos\Types\Album|null
      */
     public function getAlbum()
     {
-        return $this->album;
+        return isset($this->album) ? $this->album : null;
+    }
+
+    public function hasAlbum()
+    {
+        return isset($this->album);
+    }
+
+    public function clearAlbum()
+    {
+        unset($this->album);
     }
 
     /**
@@ -90,22 +100,32 @@ class UpdateAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Indicate what fields in the provided album to update.
+     * Required. Indicate what fields in the provided album to update.
      * The only valid values are `title` and `cover_photo_media_item_id`.
      *
-     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2;</code>
-     * @return \Google\Protobuf\FieldMask
+     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return \Google\Protobuf\FieldMask|null
      */
     public function getUpdateMask()
     {
-        return $this->update_mask;
+        return isset($this->update_mask) ? $this->update_mask : null;
+    }
+
+    public function hasUpdateMask()
+    {
+        return isset($this->update_mask);
+    }
+
+    public function clearUpdateMask()
+    {
+        unset($this->update_mask);
     }
 
     /**
-     * Indicate what fields in the provided album to update.
+     * Required. Indicate what fields in the provided album to update.
      * The only valid values are `title` and `cover_photo_media_item_id`.
      *
-     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.FieldMask update_mask = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Protobuf\FieldMask $var
      * @return $this
      */

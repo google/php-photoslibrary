@@ -109,11 +109,21 @@ class ShareInfo extends \Google\Protobuf\Internal\Message
      * a shared album.
      *
      * Generated from protobuf field <code>.google.photos.types.SharedAlbumOptions shared_album_options = 1;</code>
-     * @return \Google\Photos\Types\SharedAlbumOptions
+     * @return \Google\Photos\Types\SharedAlbumOptions|null
      */
     public function getSharedAlbumOptions()
     {
-        return $this->shared_album_options;
+        return isset($this->shared_album_options) ? $this->shared_album_options : null;
+    }
+
+    public function hasSharedAlbumOptions()
+    {
+        return isset($this->shared_album_options);
+    }
+
+    public function clearSharedAlbumOptions()
+    {
+        unset($this->shared_album_options);
     }
 
     /**

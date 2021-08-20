@@ -41,11 +41,21 @@ class AddEnrichmentToAlbumResponse extends \Google\Protobuf\Internal\Message
      * Output only. Enrichment which was added.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.EnrichmentItem enrichment_item = 1;</code>
-     * @return \Google\Photos\Library\V1\EnrichmentItem
+     * @return \Google\Photos\Library\V1\EnrichmentItem|null
      */
     public function getEnrichmentItem()
     {
-        return $this->enrichment_item;
+        return isset($this->enrichment_item) ? $this->enrichment_item : null;
+    }
+
+    public function hasEnrichmentItem()
+    {
+        return isset($this->enrichment_item);
+    }
+
+    public function clearEnrichmentItem()
+    {
+        unset($this->enrichment_item);
     }
 
     /**

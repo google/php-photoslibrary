@@ -1,0 +1,113 @@
+{
+    "schema": "1.0",
+    "comment": "This file maps proto services\/RPCs to the corresponding library clients\/methods",
+    "language": "php",
+    "protoPackage": "google.photos.library.v1",
+    "libraryPackage": "Google\\Photos\\Library\\V1",
+    "services": {
+        "PhotosLibrary": {
+            "clients": {
+                "grpc": {
+                    "libraryClient": "PhotosLibraryGapicClient",
+                    "rpcs": {
+                        "AddEnrichmentToAlbum": {
+                            "methods": [
+                                "addEnrichmentToAlbum"
+                            ]
+                        },
+                        "BatchAddMediaItemsToAlbum": {
+                            "methods": [
+                                "batchAddMediaItemsToAlbum"
+                            ]
+                        },
+                        "BatchCreateMediaItems": {
+                            "methods": [
+                                "batchCreateMediaItems"
+                            ]
+                        },
+                        "BatchGetMediaItems": {
+                            "methods": [
+                                "batchGetMediaItems"
+                            ]
+                        },
+                        "BatchRemoveMediaItemsFromAlbum": {
+                            "methods": [
+                                "batchRemoveMediaItemsFromAlbum"
+                            ]
+                        },
+                        "CreateAlbum": {
+                            "methods": [
+                                "createAlbum"
+                            ]
+                        },
+                        "GetAlbum": {
+                            "methods": [
+                                "getAlbum"
+                            ]
+                        },
+                        "GetMediaItem": {
+                            "methods": [
+                                "getMediaItem"
+                            ]
+                        },
+                        "GetSharedAlbum": {
+                            "methods": [
+                                "getSharedAlbum"
+                            ]
+                        },
+                        "JoinSharedAlbum": {
+                            "methods": [
+                                "joinSharedAlbum"
+                            ]
+                        },
+                        "LeaveSharedAlbum": {
+                            "methods": [
+                                "leaveSharedAlbum"
+                            ]
+                        },
+                        "ListAlbums": {
+                            "methods": [
+                                "listAlbums"
+                            ]
+                        },
+                        "ListMediaItems": {
+                            "methods": [
+                                "listMediaItems"
+                            ]
+                        },
+                        "ListSharedAlbums": {
+                            "methods": [
+                                "listSharedAlbums"
+                            ]
+                        },
+                        "SearchMediaItems": {
+                            "methods": [
+                                "searchMediaItems"
+                            ]
+                        },
+                        "ShareAlbum": {
+                            "methods": [
+                                "shareAlbum"
+                            ]
+                        },
+                        "UnshareAlbum": {
+                            "methods": [
+                                "unshareAlbum"
+                            ]
+                        },
+                        "UpdateAlbum": {
+                            "methods": [
+                                "updateAlbum"
+                            ]
+                        },
+                        "UpdateMediaItem": {
+                            "methods": [
+                                "updateMediaItem"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

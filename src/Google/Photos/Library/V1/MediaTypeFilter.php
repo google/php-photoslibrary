@@ -10,8 +10,7 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  * This filter defines the type of media items to be returned, for example,
- * videos or photos. All the specified media types are treated as an OR when
- * used together.
+ * videos or photos. Only one media type is supported.
  *
  * Generated from protobuf message <code>google.photos.library.v1.MediaTypeFilter</code>
  */

@@ -16,19 +16,19 @@ use Google\Protobuf\Internal\GPBUtil;
 class BatchRemoveMediaItemsFromAlbumRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
+     * Required. Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
      * removed.
      * Must not contain repeated identifiers and cannot be empty. The maximum
      * number of media items that can be removed in one call is 50.
      *
-     * Generated from protobuf field <code>repeated string media_item_ids = 1;</code>
+     * Generated from protobuf field <code>repeated string media_item_ids = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private $media_item_ids;
     /**
-     * Identifier of the [Album][google.photos.types.Album] that the media
+     * Required. Identifier of the [Album][google.photos.types.Album] that the media
      * items are to be removed from.
      *
-     * Generated from protobuf field <code>string album_id = 2;</code>
+     * Generated from protobuf field <code>string album_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $album_id = '';
 
@@ -39,12 +39,12 @@ class BatchRemoveMediaItemsFromAlbumRequest extends \Google\Protobuf\Internal\Me
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $media_item_ids
-     *           Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
+     *           Required. Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
      *           removed.
      *           Must not contain repeated identifiers and cannot be empty. The maximum
      *           number of media items that can be removed in one call is 50.
      *     @type string $album_id
-     *           Identifier of the [Album][google.photos.types.Album] that the media
+     *           Required. Identifier of the [Album][google.photos.types.Album] that the media
      *           items are to be removed from.
      * }
      */
@@ -54,12 +54,12 @@ class BatchRemoveMediaItemsFromAlbumRequest extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
+     * Required. Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
      * removed.
      * Must not contain repeated identifiers and cannot be empty. The maximum
      * number of media items that can be removed in one call is 50.
      *
-     * Generated from protobuf field <code>repeated string media_item_ids = 1;</code>
+     * Generated from protobuf field <code>repeated string media_item_ids = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMediaItemIds()
@@ -68,12 +68,12 @@ class BatchRemoveMediaItemsFromAlbumRequest extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
+     * Required. Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
      * removed.
      * Must not contain repeated identifiers and cannot be empty. The maximum
      * number of media items that can be removed in one call is 50.
      *
-     * Generated from protobuf field <code>repeated string media_item_ids = 1;</code>
+     * Generated from protobuf field <code>repeated string media_item_ids = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -86,10 +86,10 @@ class BatchRemoveMediaItemsFromAlbumRequest extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * Identifier of the [Album][google.photos.types.Album] that the media
+     * Required. Identifier of the [Album][google.photos.types.Album] that the media
      * items are to be removed from.
      *
-     * Generated from protobuf field <code>string album_id = 2;</code>
+     * Generated from protobuf field <code>string album_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAlbumId()
@@ -98,10 +98,10 @@ class BatchRemoveMediaItemsFromAlbumRequest extends \Google\Protobuf\Internal\Me
     }
 
     /**
-     * Identifier of the [Album][google.photos.types.Album] that the media
+     * Required. Identifier of the [Album][google.photos.types.Album] that the media
      * items are to be removed from.
      *
-     * Generated from protobuf field <code>string album_id = 2;</code>
+     * Generated from protobuf field <code>string album_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

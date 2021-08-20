@@ -16,21 +16,21 @@ use Google\Protobuf\Internal\GPBUtil;
 class AddEnrichmentToAlbumRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Identifier of the album where the enrichment is to be added.
+     * Required. Identifier of the album where the enrichment is to be added.
      *
-     * Generated from protobuf field <code>string album_id = 1;</code>
+     * Generated from protobuf field <code>string album_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $album_id = '';
     /**
-     * The enrichment to be added.
+     * Required. The enrichment to be added.
      *
-     * Generated from protobuf field <code>.google.photos.library.v1.NewEnrichmentItem new_enrichment_item = 2;</code>
+     * Generated from protobuf field <code>.google.photos.library.v1.NewEnrichmentItem new_enrichment_item = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $new_enrichment_item = null;
     /**
-     * The position in the album where the enrichment is to be inserted.
+     * Required. The position in the album where the enrichment is to be inserted.
      *
-     * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition album_position = 3;</code>
+     * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition album_position = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $album_position = null;
 
@@ -41,11 +41,11 @@ class AddEnrichmentToAlbumRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $album_id
-     *           Identifier of the album where the enrichment is to be added.
+     *           Required. Identifier of the album where the enrichment is to be added.
      *     @type \Google\Photos\Library\V1\NewEnrichmentItem $new_enrichment_item
-     *           The enrichment to be added.
+     *           Required. The enrichment to be added.
      *     @type \Google\Photos\Library\V1\AlbumPosition $album_position
-     *           The position in the album where the enrichment is to be inserted.
+     *           Required. The position in the album where the enrichment is to be inserted.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,9 +54,9 @@ class AddEnrichmentToAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the album where the enrichment is to be added.
+     * Required. Identifier of the album where the enrichment is to be added.
      *
-     * Generated from protobuf field <code>string album_id = 1;</code>
+     * Generated from protobuf field <code>string album_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAlbumId()
@@ -65,9 +65,9 @@ class AddEnrichmentToAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the album where the enrichment is to be added.
+     * Required. Identifier of the album where the enrichment is to be added.
      *
-     * Generated from protobuf field <code>string album_id = 1;</code>
+     * Generated from protobuf field <code>string album_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
@@ -80,20 +80,30 @@ class AddEnrichmentToAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The enrichment to be added.
+     * Required. The enrichment to be added.
      *
-     * Generated from protobuf field <code>.google.photos.library.v1.NewEnrichmentItem new_enrichment_item = 2;</code>
-     * @return \Google\Photos\Library\V1\NewEnrichmentItem
+     * Generated from protobuf field <code>.google.photos.library.v1.NewEnrichmentItem new_enrichment_item = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return \Google\Photos\Library\V1\NewEnrichmentItem|null
      */
     public function getNewEnrichmentItem()
     {
-        return $this->new_enrichment_item;
+        return isset($this->new_enrichment_item) ? $this->new_enrichment_item : null;
+    }
+
+    public function hasNewEnrichmentItem()
+    {
+        return isset($this->new_enrichment_item);
+    }
+
+    public function clearNewEnrichmentItem()
+    {
+        unset($this->new_enrichment_item);
     }
 
     /**
-     * The enrichment to be added.
+     * Required. The enrichment to be added.
      *
-     * Generated from protobuf field <code>.google.photos.library.v1.NewEnrichmentItem new_enrichment_item = 2;</code>
+     * Generated from protobuf field <code>.google.photos.library.v1.NewEnrichmentItem new_enrichment_item = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Photos\Library\V1\NewEnrichmentItem $var
      * @return $this
      */
@@ -106,20 +116,30 @@ class AddEnrichmentToAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The position in the album where the enrichment is to be inserted.
+     * Required. The position in the album where the enrichment is to be inserted.
      *
-     * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition album_position = 3;</code>
-     * @return \Google\Photos\Library\V1\AlbumPosition
+     * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition album_position = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return \Google\Photos\Library\V1\AlbumPosition|null
      */
     public function getAlbumPosition()
     {
-        return $this->album_position;
+        return isset($this->album_position) ? $this->album_position : null;
+    }
+
+    public function hasAlbumPosition()
+    {
+        return isset($this->album_position);
+    }
+
+    public function clearAlbumPosition()
+    {
+        unset($this->album_position);
     }
 
     /**
-     * The position in the album where the enrichment is to be inserted.
+     * Required. The position in the album where the enrichment is to be inserted.
      *
-     * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition album_position = 3;</code>
+     * Generated from protobuf field <code>.google.photos.library.v1.AlbumPosition album_position = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param \Google\Photos\Library\V1\AlbumPosition $var
      * @return $this
      */

@@ -41,11 +41,21 @@ class LocationEnrichment extends \Google\Protobuf\Internal\Message
      * Location for this enrichment item.
      *
      * Generated from protobuf field <code>.google.photos.library.v1.Location location = 1;</code>
-     * @return \Google\Photos\Library\V1\Location
+     * @return \Google\Photos\Library\V1\Location|null
      */
     public function getLocation()
     {
-        return $this->location;
+        return isset($this->location) ? $this->location : null;
+    }
+
+    public function hasLocation()
+    {
+        return isset($this->location);
+    }
+
+    public function clearLocation()
+    {
+        unset($this->location);
     }
 
     /**

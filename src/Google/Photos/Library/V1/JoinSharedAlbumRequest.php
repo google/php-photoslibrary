@@ -17,9 +17,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class JoinSharedAlbumRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Token to join the shared album on behalf of the user.
+     * Required. Token to join the shared album on behalf of the user.
      *
-     * Generated from protobuf field <code>string share_token = 1;</code>
+     * Generated from protobuf field <code>string share_token = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $share_token = '';
 
@@ -30,7 +30,7 @@ class JoinSharedAlbumRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $share_token
-     *           Token to join the shared album on behalf of the user.
+     *           Required. Token to join the shared album on behalf of the user.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,9 +39,9 @@ class JoinSharedAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Token to join the shared album on behalf of the user.
+     * Required. Token to join the shared album on behalf of the user.
      *
-     * Generated from protobuf field <code>string share_token = 1;</code>
+     * Generated from protobuf field <code>string share_token = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getShareToken()
@@ -50,9 +50,9 @@ class JoinSharedAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Token to join the shared album on behalf of the user.
+     * Required. Token to join the shared album on behalf of the user.
      *
-     * Generated from protobuf field <code>string share_token = 1;</code>
+     * Generated from protobuf field <code>string share_token = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

@@ -65,11 +65,21 @@ class MediaMetadata extends \Google\Protobuf\Internal\Message
      * Google Photos).
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp creation_time = 1;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreationTime()
     {
-        return $this->creation_time;
+        return isset($this->creation_time) ? $this->creation_time : null;
+    }
+
+    public function hasCreationTime()
+    {
+        return isset($this->creation_time);
+    }
+
+    public function clearCreationTime()
+    {
+        unset($this->creation_time);
     }
 
     /**
@@ -144,11 +154,16 @@ class MediaMetadata extends \Google\Protobuf\Internal\Message
      * Metadata for a photo media type.
      *
      * Generated from protobuf field <code>.google.photos.types.Photo photo = 6;</code>
-     * @return \Google\Photos\Types\Photo
+     * @return \Google\Photos\Types\Photo|null
      */
     public function getPhoto()
     {
         return $this->readOneof(6);
+    }
+
+    public function hasPhoto()
+    {
+        return $this->hasOneof(6);
     }
 
     /**
@@ -170,11 +185,16 @@ class MediaMetadata extends \Google\Protobuf\Internal\Message
      * Metadata for a video media type.
      *
      * Generated from protobuf field <code>.google.photos.types.Video video = 7;</code>
-     * @return \Google\Photos\Types\Video
+     * @return \Google\Photos\Types\Video|null
      */
     public function getVideo()
     {
         return $this->readOneof(7);
+    }
+
+    public function hasVideo()
+    {
+        return $this->hasOneof(7);
     }
 
     /**

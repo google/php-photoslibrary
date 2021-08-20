@@ -17,9 +17,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetMediaItemRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Identifier of the media item to be requested.
+     * Required. Identifier of the media item to be requested.
      *
-     * Generated from protobuf field <code>string media_item_id = 1;</code>
+     * Generated from protobuf field <code>string media_item_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $media_item_id = '';
 
@@ -30,7 +30,7 @@ class GetMediaItemRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $media_item_id
-     *           Identifier of the media item to be requested.
+     *           Required. Identifier of the media item to be requested.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,9 +39,9 @@ class GetMediaItemRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the media item to be requested.
+     * Required. Identifier of the media item to be requested.
      *
-     * Generated from protobuf field <code>string media_item_id = 1;</code>
+     * Generated from protobuf field <code>string media_item_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getMediaItemId()
@@ -50,9 +50,9 @@ class GetMediaItemRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the media item to be requested.
+     * Required. Identifier of the media item to be requested.
      *
-     * Generated from protobuf field <code>string media_item_id = 1;</code>
+     * Generated from protobuf field <code>string media_item_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */

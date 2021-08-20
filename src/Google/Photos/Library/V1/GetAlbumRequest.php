@@ -16,9 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetAlbumRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Identifier of the album to be requested.
+     * Required. Identifier of the album to be requested.
      *
-     * Generated from protobuf field <code>string album_id = 1;</code>
+     * Generated from protobuf field <code>string album_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $album_id = '';
 
@@ -29,7 +29,7 @@ class GetAlbumRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $album_id
-     *           Identifier of the album to be requested.
+     *           Required. Identifier of the album to be requested.
      * }
      */
     public function __construct($data = NULL) {
@@ -38,9 +38,9 @@ class GetAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the album to be requested.
+     * Required. Identifier of the album to be requested.
      *
-     * Generated from protobuf field <code>string album_id = 1;</code>
+     * Generated from protobuf field <code>string album_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return string
      */
     public function getAlbumId()
@@ -49,9 +49,9 @@ class GetAlbumRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Identifier of the album to be requested.
+     * Required. Identifier of the album to be requested.
      *
-     * Generated from protobuf field <code>string album_id = 1;</code>
+     * Generated from protobuf field <code>string album_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param string $var
      * @return $this
      */
