@@ -14,9 +14,6 @@ jobs:
   build:
     # The type of machine to run the job on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        php-versions: ['5.5', '7.0']
 
     steps:
     # Checks out the repository under $GITHUB_WORKSPACE, so that the job can access it.
@@ -26,7 +23,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: ${{ matrix.php-versions }}
+        php-version: '7.0'
 
     - name: Setup PhotosLibrary
       run: composer install --no-interaction
