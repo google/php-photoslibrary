@@ -6,8 +6,13 @@
     -->
     <exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
   </rule>
-  <exclude-pattern>tests/*</exclude-pattern>
+
+  <file>src</file>
+  <file>tests</file>
+
   <exclude-pattern>src/GPBMetadata/Google/*</exclude-pattern>
   <exclude-pattern>src/Google/Photos/*</exclude-pattern>
-  <file>src</file>
+
+  <!--Exclude auto generated tests-->
+  <exclude-pattern>tests/Unit/V1/PhotosLibraryClientTest.php</exclude-pattern>
 </ruleset>
