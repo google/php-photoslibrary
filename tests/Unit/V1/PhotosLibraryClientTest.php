@@ -50,20 +50,14 @@ use Google\Rpc\Code;
 use stdClass;
 
 /**
- * Class PhotosLibraryClientTest
- *
  * @group library
  *
  * @group gapic
- * @package Google\Photos\Library\Tests\Unit\V1
  */
 class PhotosLibraryClientTest extends GeneratedTest
 {
     /**
-     * Creates mocked transport interface.
-     *
-     * @param mixed|null $deserialize
-     * @return \Google\ApiCore\Transport\TransportInterface
+     * @return TransportInterface
      */
     private function createTransport($deserialize = null)
     {
@@ -71,9 +65,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Creates mocked credentials.
-     *
-     * @return \Google\ApiCore\CredentialsWrapper|\PHPUnit_Framework_MockObject_MockObject
+     * @return CredentialsWrapper
      */
     private function createCredentials()
     {
@@ -81,11 +73,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Creates client instance with credentials.
-     *
-     * @param array $options The options for photo library client.
-     * @return \Google\Photos\Library\V1\PhotosLibraryClient
-     * @throws \Google\ApiCore\ValidationException
+     * @return PhotosLibraryClient
      */
     private function createClient(array $options = [])
     {
@@ -96,9 +84,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Album creation test.
-     *
-     * @throws \Google\ApiCore\ValidationException|\Google\ApiCore\ApiException
+     * @test
      */
     public function addEnrichmentToAlbumTest()
     {
@@ -131,9 +117,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Album creation test with API Exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function addEnrichmentToAlbumExceptionTest()
     {
@@ -164,19 +148,15 @@ class PhotosLibraryClientTest extends GeneratedTest
             $this->assertEquals($status->code, $ex->getCode());
             $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
         }
-
         // Call popReceivedCalls to ensure the stub is exhausted
         $transport->popReceivedCalls();
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
-     * Batch add media items to album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testBatchAddMediaItemsToAlbum()
+    public function batchAddMediaItemsToAlbumTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -204,11 +184,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Batch add media items to album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testBatchAddMediaItemsToAlbumException()
+    public function batchAddMediaItemsToAlbumExceptionTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -228,7 +206,6 @@ class PhotosLibraryClientTest extends GeneratedTest
         // Mock request
         $mediaItemIds = [];
         $albumId = 'albumId1532078315';
-
         try {
             $client->batchAddMediaItemsToAlbum($mediaItemIds, $albumId);
             // If the $client method call did not throw, fail the test
@@ -243,10 +220,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * List media items testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function batchCreateMediaItemsTest()
     {
@@ -273,9 +247,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * List media items testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function batchCreateMediaItemsExceptionTest()
     {
@@ -310,10 +282,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Get media item testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function batchGetMediaItemsTest()
     {
@@ -340,9 +309,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Get media item testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function batchGetMediaItemsExceptionTest()
     {
@@ -377,10 +344,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Batch get media items testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function batchRemoveMediaItemsFromAlbumTest()
     {
@@ -410,9 +374,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Batch get media items testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function batchRemoveMediaItemsFromAlbumExceptionTest()
     {
@@ -448,10 +410,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * List albums testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function createAlbumTest()
     {
@@ -492,9 +451,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * List albums testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function createAlbumExceptionTest()
     {
@@ -529,12 +486,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Get album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testGetAlbum()
+    public function getAlbumTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -573,11 +527,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Get album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testGetAlbumException()
+    public function getAlbumExceptionTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -610,10 +562,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Get shared album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function getMediaItemTest()
     {
@@ -652,9 +601,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Get shared album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function getMediaItemExceptionTest()
     {
@@ -689,10 +636,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Add enrichment to album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function getSharedAlbumTest()
     {
@@ -733,9 +677,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Add enrichment to album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function getSharedAlbumExceptionTest()
     {
@@ -770,12 +712,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Join shared album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testJoinSharedAlbum()
+    public function joinSharedAlbumTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -800,11 +739,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Join shared album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testJoinSharedAlbumException()
+    public function joinSharedAlbumExceptionTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -837,12 +774,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Leave shared album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testLeaveSharedAlbum()
+    public function leaveSharedAlbumTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -867,11 +801,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Leave shared album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testLeaveSharedAlbumException()
+    public function leaveSharedAlbumExceptionTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -904,10 +836,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Share album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function listAlbumsTest()
     {
@@ -940,9 +869,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Share album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function listAlbumsExceptionTest()
     {
@@ -1041,12 +968,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * List shared albums testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testListSharedAlbums()
+    public function listSharedAlbumsTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -1077,11 +1001,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * List shared albums testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testListSharedAlbumsException()
+    public function listSharedAlbumsExceptionTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -1112,10 +1034,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Unshare album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function searchMediaItemsTest()
     {
@@ -1208,9 +1127,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Unshare album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function shareAlbumExceptionTest()
     {
@@ -1245,10 +1162,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Batch remove media items from album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function unshareAlbumTest()
     {
@@ -1275,9 +1189,7 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Batch remove media items from album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
     public function unshareAlbumExceptionTest()
     {
@@ -1312,12 +1224,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Update album testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testUpdateAlbum()
+    public function updateAlbumTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -1359,11 +1268,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Update album testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testUpdateAlbumException()
+    public function updateAlbumExceptionTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -1397,12 +1304,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Update media item testing.
-     *
-     * @throws \Google\ApiCore\ApiException
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testUpdateMediaItem()
+    public function updateMediaItemTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
@@ -1442,11 +1346,9 @@ class PhotosLibraryClientTest extends GeneratedTest
     }
 
     /**
-     * Update media item testing with exception handling.
-     *
-     * @throws \Google\ApiCore\ValidationException
+     * @test
      */
-    public function testUpdateMediaItemException()
+    public function updateMediaItemExceptionTest()
     {
         $transport = $this->createTransport();
         $client = $this->createClient([
