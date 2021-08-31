@@ -28,6 +28,7 @@ class VideoProcessingStatus
     const PROCESSING = 1;
     /**
      * Video processing is complete and it is now ready for viewing.
+     * Important: attempting to download a video not in the READY state may fail.
      *
      * Generated from protobuf enum <code>READY = 2;</code>
      */

@@ -971,6 +971,22 @@ class PhotosLibraryGapicClient
      *     @type Filters $filters
      *           Filters to apply to the request. Can't be set in conjunction with an
      *           `albumId`.
+     *     @type string $orderBy
+     *           An optional field to specify the sort order of the search results. The
+     *           `orderBy` field only works when a
+     *           [dateFilter][google.photos.library.v1.DateFilter] is used. When this
+     *           field is not specified, results are displayed newest first, oldest last by
+     *           their [creationTime][google.photos.types.MediaMetadata.creation_time].
+     *           Providing `MediaMetadata.creation_time` displays search results in
+     *           the opposite order, oldest first then newest last.
+     *           To display results newest first then oldest last, include the `desc`
+     *           argument as follows: `MediaMetadata.creation_time desc`.
+     *
+     *           The only additional filters that can be used with this parameter are
+     *           [includeArchivedMedia][google.photos.library.v1.Filters.include_archived_media]
+     *           and
+     *           [excludeNonAppCreatedData][google.photos.library.v1.Filters.exclude_non_app_created_data].
+     *           No other filters are supported.
      *     @type RetrySettings|array $retrySettings
      *           Retry settings to use for this call. Can be a
      *           {@see Google\ApiCore\RetrySettings} object, or an associative array of retry
@@ -999,6 +1015,10 @@ class PhotosLibraryGapicClient
 
         if (isset($optionalArgs['filters'])) {
             $request->setFilters($optionalArgs['filters']);
+        }
+
+        if (isset($optionalArgs['orderBy'])) {
+            $request->setOrderBy($optionalArgs['orderBy']);
         }
 
         return $this->getPagedListResponse('SearchMediaItems', $optionalArgs, SearchMediaItemsResponse::class, $request);
