@@ -29,6 +29,6 @@
     "google/protobuf": "^3.7.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "^4.8|^5.0"
+    "phpunit/phpunit": "^9.0"
   }
 }
