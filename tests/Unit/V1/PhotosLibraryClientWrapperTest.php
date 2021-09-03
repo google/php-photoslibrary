@@ -46,7 +46,7 @@ class PhotosLibraryClientWrapperTest extends GeneratedTest
     private $mockCredentialsHandler;
     private $mockTransport;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->mockCredentialsHandler = $this->getMockBuilder(CredentialsWrapper::class)
             ->disableOriginalConstructor()
