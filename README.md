@@ -144,14 +144,14 @@ We use PSR-2 as a coding style standard. Assuming that you're at the root
 directory of your project, to check for coding style violations,
 run
 
-```
-vendor/bin/phpcs src --standard=phpcs_ruleset.xml -np
+```shell
+./vendor/bin/phpcs --standard=phpcs_ruleset.xml -np
 ```
 
 To automatically fix (fixable) coding style violations, run
 
-```
-vendor/bin/phpcbf src --standard=phpcs_ruleset.xml
+```shell
+./vendor/bin/phpcbf --standard=phpcs_ruleset.xml
 ```
 
 ## Getting support
