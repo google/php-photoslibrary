@@ -20,16 +20,11 @@ namespace Google\Photos\Library\Tests\Unit\V1;
 use Google\ApiCore\CredentialsWrapper;
 use Google\ApiCore\Testing\GeneratedTest;
 use Google\ApiCore\Testing\MockTransport;
-use Google\Photos\Library\V1\BatchCreateMediaItemsRequest;
-use Google\Photos\Library\V1\BatchCreateMediaItemsResponse;
-use Google\Photos\Library\V1\NewMediaItem;
-use Google\Photos\Library\V1\NewMediaItemResult;
 use Google\Photos\Library\V1\PhotosLibraryClient;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Unit tests for {@link PhotosLibraryClient}, in addition to those in

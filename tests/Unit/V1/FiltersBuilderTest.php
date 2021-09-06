@@ -24,9 +24,15 @@ use Google\Photos\Library\V1\FeatureFilter\Feature;
 use Google\Photos\Library\V1\FiltersBuilder;
 use Google\Photos\Library\V1\MediaTypeFilter\MediaType;
 use Google\Type\Date;
+use UnexpectedValueException;
 
 class FiltersBuilderTest extends GeneratedTest
 {
+    /**
+     * Test filters builder using all fields.
+     *
+     * @throws \ErrorException
+     */
     public function testBuildWithAllFields()
     {
         $date = (new Date())->setYear(2018)->setDay(21)->setMonth(2);
@@ -78,7 +84,7 @@ class FiltersBuilderTest extends GeneratedTest
 
     public function testAddInvalidIncludedCategory()
     {
-        $this->setExpectedException(\UnexpectedValueException::class);
+        $this->expectException(UnexpectedValueException::class);
         FiltersBuilder::construct()
             ->addIncludedCategoryFromString("not a category");
     }
@@ -96,7 +102,7 @@ class FiltersBuilderTest extends GeneratedTest
 
     public function testAddInvalidIncludedFeature()
     {
-        $this->expectException(\UnexpectedValueException::class);
+        $this->expectException(UnexpectedValueException::class);
         FiltersBuilder::construct()
             ->addIncludedFeatureFromString("not a feature");
     }
@@ -114,7 +120,7 @@ class FiltersBuilderTest extends GeneratedTest
 
     public function testAddInvalidExcludedCategory()
     {
-        $this->setExpectedException(\UnexpectedValueException::class);
+        $this->expectException(UnexpectedValueException::class);
         FiltersBuilder::construct()
             ->addExcludedCategoryFromString("not a category");
     }
@@ -160,7 +166,7 @@ class FiltersBuilderTest extends GeneratedTest
 
     public function testAddInvalidMediaType()
     {
-        $this->setExpectedException(\UnexpectedValueException::class);
+        $this->expectException(UnexpectedValueException::class);
         FiltersBuilder::construct()->setMediaTypeFromString("not a media type");
     }
 
