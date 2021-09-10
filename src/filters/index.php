@@ -33,6 +33,7 @@ if (isset($_GET['clear'])) {
 * unfiltered search is performed.
 */
 $filtersBuilder = new FiltersBuilder();
+$orderBy = '';
 
 if (isset($_GET['media-type'])) {
     // These media types strings are from the array PhotosLibraryClient::mediaTypes().
@@ -74,6 +75,18 @@ if (isset($_GET['start-date']) && $_GET['start-date'] != '') {
     }
 }
 
+if (isset($_GET['sort']) && $_GET['sort'] != '') {
+
+    switch ($_GET['sort']) {
+        case 'newestFirst':
+            $orderBy = \Google\Photos\Library\V1\util\OrderBy::MEDIAMETADATA_CREATION_TIME_DESC;
+            break;
+        case 'oldestFirst':
+            $orderBy = \Google\Photos\Library\V1\util\OrderBy::MEDIAMETADATA_CREATION_TIME;
+            break;
+    }
+}
+
 /**
  * Sends the request, as constructed above, to the Photos Library API, and renders the response.
  */
@@ -81,9 +94,15 @@ checkCredentials($templates->render('filters::connect'));
 $photosLibraryClient = new PhotosLibraryClient(['credentials' => $_SESSION['credentials']]);
 
 try {
-    $pagedResponse = $photosLibraryClient->searchMediaItems(
-        ['filters' => $filtersBuilder->build()]
-    );
+    // Build the search filters.
+    $arguments = ['filters' => $filtersBuilder->build()];
+
+    // Optionally add the sort order if it was specified.
+    if($orderBy != ''){
+        $arguments['orderBy'] =  $orderBy;
+    }
+
+    $pagedResponse = $photosLibraryClient->searchMediaItems($arguments);
     // Many accounts have too many media items to display on a single web page. Instead, we get a
     // single page of results. You can retrieve the page token from the $pagedResponse to populate
     // later pages.

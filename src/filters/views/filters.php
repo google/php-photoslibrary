@@ -120,6 +120,29 @@ $this->layout(
         </div>
     </div>
 
+    <h4>Sort results</h4>
+    <p>Sort results for searches that only include a date filter.</p>
+    <div class="columns">
+        <div>
+            <label class="mdl-radio mdl-js-radio" for="option-default">
+                <input type="radio" id="option-default" class="mdl-radio__button" name="sort" value="" checked>
+                <span class="mdl-radio__label">Default (undefined)</span>
+            </label>
+        </div>
+        <div>
+            <label class="mdl-radio mdl-js-radio" for="option-newest">
+                <input type="radio" id="option-newest" class="mdl-radio__button" name="sort" value="newestFirst">
+                <span class="mdl-radio__label">Newest First</span>
+            </label>
+        </div>
+        <div>
+            <label class="mdl-radio mdl-js-radio" for="option-oldest">
+                <input type="radio" id="option-oldest" class="mdl-radio__button" name="sort" value="oldestFirst">
+                <span class="mdl-radio__label">Oldest First</span>
+            </label>
+        </div>
+    </div>
+
     <br>
 
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
