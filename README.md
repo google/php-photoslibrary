@@ -20,7 +20,9 @@ or by [downloading a compressed tarball](../../blob/master/README.md#downloading
 1. In the file `photoslibrary-sample.ini`, change the URLs where the samples are accessible. The URLs
    listed here must be included in the OAuth configuration in the developer console as 
    *Authorised redirect URIs*. 
-1. Access the `albums/`, `filters/`, or `share/` directories through your web server.
+1. Access the `albums/`, `filters/`, or `share/` directories through your web server. When serving the entire `src/`
+   directory, make sure to access each sample with a `/` at the end of the URL to ensure that all relative links and
+   references work as expected.
 
 ## Samples
 This repository includes the following samples.
