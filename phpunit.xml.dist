@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.4/phpunit.xsd"
-         colors="true"
-         verbose="true"
-         bootstrap="vendor/autoload.php">
-    <testsuites>
-        <testsuite name="php-photoslibrary Test Suite">
-            <directory>tests/Unit/V1/</directory>
-        </testsuite>
-    </testsuites>
-    <filter>
-        <whitelist>
-            <directory suffix=".php">src/Google/</directory>
-        </whitelist>
-    </filter>
-    <logging>
-        <log type="coverage-text"
-             target="php://stdout"
-             showUncoveredFiles="true"
-             showOnlySummary="false"
-        />
-    </logging>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" colors="true" verbose="true" bootstrap="vendor/autoload.php">
+  <coverage>
+    <include>
+      <directory suffix=".php">src/Google/</directory>
+    </include>
+    <report>
+      <text outputFile="php://stdout" showUncoveredFiles="true" showOnlySummary="false"/>
+    </report>
+  </coverage>
+  <testsuites>
+    <testsuite name="php-photoslibrary Test Suite">
+      <directory>tests/Unit/V1/</directory>
+    </testsuite>
+  </testsuites>
+  <logging/>
 </phpunit>
