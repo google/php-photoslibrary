@@ -126,6 +126,39 @@ try {
 // [END sample_usage]
 ```
 
+## Retry configuration
+
+The default retry configuration follows the [AIP guidance](https://google.aip.dev/194) for
+retrying API requests, which is configured in
+[`photos_library_client_config.json`](src/Google/Photos/Library/V1/resources/photos_library_client_config.json).
+
+This client library uses the [Google gax-php](https://github.com/googleapis/gax-php) library to
+make calls. See its reference documentation for `\Google\ApiCore\RetrySettings` that describes
+how to customize the retry configuration for individual invocations, for a group of API calls or
+for an entire client instance.
+
+Media byte uploads made using `PhotosLibraryClient -> upload (..)` that have failed are not
+attempted again unless a retry configuration has been specified. Customize the
+`UploadRetrySettings` to configure the retry behaviour. Here's an example that shows how to change
+the retry behaviour for byte uploads for a client instance:
+
+```php
+$uploadRetrySettings = [
+    'initialRetryDelayMillis' => 1000, // 1 second
+    'retryDelayMultiplier' => 1.3,
+    'maxRetryDelayMillis' => 10000, // 10 seconds
+    'singleTimeoutMillis' => 900000, // 15 minutes
+    'maxNumRetries' => 5,
+    'retryableCodes' => [ApiStatus::DEADLINE_EXCEEDED, ApiStatus::UNAVAILABLE],
+    'retryableExceptions' => []
+];
+
+$photosLibraryClient = new PhotosLibraryClient([
+    'credentials' => $myCredentials,
+    'uploadRetrySettings' => $uploadRetrySettings
+]);
+```
+
 ## Samples
 A few samples are included in the [`samples`](https://github.com/google/php-photoslibrary/tree/samples) directory.
 They show how to access media items, filter media, share albums, and upload files.
@@ -144,14 +177,14 @@ We use PSR-2 as a coding style standard. Assuming that you're at the root
 directory of your project, to check for coding style violations,
 run
 
-```
-vendor/bin/phpcs src --standard=phpcs_ruleset.xml -np
+```shell
+./vendor/bin/phpcs --standard=phpcs_ruleset.xml -np
 ```
 
 To automatically fix (fixable) coding style violations, run
 
-```
-vendor/bin/phpcbf src --standard=phpcs_ruleset.xml
+```shell
+./vendor/bin/phpcbf --standard=phpcs_ruleset.xml
 ```
 
 ## Getting support

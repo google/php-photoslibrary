@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="Google-Photos-PHP-PSR2">
+  <rule ref="PSR2">
+    <!--
+      Exclude this sniff because we override methods with underscores in some classes
+    -->
+    <exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
+  </rule>
+
+  <file>src</file>
+  <file>tests</file>
+
+  <exclude-pattern>src/GPBMetadata/Google/*</exclude-pattern>
+  <exclude-pattern>src/Google/Photos/*</exclude-pattern>
+
+  <!--Exclude auto generated tests-->
+  <exclude-pattern>tests/Unit/V1/PhotosLibraryClientTest.php</exclude-pattern>
+</ruleset>
