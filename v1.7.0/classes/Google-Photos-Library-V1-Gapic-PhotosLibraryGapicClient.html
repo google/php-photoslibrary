@@ -1,0 +1,2657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Google Photos Library API PHP client library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/template.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
+                <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="js/search.js"></script>
+        <script defer src="js/searchIndex.js"></script>
+    </head>
+<body id="top">
+    <header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Google Photos Library API PHP client library</a></h1>
+    <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section data-search-form class="phpdocumentor-search">
+    <label>
+        <span class="visually-hidden">Search for</span>
+        <svg class="phpdocumentor-search__icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12.4892" y1="12.2727" x2="19.1559" y2="18.9393" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+    </label>
+</section>
+
+    <nav class="phpdocumentor-topnav">
+    <ul class="phpdocumentor-topnav__menu">
+        </ul>
+</nav>
+</header>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <input class="phpdocumentor-sidebar__menu-button" type="checkbox" id="sidebar-button" name="sidebar-button" />
+<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+    Menu
+</label>
+<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+                    <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/google.html">Google</a></h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/google-photos.html">Photos</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+                <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace"><a href="packages/Google.html">Google</a></h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/Google-Photos.html">Photos</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+            
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google.html">Google</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google-photos.html">Photos</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google-photos-library.html">Library</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google-photos-library-v1.html">V1</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google-photos-library-v1-gapic.html">Gapic</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    PhotosLibraryGapicClient
+
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google.html">Google</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google-Photos.html">Photos</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google-Photos-Library.html">Library</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google-Photos-Library-V1.html">V1</a></li>
+                            </ul>
+        </div>
+    
+    
+            <span class="phpdocumentor-element__extends">
+            Uses
+                            <abbr title="\Google\ApiCore\GapicClientTrait">GapicClientTrait</abbr>                    </span>
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">102</span>
+
+    </aside>
+
+            <p class="phpdocumentor-summary">Service Description: Service which allows developers to perform the following actions on behalf of
+the user:
+- upload media items directly to their Google Photos library
+- create albums
+- add media items (including album enrichments) to albums
+- list and download content from their Google Photos library
+- filter results by media type, date range or content category
+- create, join, and access shared albums</p>
+
+    <section class="phpdocumentor-description"><p>This class provides the ability to make remote calls to the backing service through method
+calls that map to API methods. Sample code to get started:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = 'album_id';
+    $newEnrichmentItem = new NewEnrichmentItem();
+    $albumPosition = new AlbumPosition();
+    $response = $photosLibraryClient-&gt;addEnrichmentToAlbum($albumId, $newEnrichmentItem, $albumPosition);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#constant_CODEGEN_NAME">CODEGEN_NAME</a>
+    <span>
+        &nbsp;= &#039;gapic&#039;                    </span>
+</dt>
+<dd>The name of the code generator, to be included in the agent header.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#constant_DEFAULT_SERVICE_PORT">DEFAULT_SERVICE_PORT</a>
+    <span>
+        &nbsp;= 443                    </span>
+</dt>
+<dd>The default port of the service.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#constant_SERVICE_ADDRESS">SERVICE_ADDRESS</a>
+    <span>
+        &nbsp;= &#039;photoslibrary.googleapis.com&#039;                    </span>
+</dt>
+<dd>The default address of the service.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#constant_SERVICE_NAME">SERVICE_NAME</a>
+    <span>
+        &nbsp;= &#039;google.photos.library.v1.PhotosLibrary&#039;                    </span>
+</dt>
+<dd>The name of the service.</dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#property_serviceScopes">$serviceScopes</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>The default scopes required by the service.</dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method___construct">__construct()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Constructor.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_addEnrichmentToAlbum">addEnrichmentToAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Library-V1-AddEnrichmentToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumResponse">AddEnrichmentToAlbumResponse</abbr></a>    </span>
+</dt>
+<dd>Adds an enrichment at a specified position in a defined album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_batchAddMediaItemsToAlbum">batchAddMediaItemsToAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumResponse">BatchAddMediaItemsToAlbumResponse</abbr></a>    </span>
+</dt>
+<dd>Adds one or more media items in a user&#039;s Google Photos library to
+an album. The media items and albums must have been created by the
+developer via the API.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_batchCreateMediaItems">batchCreateMediaItems()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Library-V1-BatchCreateMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsResponse">BatchCreateMediaItemsResponse</abbr></a>    </span>
+</dt>
+<dd>Creates one or more media items in a user&#039;s Google Photos library.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_batchGetMediaItems">batchGetMediaItems()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Library-V1-BatchGetMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsResponse">BatchGetMediaItemsResponse</abbr></a>    </span>
+</dt>
+<dd>Returns the list of media items for the specified media item identifiers.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_batchRemoveMediaItemsFromAlbum">batchRemoveMediaItemsFromAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumResponse">BatchRemoveMediaItemsFromAlbumResponse</abbr></a>    </span>
+</dt>
+<dd>Removes one or more media items from a specified album. The media items and
+the album must have been created by the developer via the API.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_createAlbum">createAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a>    </span>
+</dt>
+<dd>Creates an album in a user&#039;s Google Photos library.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_getAlbum">getAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a>    </span>
+</dt>
+<dd>Returns the album based on the specified `albumId`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_getMediaItem">getMediaItem()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a>    </span>
+</dt>
+<dd>Returns the media item for the specified media item identifier.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_getSharedAlbum">getSharedAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a>    </span>
+</dt>
+<dd>Returns the album based on the specified `shareToken`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_joinSharedAlbum">joinSharedAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Library-V1-JoinSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumResponse">JoinSharedAlbumResponse</abbr></a>    </span>
+</dt>
+<dd>Joins a shared album on behalf of the Google Photos user.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_leaveSharedAlbum">leaveSharedAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Library-V1-LeaveSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumResponse">LeaveSharedAlbumResponse</abbr></a>    </span>
+</dt>
+<dd>Leaves a previously-joined shared album on behalf of the Google Photos
+user. The user must not own this album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_listAlbums">listAlbums()</a>
+    <span>
+                        &nbsp;: <abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr>    </span>
+</dt>
+<dd>Lists all albums shown to a user in the Albums tab of the Google
+Photos app.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_listMediaItems">listMediaItems()</a>
+    <span>
+                        &nbsp;: <abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr>    </span>
+</dt>
+<dd>List all media items from a user&#039;s Google Photos library.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_listSharedAlbums">listSharedAlbums()</a>
+    <span>
+                        &nbsp;: <abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr>    </span>
+</dt>
+<dd>Lists all shared albums available in the Sharing tab of the
+user&#039;s Google Photos app.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_searchMediaItems">searchMediaItems()</a>
+    <span>
+                        &nbsp;: <abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr>    </span>
+</dt>
+<dd>Searches for media items in a user&#039;s Google Photos library.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_shareAlbum">shareAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Library-V1-ShareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumResponse">ShareAlbumResponse</abbr></a>    </span>
+</dt>
+<dd>Marks an album as shared and accessible to other users. This action can
+only be performed on albums which were created by the developer via the
+API.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_unshareAlbum">unshareAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Library-V1-UnshareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumResponse">UnshareAlbumResponse</abbr></a>    </span>
+</dt>
+<dd>Marks a previously shared album as private. This means that the album is
+no longer shared and all the non-owners will lose access to the album. All
+non-owner content will be removed from the album. If a non-owner has
+previously added the album to their library, they will retain all photos in
+their library. This action can only be performed on albums which were
+created by the developer via the API.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_updateAlbum">updateAlbum()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a>    </span>
+</dt>
+<dd>Update the album with the specified `id`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_updateMediaItem">updateMediaItem()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a>    </span>
+</dt>
+<dd>Update the media item with the specified `id`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_getClientDefaults">getClientDefaults()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+        </dl>
+
+
+
+        
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_CODEGEN_NAME">
+        CODEGEN_NAME
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#constant_CODEGEN_NAME" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">124</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The name of the code generator, to be included in the agent header.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">CODEGEN_NAME</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;gapic&#039;</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_DEFAULT_SERVICE_PORT">
+        DEFAULT_SERVICE_PORT
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#constant_DEFAULT_SERVICE_PORT" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">119</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The default port of the service.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">DEFAULT_SERVICE_PORT</span>
+    = <span class="phpdocumentor-signature__default-value">443</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SERVICE_ADDRESS">
+        SERVICE_ADDRESS
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#constant_SERVICE_ADDRESS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">114</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The default address of the service.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">SERVICE_ADDRESS</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;photoslibrary.googleapis.com&#039;</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SERVICE_NAME">
+        SERVICE_NAME
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#constant_SERVICE_NAME" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">109</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The name of the service.</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">SERVICE_NAME</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;google.photos.library.v1.PhotosLibrary&#039;</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+        
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+            -static                                            "
+>
+    <h4 class="phpdocumentor-element__name" id="property_serviceScopes">
+        $serviceScopes
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#property_serviceScopes" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">129</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">The default scopes required by the service.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$serviceScopes</span>
+     = <span class="phpdocumentor-signature__default-value">[&#039;https://www.googleapis.com/auth/photoslibrary&#039;, &#039;https://www.googleapis.com/auth/photoslibrary.appendonly&#039;, &#039;https://www.googleapis.com/auth/photoslibrary.edit.appcreateddata&#039;, &#039;https://www.googleapis.com/auth/photoslibrary.readonly&#039;, &#039;https://www.googleapis.com/auth/photoslibrary.readonly.appcreateddata&#039;, &#039;https://www.googleapis.com/auth/photoslibrary.sharing&#039;]</span></code>
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">211</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Constructor.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional. Options for configuring the service API wrapper.</p>
+<pre class="prettyprint"><code class="prettyprint">@type string $serviceAddress
+      The address of the API remote host. May optionally include the port, formatted
+      as &quot;&lt;uri&gt;:&lt;port&gt;&quot;. Default 'photoslibrary.googleapis.com:443'.
+@type string|array|FetchAuthTokenInterface|CredentialsWrapper $credentials
+      The credentials to be used by the client to authorize API calls. This option
+      accepts either a path to a credentials file, or a decoded credentials file as a
+      PHP array.
+      *Advanced usage*: In addition, this option can also accept a pre-constructed
+      &lt;abbr title=&quot;\Google\Auth\FetchAuthTokenInterface&quot;&gt;FetchAuthTokenInterface&lt;/abbr&gt; object or
+      &lt;abbr title=&quot;\Google\ApiCore\CredentialsWrapper&quot;&gt;CredentialsWrapper&lt;/abbr&gt; object. Note that when one of these
+      objects are provided, any settings in $credentialsConfig will be ignored.
+@type array $credentialsConfig
+      Options used to configure credentials, including auth token caching, for the
+      client. For a full list of supporting configuration options, see
+      &lt;abbr title=&quot;\Google\ApiCore\CredentialsWrapper::build()&quot;&gt;CredentialsWrapper::build()&lt;/abbr&gt; .
+@type bool $disableRetries
+      Determines whether or not retries defined by the client configuration should be
+      disabled. Defaults to `false`.
+@type string|array $clientConfig
+      Client method configuration, including retry settings. This option can be either
+      a path to a JSON file, or a PHP array containing the decoded JSON data. By
+      default this settings points to the default client config file, which is
+      provided in the resources folder.
+@type string|TransportInterface $transport
+      The transport used for executing network requests. May be either the string
+      `rest` or `grpc`. Defaults to `grpc` if gRPC support is detected on the system.
+      *Advanced usage*: Additionally, it is possible to pass in an already
+      instantiated &lt;abbr title=&quot;\Google\ApiCore\Transport\TransportInterface&quot;&gt;TransportInterface&lt;/abbr&gt; object. Note
+      that when this object is provided, any settings in $transportConfig, and any
+      $serviceAddress setting, will be ignored.
+@type array $transportConfig
+      Configuration options that will be used to construct the transport. Options for
+      each supported transport type should be passed in a key for that transport. For
+      example:
+      $transportConfig = [
+          'grpc' =&gt; [...],
+          'rest' =&gt; [...],
+      ];
+      See the &lt;abbr title=&quot;\Google\ApiCore\Transport\GrpcTransport::build()&quot;&gt;GrpcTransport::build()&lt;/abbr&gt; and
+      &lt;abbr title=&quot;\Google\ApiCore\Transport\RestTransport::build()&quot;&gt;RestTransport::build()&lt;/abbr&gt; methods for the
+      supported options.
+@type callable $clientCertSource
+      A callable which returns the client cert as a string. This can be used to
+      provide a certificate and private key to the transport layer for mTLS.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ValidationException">ValidationException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_addEnrichmentToAlbum">
+        addEnrichmentToAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_addEnrichmentToAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">250</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Adds an enrichment at a specified position in a defined album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">addEnrichmentToAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$albumId</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-NewEnrichmentItem.html"><abbr title="\Google\Photos\Library\V1\NewEnrichmentItem">NewEnrichmentItem</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$newEnrichmentItem</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-AlbumPosition.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition">AlbumPosition</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$albumPosition</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-AddEnrichmentToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumResponse">AddEnrichmentToAlbumResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = 'album_id';
+    $newEnrichmentItem = new NewEnrichmentItem();
+    $albumPosition = new AlbumPosition();
+    $response = $photosLibraryClient-&gt;addEnrichmentToAlbum($albumId, $newEnrichmentItem, $albumPosition);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$albumId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifier of the album where the enrichment is to be added.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$newEnrichmentItem</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-NewEnrichmentItem.html"><abbr title="\Google\Photos\Library\V1\NewEnrichmentItem">NewEnrichmentItem</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. The enrichment to be added.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$albumPosition</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-AlbumPosition.html"><abbr title="\Google\Photos\Library\V1\AlbumPosition">AlbumPosition</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. The position in the album where the enrichment is to be inserted.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-AddEnrichmentToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumResponse">AddEnrichmentToAlbumResponse</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_batchAddMediaItemsToAlbum">
+        batchAddMediaItemsToAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_batchAddMediaItemsToAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">311</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Adds one or more media items in a user&#039;s Google Photos library to
+an album. The media items and albums must have been created by the
+developer via the API.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">batchAddMediaItemsToAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mediaItemIds</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$albumId</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumResponse">BatchAddMediaItemsToAlbumResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Media items are added to the end of the album. If multiple media items are
+given, they are added in the order specified in this call.</p>
+<p>Each album can contain up to 20,000 media items.</p>
+<p>Only media items that are in the user's library can be added to an
+album. For albums that are shared, the album must either be owned by the
+user or the user must have joined the album as a collaborator.</p>
+<p>Partial success is not supported. The entire request will fail if an
+invalid media item or album is specified.</p>
+<p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $mediaItemIds = [];
+    $albumId = 'album_id';
+    $response = $photosLibraryClient-&gt;batchAddMediaItemsToAlbum($mediaItemIds, $albumId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mediaItemIds</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
+added.
+The maximum number of media items that can be added in one call is 50.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$albumId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifier of the [Album][google.photos.types.Album] that the
+media items are added to.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumResponse">BatchAddMediaItemsToAlbumResponse</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_batchCreateMediaItems">
+        batchCreateMediaItems()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_batchCreateMediaItems" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">379</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Creates one or more media items in a user&#039;s Google Photos library.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">batchCreateMediaItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Google-Photos-Library-V1-NewMediaItem.html"><abbr title="\Google\Photos\Library\V1\NewMediaItem">NewMediaItem</abbr></a>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$newMediaItems</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-BatchCreateMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsResponse">BatchCreateMediaItemsResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>This is the second step for creating a media item. For details regarding
+Step 1, uploading the raw bytes to a Google Server, see
+<a href="/photos/library/guides/upload-media">Uploading media</a>.</p>
+<p>This call adds the media item to the library. If an album <code class="prettyprint">id</code> is
+specified, the call adds the media item to the album too. Each album can
+contain up to 20,000 media items. By default, the media item will be added
+to the end of the library or album.</p>
+<p>If an album <code class="prettyprint">id</code> and position are both defined, the media item is
+added to the album at the specified position.</p>
+<p>If the call contains multiple media items, they're added at the specified
+position.
+If you are creating a media item in a shared album where you are not the
+owner, you are not allowed to position the media item. Doing so will result
+in a <code class="prettyprint">BAD REQUEST</code> error.</p>
+<p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $newMediaItems = [];
+    $response = $photosLibraryClient-&gt;batchCreateMediaItems($newMediaItems);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$newMediaItems</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, <a href="classes/Google-Photos-Library-V1-NewMediaItem.html"><abbr title="\Google\Photos\Library\V1\NewMediaItem">NewMediaItem</abbr></a>&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. List of media items to be created.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type string $albumId
+      Identifier of the album where the media items are added. The media items
+      are also added to the user's library. This is an optional field.
+@type AlbumPosition $albumPosition
+      Position in the album where the media items are added. If not
+      specified, the media items are added to the end of the album (as per
+      the default value, that is, `LAST_IN_ALBUM`). The request fails if this
+      field is set and the `albumId` is not specified. The request will also fail
+      if you set the field and are not the owner of the shared album.
+@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-BatchCreateMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsResponse">BatchCreateMediaItemsResponse</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_batchGetMediaItems">
+        batchGetMediaItems()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_batchGetMediaItems" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">426</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the list of media items for the specified media item identifiers.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">batchGetMediaItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mediaItemIds</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-BatchGetMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsResponse">BatchGetMediaItemsResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Items are returned in the same order as the supplied identifiers.</p>
+<p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $mediaItemIds = [];
+    $response = $photosLibraryClient-&gt;batchGetMediaItems($mediaItemIds);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mediaItemIds</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifiers of the media items to be requested.
+Must not contain repeated identifiers and cannot be empty. The maximum
+number of media items that can be retrieved in one call is 50.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-BatchGetMediaItemsResponse.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsResponse">BatchGetMediaItemsResponse</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_batchRemoveMediaItemsFromAlbum">
+        batchRemoveMediaItemsFromAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_batchRemoveMediaItemsFromAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">478</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Removes one or more media items from a specified album. The media items and
+the album must have been created by the developer via the API.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">batchRemoveMediaItemsFromAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mediaItemIds</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$albumId</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumResponse">BatchRemoveMediaItemsFromAlbumResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>For albums that are shared, this action is only supported for media items
+that were added to the album by this user, or for all media items if the
+album was created by this user.</p>
+<p>Partial success is not supported. The entire request will fail and no
+action will be performed on the album if an invalid media item or album is
+specified.</p>
+<p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $mediaItemIds = [];
+    $albumId = 'album_id';
+    $response = $photosLibraryClient-&gt;batchRemoveMediaItemsFromAlbum($mediaItemIds, $albumId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mediaItemIds</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifiers of the [MediaItem][google.photos.types.MediaItem]s to be
+removed.</p>
+<p>Must not contain repeated identifiers and cannot be empty. The maximum
+number of media items that can be removed in one call is 50.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$albumId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifier of the [Album][google.photos.types.Album] that the media
+items are to be removed from.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumResponse">BatchRemoveMediaItemsFromAlbumResponse</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createAlbum">
+        createAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_createAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">519</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Creates an album in a user&#039;s Google Photos library.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">createAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$album</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $album = new Album();
+    $response = $photosLibraryClient-&gt;createAlbum($album);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$album</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. The album to be created.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getAlbum">
+        getAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_getAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">557</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the album based on the specified `albumId`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$albumId</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>The <code class="prettyprint">albumId</code> must be the ID of an album owned by the user or a shared
+album that the user has joined.</p>
+<p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = 'album_id';
+    $response = $photosLibraryClient-&gt;getAlbum($albumId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$albumId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifier of the album to be requested.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getMediaItem">
+        getMediaItem()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_getMediaItem" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">597</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the media item for the specified media item identifier.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getMediaItem</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mediaItemId</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $mediaItemId = 'media_item_id';
+    $response = $photosLibraryClient-&gt;getMediaItem($mediaItemId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mediaItemId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifier of the media item to be requested.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getSharedAlbum">
+        getSharedAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_getSharedAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">637</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the album based on the specified `shareToken`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getSharedAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$shareToken</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $shareToken = 'share_token';
+    $response = $photosLibraryClient-&gt;getSharedAlbum($shareToken);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$shareToken</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Share token of the album to be requested.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_joinSharedAlbum">
+        joinSharedAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_joinSharedAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">677</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Joins a shared album on behalf of the Google Photos user.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">joinSharedAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$shareToken</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-JoinSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumResponse">JoinSharedAlbumResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $shareToken = 'share_token';
+    $response = $photosLibraryClient-&gt;joinSharedAlbum($shareToken);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$shareToken</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Token to join the shared album on behalf of the user.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-JoinSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumResponse">JoinSharedAlbumResponse</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_leaveSharedAlbum">
+        leaveSharedAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_leaveSharedAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">714</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Leaves a previously-joined shared album on behalf of the Google Photos
+user. The user must not own this album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">leaveSharedAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$shareToken</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-LeaveSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumResponse">LeaveSharedAlbumResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $shareToken = 'share_token';
+    $response = $photosLibraryClient-&gt;leaveSharedAlbum($shareToken);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$shareToken</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Token to leave the shared album on behalf of the user.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-LeaveSharedAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumResponse">LeaveSharedAlbumResponse</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_listAlbums">
+        listAlbums()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_listAlbums" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">774</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Lists all albums shown to a user in the Albums tab of the Google
+Photos app.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">listAlbums</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    // Iterate over pages of elements
+    $pagedResponse = $photosLibraryClient-&gt;listAlbums();
+    foreach ($pagedResponse-&gt;iteratePages() as $page) {
+        foreach ($page as $element) {
+            // doSomethingWith($element);
+        }
+    }
+    // Alternatively:
+    // Iterate through all elements
+    $pagedResponse = $photosLibraryClient-&gt;listAlbums();
+    foreach ($pagedResponse-&gt;iterateAllElements() as $element) {
+        // doSomethingWith($element);
+    }
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type int $pageSize
+      The maximum number of resources contained in the underlying API
+      response. The API may return fewer values in a page, even if
+      there are additional values to be retrieved.
+@type string $pageToken
+      A page token is used to specify a page of values to be returned.
+      If no page token is specified (the default), the first page
+      of values will be returned. Any page token used here must have
+      been generated by a previous call to the API.
+@type bool $excludeNonAppCreatedData
+      If set, the results exclude media items that were not created by this app.
+      Defaults to false (all albums are returned). This field is ignored if the
+      photoslibrary.readonly.appcreateddata scope is used.
+@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_listMediaItems">
+        listMediaItems()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_listMediaItems" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">840</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">List all media items from a user&#039;s Google Photos library.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">listMediaItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    // Iterate over pages of elements
+    $pagedResponse = $photosLibraryClient-&gt;listMediaItems();
+    foreach ($pagedResponse-&gt;iteratePages() as $page) {
+        foreach ($page as $element) {
+            // doSomethingWith($element);
+        }
+    }
+    // Alternatively:
+    // Iterate through all elements
+    $pagedResponse = $photosLibraryClient-&gt;listMediaItems();
+    foreach ($pagedResponse-&gt;iterateAllElements() as $element) {
+        // doSomethingWith($element);
+    }
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type int $pageSize
+      The maximum number of resources contained in the underlying API
+      response. The API may return fewer values in a page, even if
+      there are additional values to be retrieved.
+@type string $pageToken
+      A page token is used to specify a page of values to be returned.
+      If no page token is specified (the default), the first page
+      of values will be returned. Any page token used here must have
+      been generated by a previous call to the API.
+@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_listSharedAlbums">
+        listSharedAlbums()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_listSharedAlbums" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">907</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Lists all shared albums available in the Sharing tab of the
+user&#039;s Google Photos app.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">listSharedAlbums</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    // Iterate over pages of elements
+    $pagedResponse = $photosLibraryClient-&gt;listSharedAlbums();
+    foreach ($pagedResponse-&gt;iteratePages() as $page) {
+        foreach ($page as $element) {
+            // doSomethingWith($element);
+        }
+    }
+    // Alternatively:
+    // Iterate through all elements
+    $pagedResponse = $photosLibraryClient-&gt;listSharedAlbums();
+    foreach ($pagedResponse-&gt;iterateAllElements() as $element) {
+        // doSomethingWith($element);
+    }
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type int $pageSize
+      The maximum number of resources contained in the underlying API
+      response. The API may return fewer values in a page, even if
+      there are additional values to be retrieved.
+@type string $pageToken
+      A page token is used to specify a page of values to be returned.
+      If no page token is specified (the default), the first page
+      of values will be returned. Any page token used here must have
+      been generated by a previous call to the API.
+@type bool $excludeNonAppCreatedData
+      If set, the results exclude media items that were not created by this app.
+      Defaults to false (all albums are returned). This field is ignored if the
+      photoslibrary.readonly.appcreateddata scope is used.
+@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_searchMediaItems">
+        searchMediaItems()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_searchMediaItems" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1001</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Searches for media items in a user&#039;s Google Photos library.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">searchMediaItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>If no filters are set, then all media items in the user's library are
+returned.
+If an album is set, all media items in the specified album are returned.
+If filters are specified, media items that match the filters from the
+user's library are listed. If you set both the album and the filters, the
+request results in an error.</p>
+<p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    // Iterate over pages of elements
+    $pagedResponse = $photosLibraryClient-&gt;searchMediaItems();
+    foreach ($pagedResponse-&gt;iteratePages() as $page) {
+        foreach ($page as $element) {
+            // doSomethingWith($element);
+        }
+    }
+    // Alternatively:
+    // Iterate through all elements
+    $pagedResponse = $photosLibraryClient-&gt;searchMediaItems();
+    foreach ($pagedResponse-&gt;iterateAllElements() as $element) {
+        // doSomethingWith($element);
+    }
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type string $albumId
+      Identifier of an album. If populated, lists all media items in
+      specified album. Can't set in conjunction with any filters.
+@type int $pageSize
+      The maximum number of resources contained in the underlying API
+      response. The API may return fewer values in a page, even if
+      there are additional values to be retrieved.
+@type string $pageToken
+      A page token is used to specify a page of values to be returned.
+      If no page token is specified (the default), the first page
+      of values will be returned. Any page token used here must have
+      been generated by a previous call to the API.
+@type Filters $filters
+      Filters to apply to the request. Can't be set in conjunction with an
+      `albumId`.
+@type string $orderBy
+      An optional field to specify the sort order of the search results. The
+      `orderBy` field only works when a
+      [dateFilter][google.photos.library.v1.DateFilter] is used. When this
+      field is not specified, results are displayed newest first, oldest last by
+      their [creationTime][google.photos.types.MediaMetadata.creation_time].
+      Providing `MediaMetadata.creation_time` displays search results in
+      the opposite order, oldest first then newest last.
+      To display results newest first then oldest last, include the `desc`
+      argument as follows: `MediaMetadata.creation_time desc`.
+
+      The only additional filters that can be used with this parameter are
+      [includeArchivedMedia][google.photos.library.v1.Filters.include_archived_media]
+      and
+      [excludeNonAppCreatedData][google.photos.library.v1.Filters.exclude_non_app_created_data].
+      No other filters are supported.
+@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Google\ApiCore\PagedListResponse">PagedListResponse</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_shareAlbum">
+        shareAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_shareAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1061</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Marks an album as shared and accessible to other users. This action can
+only be performed on albums which were created by the developer via the
+API.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">shareAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$albumId</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-ShareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumResponse">ShareAlbumResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = 'album_id';
+    $response = $photosLibraryClient-&gt;shareAlbum($albumId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$albumId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifier of the album to be shared. This <code class="prettyprint">albumId</code> must belong to an
+album created by the developer.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type SharedAlbumOptions $sharedAlbumOptions
+      Options to be set when converting the album to a shared album.
+@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-ShareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumResponse">ShareAlbumResponse</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_unshareAlbum">
+        unshareAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_unshareAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1111</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Marks a previously shared album as private. This means that the album is
+no longer shared and all the non-owners will lose access to the album. All
+non-owner content will be removed from the album. If a non-owner has
+previously added the album to their library, they will retain all photos in
+their library. This action can only be performed on albums which were
+created by the developer via the API.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">unshareAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$albumId</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-UnshareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumResponse">UnshareAlbumResponse</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $albumId = 'album_id';
+    $response = $photosLibraryClient-&gt;unshareAlbum($albumId);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$albumId</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Identifier of the album to be unshared. This album id must belong to an
+album created by the developer.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Library-V1-UnshareAlbumResponse.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumResponse">UnshareAlbumResponse</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_updateAlbum">
+        updateAlbum()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_updateAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1162</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Update the album with the specified `id`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">updateAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$album</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Google\Protobuf\FieldMask">FieldMask</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$updateMask</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Only the <code class="prettyprint">id</code>, <code class="prettyprint">title</code> and <code class="prettyprint">cover_photo_media_item_id</code> fields of the album
+are read. The album must have been created by the developer via the API and
+must be owned by the user.</p>
+<p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $album = new Album();
+    $updateMask = new FieldMask();
+    $response = $photosLibraryClient-&gt;updateAlbum($album, $updateMask);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$album</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. The [Album][google.photos.types.Album] to update.</p>
+<p>The album’s <code class="prettyprint">id</code> field is used to identify the album to be updated.
+The album’s <code class="prettyprint">title</code> field is used to set the new album title.
+The album’s <code class="prettyprint">cover_photo_media_item_id</code> field is used to set the new album
+cover photo.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$updateMask</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Google\Protobuf\FieldMask">FieldMask</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Indicate what fields in the provided album to update.
+The only valid values are <code class="prettyprint">title</code> and <code class="prettyprint">cover_photo_media_item_id</code>.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-Album.html"><abbr title="\Google\Photos\Types\Album">Album</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_updateMediaItem">
+        updateMediaItem()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_updateMediaItem" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">1214</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Update the media item with the specified `id`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">updateMediaItem</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$mediaItem</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Google\Protobuf\FieldMask">FieldMask</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$updateMask</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$optionalArgs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>Only the <code class="prettyprint">id</code> and <code class="prettyprint">description</code> fields of the media item are read. The
+media item must have been created by the developer via the API and must be
+owned by the user.</p>
+<p>Sample code:</p>
+<pre class="prettyprint"><code class="prettyprint">$photosLibraryClient = new PhotosLibraryClient();
+try {
+    $mediaItem = new MediaItem();
+    $updateMask = new FieldMask();
+    $response = $photosLibraryClient-&gt;updateMediaItem($mediaItem, $updateMask);
+} finally {
+    $photosLibraryClient-&gt;close();
+}
+</code></pre>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$mediaItem</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. The [MediaItem][google.photos.types.MediaItem] to update.</p>
+<p>The media item's <code class="prettyprint">id</code> field is used to identify the media item to be
+updated.
+The media item's <code class="prettyprint">description</code> field is used to set the new media item
+description.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$updateMask</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Google\Protobuf\FieldMask">FieldMask</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Required. Indicate what fields in the provided media item to update.
+The only valid value is <code class="prettyprint">description</code>.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$optionalArgs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional.</p>
+<pre class="prettyprint"><code class="prettyprint">@type RetrySettings|array $retrySettings
+      Retry settings to use for this call. Can be a
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; object, or an associative array of retry
+      settings parameters. See the documentation on
+      &lt;abbr title=&quot;\Google\Photos\Library\V1\Gapic\Google\ApiCore\RetrySettings&quot;&gt;RetrySettings&lt;/abbr&gt; for example usage.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\Google\ApiCore\ApiException">ApiException</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the remote call fails</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-MediaItem.html"><abbr title="\Google\Photos\Types\MediaItem">MediaItem</abbr></a></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getClientDefaults">
+        getClientDefaults()
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#method_getClientDefaults" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php"><a href="files/src-google-photos-library-v1-gapic-photoslibrarygapicclient.html"><abbr title="src/Google/Photos/Library/V1/Gapic/PhotosLibraryGapicClient.php">PhotosLibraryGapicClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">138</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">getClientDefaults</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+            </section>
+
+        
+    <script type="text/javascript">
+        function loadExternalCodeSnippets(line) {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                pre.setAttribute('data-line', line)
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        var modals = document.querySelectorAll("[data-modal]");
+
+        modals.forEach(function (trigger) {
+            trigger.addEventListener("click", function (event) {
+                //event.preventDefault();
+                const modal = document.getElementById(trigger.dataset.modal);
+                modal.classList.add("phpdocumentor-modal__open");
+                loadExternalCodeSnippets(trigger.dataset.line)
+                const exits = modal.querySelectorAll("[data-exit-button]");
+                exits.forEach(function (exit) {
+                    exit.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        modal.classList.remove("phpdocumentor-modal__open");
+                    });
+                });
+            });
+        });
+    </script>
+
+    </article>
+                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+    <section class="phpdocumentor-search-results__dialog">
+        <header class="phpdocumentor-search-results__header">
+            <h2 class="phpdocumentor-search-results__title">Search results</h2>
+            <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+        </header>
+        <section class="phpdocumentor-search-results__body">
+            <ul class="phpdocumentor-search-results__entries"></ul>
+        </section>
+    </section>
+</section>
+            </div>
+        </div>
+        <a href="classes/Google-Photos-Library-V1-Gapic-PhotosLibraryGapicClient.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <script>
+        cssVars({});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Google Photos Library API PHP client library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/template.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
+                <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="js/search.js"></script>
+        <script defer src="js/searchIndex.js"></script>
+    </head>
+<body id="top">
+    <header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Google Photos Library API PHP client library</a></h1>
+    <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section data-search-form class="phpdocumentor-search">
+    <label>
+        <span class="visually-hidden">Search for</span>
+        <svg class="phpdocumentor-search__icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12.4892" y1="12.2727" x2="19.1559" y2="18.9393" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+    </label>
+</section>
+
+    <nav class="phpdocumentor-topnav">
+    <ul class="phpdocumentor-topnav__menu">
+        </ul>
+</nav>
+</header>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <input class="phpdocumentor-sidebar__menu-button" type="checkbox" id="sidebar-button" name="sidebar-button" />
+<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+    Menu
+</label>
+<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+                    <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/google.html">Google</a></h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/google-photos.html">Photos</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+                <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace"><a href="packages/Google.html">Google</a></h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/Google-Photos.html">Photos</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+            
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google.html">Google</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google-photos.html">Photos</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google-photos-types.html">Types</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    Album
+
+        <span class="phpdocumentor-element__extends">
+        extends <abbr title="\Google\Protobuf\Internal\Message">Message</abbr>
+    </span>
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google.html">Google</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google-Photos.html">Photos</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google-Photos-Library.html">Library</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google-Photos-Library-V1.html">V1</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">18</span>
+
+    </aside>
+
+            <p class="phpdocumentor-summary">Representation of an album in Google Photos.</p>
+
+    <section class="phpdocumentor-description"><p>Albums are containers for media items. If an album has been shared by the
+application, it contains an extra <code class="prettyprint">shareInfo</code> property.</p>
+<p>Generated from protobuf message <code class="prettyprint">google.photos.types.Album</code></p>
+</section>
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+                <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Google-Photos-Types-Album.html#property_cover_photo_base_url">$cover_photo_base_url</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>[Output only] A URL to the cover photo&#039;s bytes. This shouldn&#039;t be used as
+is. Parameters should be appended to this URL before use. See the
+[developer
+documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+for a complete list of supported parameters. For example,
+`&#039;=w2048-h1024&#039;` sets the dimensions of the cover photo to have a width of
+2048 px and height of 1024 px.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Google-Photos-Types-Album.html#property_cover_photo_media_item_id">$cover_photo_media_item_id</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>Identifier for the media item associated with the cover photo.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Google-Photos-Types-Album.html#property_id">$id</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>Identifier for the album. This is a persistent identifier that
+can be used between sessions to identify this album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Google-Photos-Types-Album.html#property_is_writeable">$is_writeable</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>[Output only] True if you can create media items in this album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Google-Photos-Types-Album.html#property_media_items_count">$media_items_count</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>[Output only] The number of media items in the album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Google-Photos-Types-Album.html#property_product_url">$product_url</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>[Output only] Google Photos URL for the album. The user needs to be signed
+in to their Google Photos account to access this link.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Google-Photos-Types-Album.html#property_share_info">$share_info</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>[Output only] Information related to shared albums.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/Google-Photos-Types-Album.html#property_title">$title</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd>Name of the album displayed to the user in their Google Photos account.</dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method___construct">__construct()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Constructor.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_clearShareInfo">clearShareInfo()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_getCoverPhotoBaseUrl">getCoverPhotoBaseUrl()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>[Output only] A URL to the cover photo&#039;s bytes. This shouldn&#039;t be used as
+is. Parameters should be appended to this URL before use. See the
+[developer
+documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+for a complete list of supported parameters. For example,
+`&#039;=w2048-h1024&#039;` sets the dimensions of the cover photo to have a width of
+2048 px and height of 1024 px.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_getCoverPhotoMediaItemId">getCoverPhotoMediaItemId()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Identifier for the media item associated with the cover photo.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_getId">getId()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Identifier for the album. This is a persistent identifier that
+can be used between sessions to identify this album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_getIsWriteable">getIsWriteable()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>[Output only] True if you can create media items in this album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_getMediaItemsCount">getMediaItemsCount()</a>
+    <span>
+                        &nbsp;: int|string    </span>
+</dt>
+<dd>[Output only] The number of media items in the album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_getProductUrl">getProductUrl()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>[Output only] Google Photos URL for the album. The user needs to be signed
+in to their Google Photos account to access this link.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_getShareInfo">getShareInfo()</a>
+    <span>
+                        &nbsp;: <a href="classes/Google-Photos-Types-ShareInfo.html"><abbr title="\Google\Photos\Types\ShareInfo">ShareInfo</abbr></a>|null    </span>
+</dt>
+<dd>[Output only] Information related to shared albums.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_getTitle">getTitle()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Name of the album displayed to the user in their Google Photos account.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_hasShareInfo">hasShareInfo()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_setCoverPhotoBaseUrl">setCoverPhotoBaseUrl()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>[Output only] A URL to the cover photo&#039;s bytes. This shouldn&#039;t be used as
+is. Parameters should be appended to this URL before use. See the
+[developer
+documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+for a complete list of supported parameters. For example,
+`&#039;=w2048-h1024&#039;` sets the dimensions of the cover photo to have a width of
+2048 px and height of 1024 px.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_setCoverPhotoMediaItemId">setCoverPhotoMediaItemId()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Identifier for the media item associated with the cover photo.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_setId">setId()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Identifier for the album. This is a persistent identifier that
+can be used between sessions to identify this album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_setIsWriteable">setIsWriteable()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>[Output only] True if you can create media items in this album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_setMediaItemsCount">setMediaItemsCount()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>[Output only] The number of media items in the album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_setProductUrl">setProductUrl()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>[Output only] Google Photos URL for the album. The user needs to be signed
+in to their Google Photos account to access this link.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_setShareInfo">setShareInfo()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>[Output only] Information related to shared albums.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Types-Album.html#method_setTitle">setTitle()</a>
+    <span>
+                        &nbsp;: $this    </span>
+</dt>
+<dd>Name of the album displayed to the user in their Google Photos account.</dd>
+
+        </dl>
+
+
+
+        
+
+        
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/Google-Photos-Types-Album.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_cover_photo_base_url">
+        $cover_photo_base_url
+        <a href="classes/Google-Photos-Types-Album.html#property_cover_photo_base_url" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">76</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] A URL to the cover photo&#039;s bytes. This shouldn&#039;t be used as
+is. Parameters should be appended to this URL before use. See the
+[developer
+documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+for a complete list of supported parameters. For example,
+`&#039;=w2048-h1024&#039;` sets the dimensions of the cover photo to have a width of
+2048 px and height of 1024 px.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$cover_photo_base_url</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string cover_photo_base_url = 7;</code></p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_cover_photo_media_item_id">
+        $cover_photo_media_item_id
+        <a href="classes/Google-Photos-Types-Album.html#property_cover_photo_media_item_id" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">82</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Identifier for the media item associated with the cover photo.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$cover_photo_media_item_id</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string cover_photo_media_item_id = 8;</code></p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_id">
+        $id
+        <a href="classes/Google-Photos-Types-Album.html#property_id" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">26</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Identifier for the album. This is a persistent identifier that
+can be used between sessions to identify this album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$id</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string id = 1;</code></p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_is_writeable">
+        $is_writeable
+        <a href="classes/Google-Photos-Types-Album.html#property_is_writeable" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">49</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] True if you can create media items in this album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$is_writeable</span>
+     = <span class="phpdocumentor-signature__default-value">false</span></code>
+
+        <section class="phpdocumentor-description"><p>This field is based on the scopes granted and permissions of the album. If
+the scopes are changed or permissions of the album are changed, this field
+is updated.</p>
+<p>Generated from protobuf field <code class="prettyprint">bool is_writeable = 4;</code></p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_media_items_count">
+        $media_items_count
+        <a href="classes/Google-Photos-Types-Album.html#property_media_items_count" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">64</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] The number of media items in the album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$media_items_count</span>
+     = <span class="phpdocumentor-signature__default-value">0</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">int64 media_items_count = 6;</code></p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_product_url">
+        $product_url
+        <a href="classes/Google-Photos-Types-Album.html#property_product_url" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] Google Photos URL for the album. The user needs to be signed
+in to their Google Photos account to access this link.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$product_url</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string product_url = 3;</code></p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_share_info">
+        $share_info
+        <a href="classes/Google-Photos-Types-Album.html#property_share_info" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">58</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] Information related to shared albums.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$share_info</span>
+     = <span class="phpdocumentor-signature__default-value">null</span></code>
+
+        <section class="phpdocumentor-description"><p>This field is only populated if the album is a shared album, the
+developer created the album and the user has granted the
+<code class="prettyprint">photoslibrary.sharing</code> scope.</p>
+<p>Generated from protobuf field <code class="prettyprint">.google.photos.types.ShareInfo share_info = 5;</code></p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_title">
+        $title
+        <a href="classes/Google-Photos-Types-Album.html#property_title" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Name of the album displayed to the user in their Google Photos account.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$title</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;&#039;</span></code>
+
+        <section class="phpdocumentor-description"><p>This string shouldn't be more than 500 characters.</p>
+<p>Generated from protobuf field <code class="prettyprint">string title = 2;</code></p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/Google-Photos-Types-Album.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="classes/Google-Photos-Types-Album.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">123</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Constructor.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$data</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">NULL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>{
+Optional. Data for populating the Message object.</p>
+<pre class="prettyprint"><code class="prettyprint">@type string $id
+      Identifier for the album. This is a persistent identifier that
+      can be used between sessions to identify this album.
+@type string $title
+      Name of the album displayed to the user in their Google Photos account.
+      This string shouldn't be more than 500 characters.
+@type string $product_url
+      [Output only] Google Photos URL for the album. The user needs to be signed
+      in to their Google Photos account to access this link.
+@type bool $is_writeable
+      [Output only] True if you can create media items in this album.
+      This field is based on the scopes granted and permissions of the album. If
+      the scopes are changed or permissions of the album are changed, this field
+      is updated.
+@type \Google\Photos\Types\ShareInfo $share_info
+      [Output only] Information related to shared albums.
+      This field is only populated if the album is a shared album, the
+      developer created the album and the user has granted the
+      `photoslibrary.sharing` scope.
+@type int|string $media_items_count
+      [Output only] The number of media items in the album.
+@type string $cover_photo_base_url
+      [Output only] A URL to the cover photo's bytes. This shouldn't be used as
+      is. Parameters should be appended to this URL before use. See the
+      [developer
+      documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+      for a complete list of supported parameters. For example,
+      `'=w2048-h1024'` sets the dimensions of the cover photo to have a width of
+      2048 px and height of 1024 px.
+@type string $cover_photo_media_item_id
+      Identifier for the media item associated with the cover photo.
+</code></pre>
+<p>}</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_clearShareInfo">
+        clearShareInfo()
+        <a href="classes/Google-Photos-Types-Album.html#method_clearShareInfo" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">263</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">clearShareInfo</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getCoverPhotoBaseUrl">
+        getCoverPhotoBaseUrl()
+        <a href="classes/Google-Photos-Types-Album.html#method_getCoverPhotoBaseUrl" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">324</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] A URL to the cover photo&#039;s bytes. This shouldn&#039;t be used as
+is. Parameters should be appended to this URL before use. See the
+[developer
+documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+for a complete list of supported parameters. For example,
+`&#039;=w2048-h1024&#039;` sets the dimensions of the cover photo to have a width of
+2048 px and height of 1024 px.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getCoverPhotoBaseUrl</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string cover_photo_base_url = 7;</code></p>
+</section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getCoverPhotoMediaItemId">
+        getCoverPhotoMediaItemId()
+        <a href="classes/Google-Photos-Types-Album.html#method_getCoverPhotoMediaItemId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">356</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Identifier for the media item associated with the cover photo.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getCoverPhotoMediaItemId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string cover_photo_media_item_id = 8;</code></p>
+</section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getId">
+        getId()
+        <a href="classes/Google-Photos-Types-Album.html#method_getId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">135</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Identifier for the album. This is a persistent identifier that
+can be used between sessions to identify this album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getId</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string id = 1;</code></p>
+</section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getIsWriteable">
+        getIsWriteable()
+        <a href="classes/Google-Photos-Types-Album.html#method_getIsWriteable" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">221</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] True if you can create media items in this album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getIsWriteable</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+        <section class="phpdocumentor-description"><p>This field is based on the scopes granted and permissions of the album. If
+the scopes are changed or permissions of the album are changed, this field
+is updated.</p>
+<p>Generated from protobuf field <code class="prettyprint">bool is_writeable = 4;</code></p>
+</section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getMediaItemsCount">
+        getMediaItemsCount()
+        <a href="classes/Google-Photos-Types-Album.html#method_getMediaItemsCount" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">292</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] The number of media items in the album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getMediaItemsCount</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int|string</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">int64 media_items_count = 6;</code></p>
+</section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">int|string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getProductUrl">
+        getProductUrl()
+        <a href="classes/Google-Photos-Types-Album.html#method_getProductUrl" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">191</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] Google Photos URL for the album. The user needs to be signed
+in to their Google Photos account to access this link.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getProductUrl</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string product_url = 3;</code></p>
+</section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getShareInfo">
+        getShareInfo()
+        <a href="classes/Google-Photos-Types-Album.html#method_getShareInfo" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">253</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] Information related to shared albums.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getShareInfo</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-ShareInfo.html"><abbr title="\Google\Photos\Types\ShareInfo">ShareInfo</abbr></a>|null</span></code>
+
+        <section class="phpdocumentor-description"><p>This field is only populated if the album is a shared album, the
+developer created the album and the user has granted the
+<code class="prettyprint">photoslibrary.sharing</code> scope.</p>
+<p>Generated from protobuf field <code class="prettyprint">.google.photos.types.ShareInfo share_info = 5;</code></p>
+</section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><a href="classes/Google-Photos-Types-ShareInfo.html"><abbr title="\Google\Photos\Types\ShareInfo">ShareInfo</abbr></a>|null</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getTitle">
+        getTitle()
+        <a href="classes/Google-Photos-Types-Album.html#method_getTitle" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">163</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Name of the album displayed to the user in their Google Photos account.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getTitle</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"><p>This string shouldn't be more than 500 characters.</p>
+<p>Generated from protobuf field <code class="prettyprint">string title = 2;</code></p>
+</section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_hasShareInfo">
+        hasShareInfo()
+        <a href="classes/Google-Photos-Types-Album.html#method_hasShareInfo" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">258</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">hasShareInfo</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setCoverPhotoBaseUrl">
+        setCoverPhotoBaseUrl()
+        <a href="classes/Google-Photos-Types-Album.html#method_setCoverPhotoBaseUrl" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">342</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] A URL to the cover photo&#039;s bytes. This shouldn&#039;t be used as
+is. Parameters should be appended to this URL before use. See the
+[developer
+documentation](https://developers.google.com/photos/library/guides/access-media-items#base-urls)
+for a complete list of supported parameters. For example,
+`&#039;=w2048-h1024&#039;` sets the dimensions of the cover photo to have a width of
+2048 px and height of 1024 px.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setCoverPhotoBaseUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string cover_photo_base_url = 7;</code></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setCoverPhotoMediaItemId">
+        setCoverPhotoMediaItemId()
+        <a href="classes/Google-Photos-Types-Album.html#method_setCoverPhotoMediaItemId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">368</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Identifier for the media item associated with the cover photo.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setCoverPhotoMediaItemId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string cover_photo_media_item_id = 8;</code></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setId">
+        setId()
+        <a href="classes/Google-Photos-Types-Album.html#method_setId" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">148</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Identifier for the album. This is a persistent identifier that
+can be used between sessions to identify this album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setId</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string id = 1;</code></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setIsWriteable">
+        setIsWriteable()
+        <a href="classes/Google-Photos-Types-Album.html#method_setIsWriteable" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">236</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] True if you can create media items in this album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setIsWriteable</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"><p>This field is based on the scopes granted and permissions of the album. If
+the scopes are changed or permissions of the album are changed, this field
+is updated.</p>
+<p>Generated from protobuf field <code class="prettyprint">bool is_writeable = 4;</code></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setMediaItemsCount">
+        setMediaItemsCount()
+        <a href="classes/Google-Photos-Types-Album.html#method_setMediaItemsCount" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">304</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] The number of media items in the album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setMediaItemsCount</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">int64 media_items_count = 6;</code></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setProductUrl">
+        setProductUrl()
+        <a href="classes/Google-Photos-Types-Album.html#method_setProductUrl" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">204</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] Google Photos URL for the album. The user needs to be signed
+in to their Google Photos account to access this link.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setProductUrl</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"><p>Generated from protobuf field <code class="prettyprint">string product_url = 3;</code></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setShareInfo">
+        setShareInfo()
+        <a href="classes/Google-Photos-Types-Album.html#method_setShareInfo" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">278</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">[Output only] Information related to shared albums.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setShareInfo</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Types-ShareInfo.html"><abbr title="\Google\Photos\Types\ShareInfo">ShareInfo</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"><p>This field is only populated if the album is a shared album, the
+developer created the album and the user has granted the
+<code class="prettyprint">photoslibrary.sharing</code> scope.</p>
+<p>Generated from protobuf field <code class="prettyprint">.google.photos.types.ShareInfo share_info = 5;</code></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Types-ShareInfo.html"><abbr title="\Google\Photos\Types\ShareInfo">ShareInfo</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setTitle">
+        setTitle()
+        <a href="classes/Google-Photos-Types-Album.html#method_setTitle" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Types/Album.php"><a href="files/src-google-photos-types-album.html"><abbr title="src/Google/Photos/Types/Album.php">Album.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">176</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Name of the album displayed to the user in their Google Photos account.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setTitle</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$var</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">$this</span></code>
+
+        <section class="phpdocumentor-description"><p>This string shouldn't be more than 500 characters.</p>
+<p>Generated from protobuf field <code class="prettyprint">string title = 2;</code></p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$var</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">$this</span>
+            &mdash;
+        
+    
+</article>
+            </section>
+
+        
+    <script type="text/javascript">
+        function loadExternalCodeSnippets(line) {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                pre.setAttribute('data-line', line)
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        var modals = document.querySelectorAll("[data-modal]");
+
+        modals.forEach(function (trigger) {
+            trigger.addEventListener("click", function (event) {
+                //event.preventDefault();
+                const modal = document.getElementById(trigger.dataset.modal);
+                modal.classList.add("phpdocumentor-modal__open");
+                loadExternalCodeSnippets(trigger.dataset.line)
+                const exits = modal.querySelectorAll("[data-exit-button]");
+                exits.forEach(function (exit) {
+                    exit.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        modal.classList.remove("phpdocumentor-modal__open");
+                    });
+                });
+            });
+        });
+    </script>
+
+    </article>
+                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+    <section class="phpdocumentor-search-results__dialog">
+        <header class="phpdocumentor-search-results__header">
+            <h2 class="phpdocumentor-search-results__title">Search results</h2>
+            <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+        </header>
+        <section class="phpdocumentor-search-results__body">
+            <ul class="phpdocumentor-search-results__entries"></ul>
+        </section>
+    </section>
+</section>
+            </div>
+        </div>
+        <a href="classes/Google-Photos-Types-Album.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <script>
+        cssVars({});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+</body>
+</html>

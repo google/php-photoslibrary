@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Google Photos Library API PHP client library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/template.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
+                <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="js/search.js"></script>
+        <script defer src="js/searchIndex.js"></script>
+    </head>
+<body id="top">
+    <header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Google Photos Library API PHP client library</a></h1>
+    <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section data-search-form class="phpdocumentor-search">
+    <label>
+        <span class="visually-hidden">Search for</span>
+        <svg class="phpdocumentor-search__icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12.4892" y1="12.2727" x2="19.1559" y2="18.9393" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+    </label>
+</section>
+
+    <nav class="phpdocumentor-topnav">
+    <ul class="phpdocumentor-topnav__menu">
+        </ul>
+</nav>
+</header>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <input class="phpdocumentor-sidebar__menu-button" type="checkbox" id="sidebar-button" name="sidebar-button" />
+<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+    Menu
+</label>
+<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+                    <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/google.html">Google</a></h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/google-photos.html">Photos</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+                <section class="phpdocumentor-sidebar__category">
+            <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace"><a href="packages/Google.html">Google</a></h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="packages/Google-Photos.html">Photos</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+            
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google.html">Google</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google-photos.html">Photos</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google-photos-library.html">Library</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/google-photos-library-v1.html">V1</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    PhotosLibraryGrpcClient
+
+        <span class="phpdocumentor-element__extends">
+        extends <abbr title="\Grpc\BaseStub">BaseStub</abbr>
+    </span>
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google.html">Google</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google-Photos.html">Photos</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google-Photos-Library.html">Library</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Google-Photos-Library-V1.html">V1</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">31</span>
+
+    </aside>
+
+            <p class="phpdocumentor-summary">Service which allows developers to perform the following actions on behalf of
+the user:
+- upload media items directly to their Google Photos library
+- create albums
+- add media items (including album enrichments) to albums
+- list and download content from their Google Photos library
+- filter results by media type, date range or content category
+- create, join, and access shared albums</p>
+
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method___construct">__construct()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_AddEnrichmentToAlbum">AddEnrichmentToAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Adds an enrichment at a specified position in a defined album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_BatchAddMediaItemsToAlbum">BatchAddMediaItemsToAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Adds one or more media items in a user&#039;s Google Photos library to
+an album. The media items and albums must have been created by the
+developer via the API.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_BatchCreateMediaItems">BatchCreateMediaItems()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Creates one or more media items in a user&#039;s Google Photos library.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_BatchGetMediaItems">BatchGetMediaItems()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Returns the list of media items for the specified media item identifiers.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_BatchRemoveMediaItemsFromAlbum">BatchRemoveMediaItemsFromAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Removes one or more media items from a specified album. The media items and
+the album must have been created by the developer via the API.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_CreateAlbum">CreateAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Creates an album in a user&#039;s Google Photos library.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_GetAlbum">GetAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Returns the album based on the specified `albumId`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_GetMediaItem">GetMediaItem()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Returns the media item for the specified media item identifier.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_GetSharedAlbum">GetSharedAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Returns the album based on the specified `shareToken`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_JoinSharedAlbum">JoinSharedAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Joins a shared album on behalf of the Google Photos user.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_LeaveSharedAlbum">LeaveSharedAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Leaves a previously-joined shared album on behalf of the Google Photos
+user. The user must not own this album.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_ListAlbums">ListAlbums()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Lists all albums shown to a user in the Albums tab of the Google
+Photos app.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_ListMediaItems">ListMediaItems()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>List all media items from a user&#039;s Google Photos library.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_ListSharedAlbums">ListSharedAlbums()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Lists all shared albums available in the Sharing tab of the
+user&#039;s Google Photos app.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_SearchMediaItems">SearchMediaItems()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Searches for media items in a user&#039;s Google Photos library.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_ShareAlbum">ShareAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Marks an album as shared and accessible to other users. This action can
+only be performed on albums which were created by the developer via the
+API.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_UnshareAlbum">UnshareAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Marks a previously shared album as private. This means that the album is
+no longer shared and all the non-owners will lose access to the album. All
+non-owner content will be removed from the album. If a non-owner has
+previously added the album to their library, they will retain all photos in
+their library. This action can only be performed on albums which were
+created by the developer via the API.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_UpdateAlbum">UpdateAlbum()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Update the album with the specified `id`.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_UpdateMediaItem">UpdateMediaItem()</a>
+    <span>
+                        &nbsp;: <abbr title="\Grpc\UnaryCall">UnaryCall</abbr>    </span>
+</dt>
+<dd>Update the media item with the specified `id`.</dd>
+
+        </dl>
+
+
+
+        
+
+        
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$hostname</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$opts</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Grpc\Channel">Channel</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$channel</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$hostname</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>hostname</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$opts</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>channel options</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$channel</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Grpc\Channel">Channel</abbr></span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>(optional) re-use channel object</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_AddEnrichmentToAlbum">
+        AddEnrichmentToAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_AddEnrichmentToAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">241</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Adds an enrichment at a specified position in a defined album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">AddEnrichmentToAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-AddEnrichmentToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumRequest">AddEnrichmentToAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-AddEnrichmentToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\AddEnrichmentToAlbumRequest">AddEnrichmentToAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_BatchAddMediaItemsToAlbum">
+        BatchAddMediaItemsToAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_BatchAddMediaItemsToAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">111</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Adds one or more media items in a user&#039;s Google Photos library to
+an album. The media items and albums must have been created by the
+developer via the API.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">BatchAddMediaItemsToAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumRequest">BatchAddMediaItemsToAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>Media items are added to the end of the album. If multiple media items are
+given, they are added in the order specified in this call.</p>
+<p>Each album can contain up to 20,000 media items.</p>
+<p>Only media items that are in the user's library can be added to an
+album. For albums that are shared, the album must either be owned by the
+user or the user must have joined the album as a collaborator.</p>
+<p>Partial success is not supported. The entire request will fail if an
+invalid media item or album is specified.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-BatchAddMediaItemsToAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchAddMediaItemsToAlbumRequest">BatchAddMediaItemsToAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_BatchCreateMediaItems">
+        BatchCreateMediaItems()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_BatchCreateMediaItems" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">82</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Creates one or more media items in a user&#039;s Google Photos library.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">BatchCreateMediaItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-BatchCreateMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsRequest">BatchCreateMediaItemsRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>This is the second step for creating a media item. For details regarding
+Step 1, uploading the raw bytes to a Google Server, see
+<a href="/photos/library/guides/upload-media">Uploading media</a>.</p>
+<p>This call adds the media item to the library. If an album <code class="prettyprint">id</code> is
+specified, the call adds the media item to the album too. Each album can
+contain up to 20,000 media items. By default, the media item will be added
+to the end of the library or album.</p>
+<p>If an album <code class="prettyprint">id</code> and position are both defined, the media item is
+added to the album at the specified position.</p>
+<p>If the call contains multiple media items, they're added at the specified
+position.
+If you are creating a media item in a shared album where you are not the
+owner, you are not allowed to position the media item. Doing so will result
+in a <code class="prettyprint">BAD REQUEST</code> error.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-BatchCreateMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchCreateMediaItemsRequest">BatchCreateMediaItemsRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_BatchGetMediaItems">
+        BatchGetMediaItems()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_BatchGetMediaItems" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">178</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the list of media items for the specified media item identifiers.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">BatchGetMediaItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-BatchGetMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsRequest">BatchGetMediaItemsRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>Items are returned in the same order as the supplied identifiers.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-BatchGetMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\BatchGetMediaItemsRequest">BatchGetMediaItemsRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_BatchRemoveMediaItemsFromAlbum">
+        BatchRemoveMediaItemsFromAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_BatchRemoveMediaItemsFromAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">349</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Removes one or more media items from a specified album. The media items and
+the album must have been created by the developer via the API.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">BatchRemoveMediaItemsFromAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumRequest">BatchRemoveMediaItemsFromAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>For albums that are shared, this action is only supported for media items
+that were added to the album by this user, or for all media items if the
+album was created by this user.</p>
+<p>Partial success is not supported. The entire request will fail and no
+action will be performed on the album if an invalid media item or album is
+specified.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-BatchRemoveMediaItemsFromAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\BatchRemoveMediaItemsFromAlbumRequest">BatchRemoveMediaItemsFromAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_CreateAlbum">
+        CreateAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_CreateAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">49</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Creates an album in a user&#039;s Google Photos library.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">CreateAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-CreateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\CreateAlbumRequest">CreateAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-CreateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\CreateAlbumRequest">CreateAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetAlbum">
+        GetAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_GetAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">211</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the album based on the specified `albumId`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-GetAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetAlbumRequest">GetAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>The <code class="prettyprint">albumId</code> must be the ID of an album owned by the user or a shared
+album that the user has joined.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-GetAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetAlbumRequest">GetAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetMediaItem">
+        GetMediaItem()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_GetMediaItem" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">162</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the media item for the specified media item identifier.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetMediaItem</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-GetMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\GetMediaItemRequest">GetMediaItemRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-GetMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\GetMediaItemRequest">GetMediaItemRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetSharedAlbum">
+        GetSharedAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_GetSharedAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">226</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the album based on the specified `shareToken`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetSharedAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-GetSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetSharedAlbumRequest">GetSharedAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-GetSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\GetSharedAlbumRequest">GetSharedAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_JoinSharedAlbum">
+        JoinSharedAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_JoinSharedAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">256</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Joins a shared album on behalf of the Google Photos user.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">JoinSharedAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-JoinSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumRequest">JoinSharedAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-JoinSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\JoinSharedAlbumRequest">JoinSharedAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_LeaveSharedAlbum">
+        LeaveSharedAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_LeaveSharedAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">272</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Leaves a previously-joined shared album on behalf of the Google Photos
+user. The user must not own this album.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">LeaveSharedAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-LeaveSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumRequest">LeaveSharedAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-LeaveSharedAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\LeaveSharedAlbumRequest">LeaveSharedAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_ListAlbums">
+        ListAlbums()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_ListAlbums" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">194</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Lists all albums shown to a user in the Albums tab of the Google
+Photos app.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">ListAlbums</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-ListAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListAlbumsRequest">ListAlbumsRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-ListAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListAlbumsRequest">ListAlbumsRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_ListMediaItems">
+        ListMediaItems()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_ListMediaItems" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">147</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">List all media items from a user&#039;s Google Photos library.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">ListMediaItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-ListMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\ListMediaItemsRequest">ListMediaItemsRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-ListMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\ListMediaItemsRequest">ListMediaItemsRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_ListSharedAlbums">
+        ListSharedAlbums()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_ListSharedAlbums" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">305</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Lists all shared albums available in the Sharing tab of the
+user&#039;s Google Photos app.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">ListSharedAlbums</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-ListSharedAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListSharedAlbumsRequest">ListSharedAlbumsRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-ListSharedAlbumsRequest.html"><abbr title="\Google\Photos\Library\V1\ListSharedAlbumsRequest">ListSharedAlbumsRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_SearchMediaItems">
+        SearchMediaItems()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_SearchMediaItems" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">132</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Searches for media items in a user&#039;s Google Photos library.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">SearchMediaItems</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-SearchMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\SearchMediaItemsRequest">SearchMediaItemsRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>If no filters are set, then all media items in the user's library are
+returned.
+If an album is set, all media items in the specified album are returned.
+If filters are specified, media items that match the filters from the
+user's library are listed. If you set both the album and the filters, the
+request results in an error.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-SearchMediaItemsRequest.html"><abbr title="\Google\Photos\Library\V1\SearchMediaItemsRequest">SearchMediaItemsRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_ShareAlbum">
+        ShareAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_ShareAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">289</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Marks an album as shared and accessible to other users. This action can
+only be performed on albums which were created by the developer via the
+API.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">ShareAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-ShareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumRequest">ShareAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-ShareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\ShareAlbumRequest">ShareAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_UnshareAlbum">
+        UnshareAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_UnshareAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">325</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Marks a previously shared album as private. This means that the album is
+no longer shared and all the non-owners will lose access to the album. All
+non-owner content will be removed from the album. If a non-owner has
+previously added the album to their library, they will retain all photos in
+their library. This action can only be performed on albums which were
+created by the developer via the API.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">UnshareAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-UnshareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumRequest">UnshareAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-UnshareAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UnshareAlbumRequest">UnshareAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_UpdateAlbum">
+        UpdateAlbum()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_UpdateAlbum" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">367</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Update the album with the specified `id`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">UpdateAlbum</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-UpdateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateAlbumRequest">UpdateAlbumRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>Only the <code class="prettyprint">id</code>, <code class="prettyprint">title</code> and <code class="prettyprint">cover_photo_media_item_id</code> fields of the album
+are read. The album must have been created by the developer via the API and
+must be owned by the user.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-UpdateAlbumRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateAlbumRequest">UpdateAlbumRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_UpdateMediaItem">
+        UpdateMediaItem()
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#method_UpdateMediaItem" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php"><a href="files/src-google-photos-library-v1-photoslibrarygrpcclient.html"><abbr title="src/Google/Photos/Library/V1/PhotosLibraryGrpcClient.php">PhotosLibraryGrpcClient.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">385</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Update the media item with the specified `id`.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">UpdateMediaItem</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-UpdateMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateMediaItemRequest">UpdateMediaItemRequest</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$argument</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$metadata</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$options</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span></code>
+
+        <section class="phpdocumentor-description"><p>Only the <code class="prettyprint">id</code> and <code class="prettyprint">description</code> fields of the media item are read. The
+media item must have been created by the developer via the API and must be
+owned by the user.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$argument</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/Google-Photos-Library-V1-UpdateMediaItemRequest.html"><abbr title="\Google\Photos\Library\V1\UpdateMediaItemRequest">UpdateMediaItemRequest</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>input argument</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$metadata</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>metadata</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$options</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>call options</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type"><abbr title="\Grpc\UnaryCall">UnaryCall</abbr></span>
+            &mdash;
+        
+    
+</article>
+            </section>
+
+        
+    <script type="text/javascript">
+        function loadExternalCodeSnippets(line) {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                pre.setAttribute('data-line', line)
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        var modals = document.querySelectorAll("[data-modal]");
+
+        modals.forEach(function (trigger) {
+            trigger.addEventListener("click", function (event) {
+                //event.preventDefault();
+                const modal = document.getElementById(trigger.dataset.modal);
+                modal.classList.add("phpdocumentor-modal__open");
+                loadExternalCodeSnippets(trigger.dataset.line)
+                const exits = modal.querySelectorAll("[data-exit-button]");
+                exits.forEach(function (exit) {
+                    exit.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        modal.classList.remove("phpdocumentor-modal__open");
+                    });
+                });
+            });
+        });
+    </script>
+
+    </article>
+                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+    <section class="phpdocumentor-search-results__dialog">
+        <header class="phpdocumentor-search-results__header">
+            <h2 class="phpdocumentor-search-results__title">Search results</h2>
+            <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+        </header>
+        <section class="phpdocumentor-search-results__body">
+            <ul class="phpdocumentor-search-results__entries"></ul>
+        </section>
+    </section>
+</section>
+            </div>
+        </div>
+        <a href="classes/Google-Photos-Library-V1-PhotosLibraryGrpcClient.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <script>
+        cssVars({});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+</body>
+</html>
