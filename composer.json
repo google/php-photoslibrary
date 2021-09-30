@@ -4,7 +4,7 @@
   },
   "minimum-stability":"stable",
   "require": {
-    "google/photos-library": "^1.6.0",
+    "google/photos-library": "^1.7.0",
     "league/plates": "^3.4.0",
     "google/auth": "^1.16.0"
   }
