@@ -14,10 +14,6 @@
  * limitations under the License.
  */
 
-#album-header {
-  margin-bottom: 36px;
-}
-
 #album-header h3 {
   display: inline;
   text-transform: capitalize;
@@ -26,4 +22,12 @@
 #album-header .mdl-button {
   margin-left: 20px;
   vertical-align: middle;
+}
+
+.metadata {
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 18px;
+  font-family: "Roboto Mono", monospace;
+  line-height: 2;
 }

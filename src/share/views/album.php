@@ -26,22 +26,14 @@ $this->layout(
 <div class="mdl-grid">
     <div id="album-header" class="mdl-cell mdl-cell--12-col">
         <h3><?= $album->getTitle() ?></h3>
-        <a class="mdl-button mdl-button--raised mdl-button--primary"
-           href="<?= $album->getProductUrl() ?>">
-              Open in Google Photos
-        </a>
     </div>
     <div class="mdl-cell mdl-cell--12-col">
         <?php if (null !== $album->getShareInfo()) : ?>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input id='share-url' class="mdl-textfield__input" type="text"
-                       value="<?= $album->getShareInfo()->getShareableUrl() ?>"/>
-                <label class="mdl-textfield__label" for="share-url">Shareable URL</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input id="share-token" class="mdl-textfield__input" type="text"
-                       value="<?= $album->getShareInfo()->getShareToken() ?>"/>
-                <label class="mdl-textfield__label" for="share-token">Share Token</label>
+            <h4>Metadata</h4>
+            <div class="metadata mdl-color--grey-200">
+                Product URL: <?= $album->getProductUrl() ?><br/>
+                Shareable URL: <?= $album->getShareInfo()->getShareableUrl() ?><br/>
+                Share token: <?= $album->getShareInfo()->getShareToken() ?>
             </div>
         <?php else : ?>
             <form method="post">
@@ -63,6 +55,12 @@ $this->layout(
                 <button class="mdl-button mdl-button--raised mdl-button--primary">Share</button>
             </form>`
         <?php endif ?>
+        <div>
+        <a class="mdl-button mdl-button--raised mdl-button--primary"
+           href="<?= $album->getProductUrl() ?>">
+            Open in Google Photos
+        </a>
+        </div>
     </div>
 
     <?php $this->insert('image_grid', ['mediaItems' => $mediaItems]); ?>
