@@ -21,12 +21,14 @@
 
 namespace Google\Photos\Library\V1;
 
+use Closure;
 use Google\ApiCore\ApiException;
 use Google\Photos\Library\V1\Gapic\PhotosLibraryGapicClient;
 use Google\Photos\Types\Album;
 use Google\Photos\Types\MediaItem;
 use Google\Protobuf\FieldMask;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
 
@@ -45,7 +47,7 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
      * The returned function returns true if the status was not okay, the error was in one of the
      * acceptable retry codes, and the maximum number of retries has not been exceeded.
      * @param UploadRetrySettings $uploadRetrySettings
-     * @return \Closure
+     * @return Closure
      */
     private function retryDecider($uploadRetrySettings)
     {
@@ -82,7 +84,7 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
      *
      * Implements exponential backoff, with some maximum delay.
      * @param UploadRetrySettings $uploadRetrySettings
-     * @return \Closure
+     * @return Closure
      */
     private function retryDelay($uploadRetrySettings)
     {
@@ -135,7 +137,7 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
      *     Filenames should be set in the batchCreate call instead.
      * @param string $mimeType The MIME type of the file to be uploaded. For example, text/html.
      * @return string An upload token
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws GuzzleException
      */
     public function upload($rawFile, $fileName = '', $mimeType = '')
     {
@@ -145,7 +147,7 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
             'X-Goog-Upload-Protocol' => 'raw',
         ];
 
-        if ($fileName) {;
+        if ($fileName) {
             $headers['X-Goog-Upload-File-Name'] = $fileName;
         }
         if ($mimeType) {
@@ -177,7 +179,7 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
      * @param string $newTitle Required. The new title of the album.
      * @param array $optionalArgs
      *
-     * @return \Google\Photos\Types\Album
+     * @return Album
      *
      * @throws ApiException if the remote call fails
      * @see updateAlbum
@@ -206,7 +208,7 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
      * @param string $newCoverMediaItemId Required. The identifier of the new media item cover photo.
      * @param array $optionalArgs
      *
-     * @return \Google\Photos\Types\Album
+     * @return Album
      *
      * @throws ApiException if the remote call fails
      * @see updateAlbum
@@ -222,6 +224,7 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
 
         return parent::updateAlbum($newAlbum, $updateMask, $optionalArgs);
     }
+
     /**
      * Updates the media item with a new description.
      *
@@ -232,7 +235,7 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
      * @param string $newDescription The new description for the media item.
      * @param array $optionalArgs
      *
-     * @return \Google\Photos\Types\MediaItem
+     * @return MediaItem
      *
      * @throws ApiException if the remote call fails
      */
@@ -247,6 +250,11 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
         return parent::updateMediaItem($newItem, $updateMask, $optionalArgs);
     }
 
+    /**
+     * List of supported content categories for media item searches with a content filter.
+     *
+     * @return string[] Content categories supported by the API.
+     */
     public static function contentCategories()
     {
         return ['NONE', 'LANDSCAPES', 'RECEIPTS', 'CITYSCAPES', 'LANDMARKS', 'SELFIES', 'PEOPLE',
@@ -254,11 +262,21 @@ class PhotosLibraryClient extends PhotosLibraryGapicClient
             'NIGHT', 'PERFORMANCES', 'WHITEBOARDS', 'SCREENSHOTS', 'UTILITY'];
     }
 
+    /**
+     * List of supported media types for media item searches with a media type filter.
+     *
+     * @return string[] Media types supported by the API.
+     */
     public static function mediaTypes()
     {
         return ['ALL_MEDIA', 'PHOTO', 'VIDEO'];
     }
 
+    /**
+     * List of supported feature attributes for media item searches with a feature filter.
+     *
+     * @return string[] Feature attributes supported by the API.
+     */
     public static function features()
     {
         return ['NONE', 'FAVORITES'];
