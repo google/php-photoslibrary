@@ -100,8 +100,7 @@ function connectWithGooglePhotos(array $scopes, $redirectURI)
     } else {
         // With the code returned by the OAuth flow, we can retrieve the refresh token.
         $oauth2->setCode($_GET['code']);
-        $authToken = $oauth2->fetchAuthToken();
-        $refreshToken = $authToken['access_token'];
+        $refreshToken = $oauth2->getRefreshToken();
 
         // The UserRefreshCredentials will use the refresh token to 'refresh' the credentials when
         // they expire.
